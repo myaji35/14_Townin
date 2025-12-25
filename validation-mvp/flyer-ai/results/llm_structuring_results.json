@@ -1,0 +1,33 @@
+{
+  "total_samples": 5,
+  "successful": 0,
+  "total_cost": 0.0,
+  "avg_cost_per_sample": 0.0,
+  "results": [
+    {
+      "sample_name": "마트 전단지 - 식품",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CVfPhWtazd3iWTJTcNeL1'}"
+    },
+    {
+      "sample_name": "화장품 할인",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CVfPhY2JN2iPvGqqDtQtJ'}"
+    },
+    {
+      "sample_name": "치킨 전단지",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CVfPhYzqSCSwGj2vnjmBD'}"
+    },
+    {
+      "sample_name": "전자제품 할인",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CVfPhZxPBnQkySxRyNGts'}"
+    },
+    {
+      "sample_name": "카페 메뉴",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CVfPhayefj7bHCs47Ce1s'}"
+    }
+  ]
+}

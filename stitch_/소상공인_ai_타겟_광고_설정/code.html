@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Townin - AI Targeted Ad Setup</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Noto+Sans+KR:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecb6",
+                        "primary-dark": "#0eb58e",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#10221d",
+                        "surface-dark": "#162e28",
+                        "surface-border": "#23483f",
+                        "text-muted": "#92c9bb",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans KR", "sans-serif"],
+                        "sans": ["Manrope", "Noto Sans KR", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom Scrollbar for dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #10221d; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #23483f; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #32675a; 
+        }
+        
+        .range-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #13ecb6;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-display overflow-hidden antialiased selection:bg-primary selection:text-background-dark">
+<div class="flex h-screen w-full overflow-hidden">
+<!-- Side Navigation -->
+<aside class="hidden w-64 flex-col border-r border-surface-border bg-[#11221e] lg:flex">
+<div class="flex h-16 items-center gap-3 px-6 border-b border-surface-border">
+<div class="flex items-center justify-center rounded-full bg-primary/20 p-1.5">
+<span class="material-symbols-outlined text-primary">hub</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-white">Townin</h1>
+</div>
+<div class="flex flex-1 flex-col gap-1 px-4 py-6 overflow-y-auto">
+<div class="mb-4 flex items-center gap-3 rounded-xl bg-surface-dark p-3 border border-surface-border">
+<div class="h-10 w-10 overflow-hidden rounded-full bg-cover bg-center" data-alt="User profile picture with a generic avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrMybHclElTDWNM5Vrw7jjvKrgTwDPHe5ZFTXNbTx-yvBI0MAGwPVplclrOSUMEnCVQbYyOcmUCbdjTsfBU5OKcEt103H1b-LJQnOZqain54-VBz2Cf1Z1p960Z3BfXy1i6rT5Wb_Xk0er4PwxmBVG2A42nkhfuK-hMxENnvWVajomUr9K742ILwQBsjxc2I44gVWn3QPVB96vtFqTqtcU_4iwAsJ72zPrZdO9G_Y5m3SWyFVJ_kVRtFU0X0CtTZ5e2atD2XnWDlM");'></div>
+<div class="flex flex-col overflow-hidden">
+<span class="truncate text-sm font-semibold text-white">카페 타운인</span>
+<span class="truncate text-xs text-text-muted">소상공인 파트너</span>
+</div>
+</div>
+<div class="space-y-1">
+<p class="px-3 pb-2 pt-4 text-xs font-semibold text-text-muted/70 uppercase tracking-wider">메뉴</p>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-text-muted hover:bg-surface-border hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="text-sm font-medium">대시보드</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg bg-primary/10 px-3 py-2.5 text-primary ring-1 ring-primary/20" href="#">
+<span class="material-symbols-outlined text-[20px] fill-1">campaign</span>
+<span class="text-sm font-medium">캠페인 관리</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-text-muted hover:bg-surface-border hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+<span class="text-sm font-medium">성과 분석</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-text-muted hover:bg-surface-border hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">credit_card</span>
+<span class="text-sm font-medium">결제 관리</span>
+</a>
+</div>
+<div class="mt-auto space-y-1">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-text-muted hover:bg-surface-border hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="text-sm font-medium">설정</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex flex-1 flex-col h-full overflow-hidden relative">
+<!-- Top Header -->
+<header class="flex h-16 shrink-0 items-center justify-between border-b border-surface-border bg-[#11221e]/80 px-6 backdrop-blur-md z-10">
+<div class="flex items-center gap-4">
+<button class="lg:hidden text-text-muted hover:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h2 class="text-lg font-bold text-white">소상공인 파트너 센터</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex h-9 items-center justify-center rounded-full bg-surface-border px-4 text-sm font-medium text-white hover:bg-surface-border/80 transition-colors">
+<span class="material-symbols-outlined mr-2 text-[18px]">help</span> 가이드
+                    </button>
+<button class="relative flex h-9 w-9 items-center justify-center rounded-full bg-surface-border text-white hover:bg-surface-border/80 transition-colors">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute right-2 top-2 h-2 w-2 rounded-full bg-red-500 ring-2 ring-[#11221e]"></span>
+</button>
+</div>
+</header>
+<!-- Scrollable Page Content -->
+<div class="flex-1 overflow-y-auto bg-background-dark p-6 lg:p-10">
+<div class="mx-auto max-w-6xl space-y-8">
+<!-- Page Heading & Actions -->
+<div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-primary text-sm font-semibold mb-1">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+<span>Townin AI Engine</span>
+</div>
+<h1 class="text-3xl font-black tracking-tight text-white md:text-4xl">AI 타겟 광고 설정</h1>
+<p class="max-w-xl text-text-muted">Insurance GraphRAG 엔진이 고객의 생활 맥락을 분석하여 최적의 고객을 찾아드립니다.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center justify-center gap-2 rounded-lg border border-surface-border bg-transparent px-5 py-2.5 text-sm font-bold text-white transition hover:bg-surface-border">
+                                임시 저장
+                            </button>
+<button class="flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-2.5 text-sm font-bold text-background-dark shadow-[0_0_15px_rgba(19,236,182,0.3)] transition hover:bg-primary-dark">
+<span class="material-symbols-outlined text-lg">rocket_launch</span>
+                                캠페인 시작
+                            </button>
+</div>
+</div>
+<!-- Stats Overview -->
+<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+<div class="rounded-xl border border-surface-border bg-[#11221e] p-5">
+<div class="flex items-start justify-between">
+<span class="text-sm font-medium text-text-muted">진행 중인 캠페인</span>
+<span class="rounded bg-primary/10 p-1 text-primary">
+<span class="material-symbols-outlined text-lg">campaign</span>
+</span>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="text-3xl font-bold text-white">3</span>
+<span class="text-sm font-medium text-text-muted">건</span>
+<span class="ml-auto text-xs font-medium text-primary">+1건 (오늘)</span>
+</div>
+</div>
+<div class="rounded-xl border border-surface-border bg-[#11221e] p-5">
+<div class="flex items-start justify-between">
+<span class="text-sm font-medium text-text-muted">이번 달 소진 예산</span>
+<span class="rounded bg-blue-500/10 p-1 text-blue-400">
+<span class="material-symbols-outlined text-lg">account_balance_wallet</span>
+</span>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="text-3xl font-bold text-white">450,000</span>
+<span class="text-sm font-medium text-text-muted">원</span>
+</div>
+</div>
+<div class="rounded-xl border border-surface-border bg-[#11221e] p-5 relative overflow-hidden group">
+<div class="absolute right-0 top-0 h-24 w-24 translate-x-8 translate-y--8 rounded-full bg-primary/5 blur-2xl transition group-hover:bg-primary/10"></div>
+<div class="flex items-start justify-between">
+<span class="text-sm font-medium text-text-muted">AI 추천 도달률</span>
+<span class="rounded bg-purple-500/10 p-1 text-purple-400">
+<span class="material-symbols-outlined text-lg">insights</span>
+</span>
+</div>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="text-3xl font-bold text-white">92%</span>
+<span class="ml-2 text-sm font-medium text-primary flex items-center">
+<span class="material-symbols-outlined text-sm">trending_up</span> 5%
+                                </span>
+</div>
+</div>
+</div>
+<!-- Main Workflow Area -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Left Column: Settings Form -->
+<div class="lg:col-span-8 space-y-6">
+<!-- Progress Steps -->
+<div class="flex justify-between items-center rounded-xl border border-surface-border bg-[#11221e] p-4 text-sm">
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-background-dark text-xs">1</span>
+<span>콘텐츠</span>
+</div>
+<div class="h-px w-8 bg-surface-border"></div>
+<div class="flex items-center gap-2 text-white font-bold">
+<span class="flex items-center justify-center w-6 h-6 rounded-full bg-white text-background-dark text-xs">2</span>
+<span>타겟 설정</span>
+</div>
+<div class="h-px w-8 bg-surface-border"></div>
+<div class="flex items-center gap-2 text-text-muted">
+<span class="flex items-center justify-center w-6 h-6 rounded-full border border-surface-border text-xs">3</span>
+<span>예산/기간</span>
+</div>
+<div class="h-px w-8 bg-surface-border"></div>
+<div class="flex items-center gap-2 text-text-muted">
+<span class="flex items-center justify-center w-6 h-6 rounded-full border border-surface-border text-xs">4</span>
+<span>A/B 테스트</span>
+</div>
+</div>
+<!-- Step 1: Content (Completed/Collapsed View) -->
+<div class="rounded-xl border border-surface-border bg-[#11221e] opacity-60 hover:opacity-100 transition-opacity">
+<div class="flex items-center justify-between p-4 cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<h3 class="text-lg font-bold text-white">1. 광고 콘텐츠 설정</h3>
+</div>
+<button class="text-text-muted hover:text-white">수정</button>
+</div>
+</div>
+<!-- Step 2: Targeting (Active) -->
+<div class="rounded-xl border border-primary/30 bg-[#11221e] shadow-[0_0_0_1px_rgba(19,236,182,0.1)]">
+<div class="border-b border-surface-border p-4 bg-surface-dark/50 rounded-t-xl">
+<div class="flex items-center gap-3">
+<div class="p-1.5 rounded bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-xl">target</span>
+</div>
+<h3 class="text-lg font-bold text-white">2. 타겟 고객 설정</h3>
+<span class="ml-auto rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">AI 추천 활성화됨</span>
+</div>
+</div>
+<div class="p-6 space-y-8">
+<!-- Map / Location -->
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<label class="text-sm font-semibold text-white">광고 노출 지역 범위</label>
+<span class="text-xs text-primary font-medium">반경 1.5km 추천</span>
+</div>
+<div class="relative h-64 w-full overflow-hidden rounded-lg border border-surface-border bg-[#0b1815]">
+<!-- Map Placeholder Image -->
+<div class="absolute inset-0 bg-cover bg-center opacity-60" data-location="Seoul, Gangnam" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAosjnOn9WmeOJsPAxAhxHgjBNbDjzodMTgfG1QeK9ydOLXkXk-zQIwGaBlFGRrWxuLkYaJW1mOH-HuY13luFSVWxtVCmucdyYO8aWUpylValTYITPLR0hp6YUJm3bNjq_oVlHli7y3uGVAo6EChnYS0lFe2U9f8AYGL0RmB5Yvy4VUlL1TeL-x0ZY_wSoNF6YhqMW5KbpKFMCFD_1_6gLQZa6VqPU359TuSfwMr5CyhCWoFoGBzUgAHq8PCjyxivD5ukXzo67C8j4");'></div>
+<!-- Radius Overlay -->
+<div class="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/20 border-2 border-primary shadow-[0_0_20px_rgba(19,236,182,0.2)] flex items-center justify-center">
+<div class="h-3 w-3 rounded-full bg-primary animate-pulse"></div>
+</div>
+<div class="absolute bottom-3 left-3 rounded bg-background-dark/80 backdrop-blur px-2 py-1 text-xs text-white">
+                                                내 가게 위치: 강남구 역삼동
+                                            </div>
+</div>
+<div class="pt-2">
+<input class="range-slider w-full h-2 bg-surface-border rounded-lg appearance-none cursor-pointer" max="5" min="0.5" step="0.1" type="range" value="1.5"/>
+<div class="flex justify-between text-xs text-text-muted mt-2">
+<span>0.5km (도보 5분)</span>
+<span class="text-white font-bold">1.5km (AI 최적)</span>
+<span>5km (차량 10분)</span>
+</div>
+</div>
+</div>
+<!-- Demographics -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-3">
+<label class="text-sm font-semibold text-white">성별 타겟</label>
+<div class="flex rounded-lg bg-surface-dark p-1 border border-surface-border">
+<button class="flex-1 rounded py-2 text-sm font-medium text-text-muted hover:text-white transition-colors">남성</button>
+<button class="flex-1 rounded bg-surface-border py-2 text-sm font-bold text-white shadow-sm">전체</button>
+<button class="flex-1 rounded py-2 text-sm font-medium text-text-muted hover:text-white transition-colors">여성</button>
+</div>
+</div>
+<div class="space-y-3">
+<label class="text-sm font-semibold text-white">연령대</label>
+<div class="flex gap-2 flex-wrap">
+<label class="flex items-center gap-2 rounded border border-surface-border bg-surface-dark px-3 py-2 text-sm text-text-muted cursor-pointer hover:border-primary/50">
+<input class="rounded border-surface-border bg-background-dark text-primary focus:ring-primary focus:ring-offset-background-dark" type="checkbox"/>
+                                                    10대
+                                                </label>
+<label class="flex items-center gap-2 rounded border border-primary bg-primary/10 px-3 py-2 text-sm text-white cursor-pointer font-bold">
+<input checked="" class="rounded border-primary bg-background-dark text-primary focus:ring-primary focus:ring-offset-background-dark" type="checkbox"/>
+                                                    20-30대
+                                                </label>
+<label class="flex items-center gap-2 rounded border border-surface-border bg-surface-dark px-3 py-2 text-sm text-text-muted cursor-pointer hover:border-primary/50">
+<input class="rounded border-surface-border bg-background-dark text-primary focus:ring-primary focus:ring-offset-background-dark" type="checkbox"/>
+                                                    40-50대
+                                                </label>
+</div>
+</div>
+</div>
+<!-- Context / Interests -->
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<label class="text-sm font-semibold text-white">관심사 및 행동 패턴 (GraphRAG)</label>
+<button class="text-xs text-primary underline">AI 추천 새로고침</button>
+</div>
+<div class="rounded-lg border border-surface-border bg-surface-dark p-4">
+<p class="mb-3 text-xs text-text-muted">내 가게의 업종과 최근 방문 고객 데이터를 분석한 추천 키워드입니다.</p>
+<div class="flex flex-wrap gap-2">
+<button class="flex items-center gap-1.5 rounded-full border border-primary bg-primary/10 px-3 py-1.5 text-sm font-bold text-primary transition hover:bg-primary/20">
+<span>#점심맛집</span>
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+<button class="flex items-center gap-1.5 rounded-full border border-primary bg-primary/10 px-3 py-1.5 text-sm font-bold text-primary transition hover:bg-primary/20">
+<span>#직장인할인</span>
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+<button class="flex items-center gap-1.5 rounded-full border border-surface-border bg-background-dark px-3 py-1.5 text-sm text-text-muted transition hover:border-text-muted hover:text-white">
+<span>#커피쿠폰</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+<button class="flex items-center gap-1.5 rounded-full border border-surface-border bg-background-dark px-3 py-1.5 text-sm text-text-muted transition hover:border-text-muted hover:text-white">
+<span>#주말데이트</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+<button class="flex items-center gap-1.5 rounded-full border border-surface-border bg-background-dark px-3 py-1.5 text-sm text-text-muted transition hover:border-text-muted hover:text-white">
+<span>#카공족</span>
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex justify-end pt-4 border-t border-surface-border">
+<button class="rounded-lg bg-primary px-6 py-2.5 text-sm font-bold text-background-dark hover:bg-primary-dark">다음 단계</button>
+</div>
+</div>
+</div>
+<!-- Step 4: A/B Test (Preview) -->
+<div class="rounded-xl border border-surface-border bg-[#11221e] opacity-80">
+<div class="flex items-center justify-between p-4 border-b border-surface-border">
+<div class="flex items-center gap-3">
+<div class="p-1.5 rounded bg-surface-dark text-text-muted">
+<span class="material-symbols-outlined text-xl">experiment</span>
+</div>
+<h3 class="text-lg font-bold text-white">4. A/B 테스트 설정</h3>
+</div>
+<div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-4 appearance-none cursor-pointer transition-transform duration-200 ease-in-out" id="toggle" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-5 rounded-full bg-surface-border cursor-pointer" for="toggle"></label>
+</div>
+</div>
+<div class="p-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="p-3 border border-surface-border rounded bg-surface-dark/30">
+<p class="text-xs text-text-muted mb-1">A안 (기본)</p>
+<p class="text-sm text-white">오늘 점심은 아메리카노 무료!</p>
+</div>
+<div class="p-3 border border-dashed border-text-muted/30 rounded flex items-center justify-center text-text-muted text-sm">
+                                            B안 추가하기 +
+                                        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: AI Insight Panel (Sticky) -->
+<div class="lg:col-span-4 space-y-4 lg:sticky lg:top-6">
+<!-- Realtime Prediction Card -->
+<div class="rounded-xl border border-primary/40 bg-gradient-to-b from-[#11221e] to-[#0d1a16] p-6 shadow-lg relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-9xl text-primary">auto_graph</span>
+</div>
+<div class="flex items-center gap-2 mb-6">
+<span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+<h3 class="text-sm font-bold text-primary uppercase tracking-wide">실시간 AI 예측</h3>
+</div>
+<div class="flex flex-col items-center justify-center py-4">
+<!-- Simple Gauge Chart via SVG -->
+<div class="relative h-32 w-48 flex items-end justify-center overflow-hidden">
+<svg class="h-full w-full" viewbox="0 0 200 120">
+<!-- Background Arc -->
+<path d="M20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#23483f" stroke-linecap="round" stroke-width="20"></path>
+<!-- Progress Arc (approx 75%) -->
+<path d="M20 100 A 80 80 0 0 1 150 45" fill="none" stroke="#13ecb6" stroke-dasharray="300" stroke-dashoffset="0" stroke-linecap="round" stroke-width="20"></path>
+</svg>
+<div class="absolute bottom-0 flex flex-col items-center pb-2">
+<span class="text-3xl font-black text-white tracking-tighter">3,450명</span>
+<span class="text-xs text-text-muted">예상 도달 수</span>
+</div>
+</div>
+</div>
+<div class="space-y-4 mt-4">
+<div class="flex items-center justify-between text-sm">
+<span class="text-text-muted">예상 클릭률 (CTR)</span>
+<span class="font-bold text-white">4.2%</span>
+</div>
+<div class="h-1.5 w-full rounded-full bg-surface-border overflow-hidden">
+<div class="h-full bg-primary" style="width: 70%"></div>
+</div>
+<div class="flex items-center justify-between text-sm">
+<span class="text-text-muted">적합도 점수</span>
+<span class="font-bold text-primary">매우 높음</span>
+</div>
+</div>
+</div>
+<!-- AI Tip Card -->
+<div class="rounded-xl border border-surface-border bg-surface-dark p-4">
+<div class="flex items-start gap-3">
+<div class="mt-0.5 text-amber-400">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div class="space-y-2">
+<h4 class="text-sm font-bold text-white">타겟 최적화 팁</h4>
+<p class="text-xs leading-relaxed text-text-muted">
+                                            반경을 <span class="text-white font-bold">500m</span> 더 넓히면 인근 오피스 건물의 직장인 <span class="text-primary font-bold">200명</span>에게 더 도달할 수 있습니다.
+                                        </p>
+<button class="text-xs font-bold text-amber-400 hover:text-amber-300 underline">반경 자동 조절하기</button>
+</div>
+</div>
+</div>
+<!-- Cost Summary Card -->
+<div class="rounded-xl border border-surface-border bg-[#11221e] p-4">
+<h4 class="text-sm font-bold text-white mb-3">예상 비용 (1일)</h4>
+<div class="flex items-end gap-1 mb-1">
+<span class="text-2xl font-bold text-white">15,000</span>
+<span class="text-sm text-text-muted mb-1">원</span>
+</div>
+<p class="text-xs text-text-muted">총 예산: 450,000원 (30일)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<script>
+        // Simple script to toggle checkbox style for visualization only
+        document.querySelector('.toggle-checkbox').addEventListener('change', function() {
+            const label = document.querySelector('.toggle-label');
+            if(this.checked) {
+                label.classList.remove('bg-surface-border');
+                label.classList.add('bg-primary');
+                this.classList.add('translate-x-full', 'border-white');
+            } else {
+                label.classList.add('bg-surface-border');
+                label.classList.remove('bg-primary');
+                this.classList.remove('translate-x-full', 'border-white');
+            }
+        });
+    </script>
+<style>
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #13ecb6;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #13ecb6;
+        }
+        .toggle-checkbox {
+            right: 0;
+            z-index: 10;
+        }
+    </style>
+</body></html>

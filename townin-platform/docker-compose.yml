@@ -1,0 +1,123 @@
+version: '3.8'
+
+services:
+  # PostgreSQL + PostGIS
+  postgres:
+    image: postgis/postgis:15-3.4
+    container_name: townin-postgres
+    environment:
+      POSTGRES_DB: townin-db
+      POSTGRES_USER: townin
+      POSTGRES_PASSWORD: townin_dev_password
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "15432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/postgresql/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U townin -d townin-db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - townin-network
+
+  # Redis (Cache & Queue)
+  redis:
+    image: redis:7-alpine
+    container_name: townin-redis
+    ports:
+      - "16379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    networks:
+      - townin-network
+
+  # Neo4j (GraphRAG)
+  neo4j:
+    image: neo4j:5.16
+    container_name: townin-neo4j
+    environment:
+      NEO4J_AUTH: neo4j/townin_neo4j_password
+      NEO4J_PLUGINS: '["apoc", "graph-data-science"]'
+      NEO4J_apoc_export_file_enabled: "true"
+      NEO4J_apoc_import_file_enabled: "true"
+      NEO4J_dbms_security_procedures_unrestricted: "apoc.*,gds.*"
+    ports:
+      - "7474:7474"  # HTTP
+      - "7687:7687"  # Bolt
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+    healthcheck:
+      test: ["CMD-SHELL", "cypher-shell -u neo4j -p townin_neo4j_password 'RETURN 1'"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - townin-network
+
+  # InfluxDB (IoT Time-Series Data)
+  influxdb:
+    image: influxdb:2.7-alpine
+    container_name: townin-influxdb
+    environment:
+      DOCKER_INFLUXDB_INIT_MODE: setup
+      DOCKER_INFLUXDB_INIT_USERNAME: townin
+      DOCKER_INFLUXDB_INIT_PASSWORD: townin_influx_password
+      DOCKER_INFLUXDB_INIT_ORG: townin
+      DOCKER_INFLUXDB_INIT_BUCKET: iot_events
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: townin_influx_admin_token
+    ports:
+      - "8086:8086"
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+      - influxdb_config:/etc/influxdb2
+    healthcheck:
+      test: ["CMD", "influx", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - townin-network
+
+  # pgAdmin (Database GUI - Optional)
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: townin-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@townin.kr
+      PGADMIN_DEFAULT_PASSWORD: townin2025!
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - townin-network
+    profiles:
+      - tools  # Only start with: docker-compose --profile tools up
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  neo4j_data:
+    driver: local
+  neo4j_logs:
+    driver: local
+  influxdb_data:
+    driver: local
+  influxdb_config:
+    driver: local
+
+networks:
+  townin-network:
+    driver: bridge

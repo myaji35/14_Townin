@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material Vivid App</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Flex:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            // M3 Dynamic Color Tokens
+            'primary': 'var(--color-primary)',
+            'on-primary': 'var(--color-on-primary)',
+            'primary-container': 'var(--color-primary-container)',
+            'bg-base': 'var(--color-bg-base)',
+            'bg-container': 'var(--color-bg-container)',
+            'surface-variant': 'var(--color-surface-variant)',
+            'text-primary': 'var(--color-text-primary)',
+            'text-secondary': 'var(--color-text-secondary)',
+            'outline': 'var(--color-outline)',
+          },
+          fontFamily: {
+            'display': ['Inter', 'sans-serif'],
+            'body': ['Roboto Flex', 'sans-serif'],
+          },
+          borderRadius: {
+            'xl': '1rem',
+            '2xl': '1.5rem',
+            '3xl': '1.75rem',
+          },
+        },
+      },
+    };
+  </script>
+  
+  <style>
+    /* M3 Color System - Light */
+    :root {
+      --color-primary: #6750A4;
+      --color-primary-rgb: 103, 80, 164;
+      --color-on-primary: #FFFFFF;
+      --color-primary-container: #EADDFF;
+      --color-on-primary-container: #21005D;
+      
+      --color-secondary: #625B71;
+      --color-on-secondary: #FFFFFF;
+      
+      --color-bg-base: #FFFBFE;
+      --color-bg-container: #F3EDF7;
+      --color-surface-variant: #E7E0EC;
+      
+      --color-text-primary: #1D1B20;
+      --color-text-secondary: #49454E;
+      --color-outline: #79747E;
+    }
+    
+    /* M3 Color System - Dark */
+    .dark {
+      --color-primary: #D0BCFF;
+      --color-primary-rgb: 208, 188, 255;
+      --color-on-primary: #381E72;
+      --color-primary-container: #4F378B;
+      --color-on-primary-container: #EADDFF;
+      
+      --color-secondary: #CCC2DC;
+      --color-on-secondary: #332D41;
+      
+      --color-bg-base: #1D1B20;
+      --color-bg-container: #2B2930;
+      --color-surface-variant: #49454E;
+      
+      --color-text-primary: #E6E1E5;
+      --color-text-secondary: #CAC4D0;
+      --color-outline: #938F99;
+    }
+    
+    /* Surface Tint Levels */
+    .surface-level-0 { background-color: var(--color-bg-base); }
+    .surface-level-1 {
+      background-color: var(--color-bg-container);
+      background-image: linear-gradient(
+        rgba(var(--color-primary-rgb), 0.05),
+        rgba(var(--color-primary-rgb), 0.05)
+      );
+    }
+    .surface-level-2 {
+      background-color: var(--color-bg-container);
+      background-image: linear-gradient(
+        rgba(var(--color-primary-rgb), 0.08),
+        rgba(var(--color-primary-rgb), 0.08)
+      );
+    }
+    .surface-level-3 {
+      background-color: var(--color-bg-container);
+      background-image: linear-gradient(
+        rgba(var(--color-primary-rgb), 0.11),
+        rgba(var(--color-primary-rgb), 0.11)
+      );
+    }
+    
+    /* M3 Glass Effect */
+    .m3-glass {
+      background: rgba(var(--color-bg-container-rgb, 43, 41, 48), 0.85);
+      backdrop-filter: blur(40px);
+      -webkit-backdrop-filter: blur(40px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* State Layer Button */
+    .btn-state-layer {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+    .btn-state-layer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: currentColor;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 150ms ease;
+    }
+    .btn-state-layer:hover::before { opacity: 0.08; }
+    .btn-state-layer:active::before { opacity: 0.12; }
+    
+    /* Card Hover */
+    .card-hover {
+      transition: transform 200ms cubic-bezier(0.2, 0, 0, 1),
+                  box-shadow 200ms cubic-bezier(0.2, 0, 0, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px -10px rgba(var(--color-primary-rgb), 0.15);
+    }
+    
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: var(--color-bg-base); }
+    ::-webkit-scrollbar-thumb { 
+      background: var(--color-surface-variant); 
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover { 
+      background: var(--color-primary); 
+    }
+    
+    /* Reduce Motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-bg-base text-text-primary font-body min-h-screen">
+  
+  <!-- Header -->
+  <header class="sticky top-0 z-50 surface-level-2 border-b border-outline/20">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-on-primary">apps</span>
+        </div>
+        <span class="font-display font-semibold text-lg">App Name</span>
+      </div>
+      
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#" class="text-text-secondary hover:text-primary transition-colors">Home</a>
+        <a href="#" class="text-text-secondary hover:text-primary transition-colors">Features</a>
+        <a href="#" class="text-text-secondary hover:text-primary transition-colors">About</a>
+      </nav>
+      
+      <button class="btn-state-layer px-4 py-2 rounded-full bg-primary text-on-primary font-medium">
+        Get Started
+      </button>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    
+    <!-- Hero Section -->
+    <section class="surface-level-1 rounded-3xl p-8 mb-8">
+      <h1 class="font-display text-4xl md:text-5xl font-bold mb-4" style="color: var(--color-primary)">
+        Material Vivid
+      </h1>
+      <p class="text-text-secondary text-lg max-w-2xl leading-relaxed">
+        Dynamic, personalized interfaces built with Material You 3 design principles.
+        Living interfaces that adapt to your context.
+      </p>
+    </section>
+    
+    <!-- Card Grid -->
+    <section>
+      <h2 class="font-display text-2xl font-semibold mb-6">Featured Items</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Card 1 -->
+        <div class="surface-level-1 rounded-2xl overflow-hidden border border-outline/20 card-hover">
+          <div class="h-48 bg-gradient-to-br from-primary/20 to-primary/5"></div>
+          <div class="p-5">
+            <span class="text-xs font-medium uppercase tracking-wider text-text-secondary">Category</span>
+            <h3 class="font-display text-xl font-semibold mt-1 mb-2">Card Title</h3>
+            <p class="text-text-secondary text-sm mb-4">
+              Description text goes here. Keep it concise and informative.
+            </p>
+            <button class="btn-state-layer w-full py-3 rounded-xl bg-primary text-on-primary font-medium flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-xl">arrow_forward</span>
+              Action
+            </button>
+          </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="surface-level-1 rounded-2xl overflow-hidden border border-outline/20 card-hover">
+          <div class="h-48 bg-gradient-to-br from-secondary/20 to-secondary/5"></div>
+          <div class="p-5">
+            <span class="text-xs font-medium uppercase tracking-wider text-text-secondary">Category</span>
+            <h3 class="font-display text-xl font-semibold mt-1 mb-2">Card Title</h3>
+            <p class="text-text-secondary text-sm mb-4">
+              Description text goes here. Keep it concise and informative.
+            </p>
+            <button class="btn-state-layer w-full py-3 rounded-xl border border-outline/30 text-primary font-medium flex items-center justify-center gap-2 hover:border-primary">
+              <span class="material-symbols-outlined text-xl">visibility</span>
+              View Details
+            </button>
+          </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="surface-level-1 rounded-2xl overflow-hidden border border-outline/20 card-hover">
+          <div class="h-48 bg-gradient-to-br from-tertiary/20 to-tertiary/5"></div>
+          <div class="p-5">
+            <span class="text-xs font-medium uppercase tracking-wider text-text-secondary">Category</span>
+            <h3 class="font-display text-xl font-semibold mt-1 mb-2">Card Title</h3>
+            <p class="text-text-secondary text-sm mb-4">
+              Description text goes here. Keep it concise and informative.
+            </p>
+            <button class="btn-state-layer w-full py-3 rounded-xl border border-outline/30 text-primary font-medium flex items-center justify-center gap-2 hover:border-primary">
+              <span class="material-symbols-outlined text-xl">visibility</span>
+              View Details
+            </button>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    
+  </main>
+  
+  <!-- Dark Mode Toggle Script -->
+  <script>
+    // Toggle dark mode
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+    
+    // Check system preference
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark');
+    }
+    
+    // Listen for system changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      document.documentElement.classList.toggle('dark', e.matches);
+    });
+  </script>
+  
+</body>
+</html>

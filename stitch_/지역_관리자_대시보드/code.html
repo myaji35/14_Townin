@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Townin Partner Manager Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecb6",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#10221d",
+                        "townin-dark": "#11221e",
+                        "townin-panel": "#23483f",
+                        "townin-accent": "#32675a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #11221e; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #23483f; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #32675a; 
+        }.glass-panel {
+            background: rgba(35, 72, 63, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(50, 103, 90, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-townin-dark text-[#11221e] dark:text-white font-display overflow-hidden">
+<div class="flex h-screen w-full">
+<aside class="w-64 flex-shrink-0 border-r border-[#23483f] bg-[#11221e] flex flex-col hidden md:flex">
+<div class="p-6 pb-2">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border border-[#32675a]" data-alt="Abstract geometric logo representing a connected town" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCA3rav8ci1Zjp7keJV1E-RfpL_NDT0-I93iU-iwZgXga9pRmWreAL4v4rdF8-XKPVj26LJOtBxaG0Z5RcNN2Xo3P2T6FzTWuxNXkZsYoENR6BABqIWxoFh-b7WTS6PsqOaft96gyeqIf-OjVtlxygWBUnnG-NbAU9UWNoWAmGEYKycooW1tjysS6tkFsYLkjj-U_BoDXYud9dLswkgmSLXwSK847OijYLTPNTLcbtt74--ZkzXW44P2HPjbZOjxyBwTut4Ey9db5E");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-lg font-bold leading-normal tracking-tight">Townin Partner</h1>
+<p class="text-[#92c9bb] text-xs font-normal">지역 관리자 (Partner)</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 overflow-y-auto px-4 py-4 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg bg-[#23483f] text-primary group transition-colors" href="#">
+<span class="material-symbols-outlined group-hover:text-white transition-colors">dashboard</span>
+<span class="text-white text-sm font-bold leading-normal">대시보드</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-[#23483f]/50 text-[#92c9bb] group transition-colors" href="#">
+<span class="material-symbols-outlined group-hover:text-white transition-colors">store</span>
+<span class="text-[#e0e0e0] text-sm font-medium leading-normal group-hover:text-white">광고주 목록 관리</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-[#23483f]/50 text-[#92c9bb] group transition-colors" href="#">
+<span class="material-symbols-outlined group-hover:text-white transition-colors">campaign</span>
+<span class="text-[#e0e0e0] text-sm font-medium leading-normal group-hover:text-white">캠페인 생성 지원</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-[#23483f]/50 text-[#92c9bb] group transition-colors" href="#">
+<span class="material-symbols-outlined group-hover:text-white transition-colors">science</span>
+<span class="text-[#e0e0e0] text-sm font-medium leading-normal group-hover:text-white">A/B 테스트 컨설팅</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-[#23483f]/50 text-[#92c9bb] group transition-colors" href="#">
+<span class="material-symbols-outlined group-hover:text-white transition-colors">analytics</span>
+<span class="text-[#e0e0e0] text-sm font-medium leading-normal group-hover:text-white">성과 리포트 생성</span>
+</a>
+</nav>
+<div class="p-4 border-t border-[#23483f]">
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-[#23483f]/50 text-[#92c9bb] group transition-colors" href="#">
+<span class="material-symbols-outlined group-hover:text-white transition-colors">settings</span>
+<span class="text-[#e0e0e0] text-sm font-medium leading-normal group-hover:text-white">설정</span>
+</a>
+</div>
+</aside>
+<div class="flex flex-col flex-1 h-full overflow-hidden relative">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#23483f] px-8 py-4 bg-[#11221e] z-10">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 flex items-center justify-center rounded bg-[#23483f] text-primary">
+<span class="material-symbols-outlined text-xl">location_on</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-white text-lg font-bold leading-tight">서초구 (관리 지역)</h2>
+<span class="text-xs text-[#92c9bb]">Seoul, Seocho-gu • Zone A</span>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full glass-panel">
+<div class="text-[#92c9bb] flex border-none items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-transparent focus:border-none h-full placeholder:text-[#92c9bb] px-4 rounded-l-none border-l-0 pl-2 text-sm font-normal leading-normal" placeholder="광고주/캠페인 검색..." value=""/>
+</div>
+</label>
+<div class="flex gap-3">
+<button class="flex size-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-[#23483f] hover:bg-[#32675a] text-white transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-primary rounded-full"></span>
+</button>
+<button class="hidden md:flex h-10 px-4 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-[#23483f] hover:bg-[#32675a] text-white text-sm font-bold leading-normal transition-colors">
+                        로그아웃
+                    </button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#23483f]" data-alt="Profile picture of the regional manager" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAU0XA39YSTS9P5qAiFf0zlQjSqNtjRGeCE3im5uziwk9HNlCv8SUVywodBLX5pTYaWruj-br_-LoK8A5F-j27-kde5qB3-tpJvLkf7CFXiHQu-efzTeDmX01YpESfJhZxFplRrGilEscjjGDYcesJ9ADAYpYa76vcc0_rtncBgIT003cj53jVdJghqEi7tgtS1u36oi7mDoRJldsAZAelxXpyIv-MQzmABpcn1dJs-WABiaKv60LW9GNLA8Z43Mp63AzOa4iBHKj8");'></div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-4 md:p-8 flex flex-col gap-6">
+<div class="flex justify-between items-end">
+<div>
+<h1 class="text-white text-2xl font-bold leading-tight tracking-tight">파트너 광고주 관리 현황</h1>
+<p class="text-[#92c9bb] text-sm mt-1">최근 업데이트: 2023년 10월 24일 14:30</p>
+</div>
+<button class="flex items-center gap-2 text-primary text-sm font-bold bg-[#13ecb6]/10 px-4 py-2 rounded-lg hover:bg-[#13ecb6]/20 transition-colors">
+<span class="material-symbols-outlined text-lg">refresh</span>
+                    데이터 새로고침
+                </button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="flex flex-col gap-2 rounded-xl p-5 border border-[#32675a] bg-[#192b27] hover:border-primary/50 transition-colors relative overflow-hidden group">
+<div class="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">storefront</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#92c9bb]">person_add</span>
+<p class="text-[#92c9bb] text-sm font-medium">신규 광고주 발굴</p>
+</div>
+<p class="text-white tracking-tight text-3xl font-bold leading-tight mt-1">12<span class="text-base font-normal text-[#92c9bb] ml-1">곳</span></p>
+<div class="flex items-center gap-1 text-primary text-sm font-medium bg-primary/10 w-fit px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-base">trending_up</span>
+                        +4곳 <span class="text-[#92c9bb] font-normal ml-1">이번주</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-5 border border-[#32675a] bg-[#192b27] hover:border-primary/50 transition-colors relative overflow-hidden group">
+<div class="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">campaign</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#92c9bb]">support_agent</span>
+<p class="text-[#92c9bb] text-sm font-medium">캠페인 지원 건수</p>
+</div>
+<p class="text-white tracking-tight text-3xl font-bold leading-tight mt-1">48<span class="text-base font-normal text-[#92c9bb] ml-1">건</span></p>
+<div class="flex items-center gap-1 text-primary text-sm font-medium bg-primary/10 w-fit px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-base">trending_up</span>
+                        +8% <span class="text-[#92c9bb] font-normal ml-1">vs 지난달</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-5 border border-[#32675a] bg-[#192b27] hover:border-primary/50 transition-colors relative overflow-hidden group">
+<div class="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">travel_explore</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#92c9bb]">radar</span>
+<p class="text-[#92c9bb] text-sm font-medium">잠재 영업 기회(회색지대)</p>
+</div>
+<p class="text-white tracking-tight text-3xl font-bold leading-tight mt-1">5<span class="text-base font-normal text-[#92c9bb] ml-1">개 구역</span></p>
+<div class="flex items-center gap-1 text-orange-400 text-sm font-medium bg-orange-400/10 w-fit px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-base">priority_high</span>
+                        영업 필요
+                    </div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-5 border border-[#32675a] bg-[#192b27] hover:border-primary/50 transition-colors relative overflow-hidden group">
+<div class="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">groups</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#92c9bb]">visibility</span>
+<p class="text-[#92c9bb] text-sm font-medium">광고 도달 가능 유저</p>
+</div>
+<p class="text-white tracking-tight text-3xl font-bold leading-tight mt-1">8,500<span class="text-base font-normal text-[#92c9bb] ml-1">명</span></p>
+<div class="flex items-center gap-1 text-primary text-sm font-medium bg-primary/10 w-fit px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-base">trending_up</span>
+                        +5% <span class="text-[#92c9bb] font-normal ml-1">성장세</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[600px] lg:h-[calc(100vh-340px)] min-h-[500px]">
+<div class="lg:col-span-2 flex flex-col rounded-xl border border-[#32675a] bg-[#192b27] overflow-hidden relative group/map">
+<div class="absolute top-4 left-4 z-10 flex flex-col gap-2">
+<div class="flex items-center bg-[#11221e]/90 backdrop-blur text-white px-4 py-2 rounded-lg border border-[#32675a] shadow-lg">
+<span class="material-symbols-outlined text-primary mr-2">layers</span>
+<span class="text-sm font-bold">분석 레이어:</span>
+<select class="bg-transparent border-none text-sm text-[#92c9bb] focus:ring-0 py-0 pl-2 pr-6">
+<option>광고주 밀집 지역</option>
+<option>잠재력 높은 지역 (회색 지대)</option>
+<option>유동인구 히트맵</option>
+</select>
+</div>
+</div>
+<div class="w-full h-full bg-cover bg-center relative" data-alt="Dark themed map of Seocho-gu showing activity heatmaps and patrol zones" data-location="Seocho-gu, Seoul" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDoRJCpUtPsdugM9Qr9Tz_BPNsVSNr8Ss56EizARZvEJ9BSpDd5GIqXhzNW28bbqWRHf6CCoqSqkoLdlckdZFlH0F3TKDLhGntpdqfKfGawYfG4FJLf89FaFCzxZJqzVN5w8JgWt8vyUpeAKX7L03ps3OkBOT2FiE4TKf7JFU9IUH-yfKDXQzHamTd27CT3LWAEH-_RnFp0A8VNWS92C-HGq0zE0HV9ETCzLrYFgPtGqbLkz-agSrOFOddmN5YSzxxLksSKrG8CYEU");'>
+<div class="absolute top-1/4 left-1/3 size-40 rounded-full bg-orange-500/20 blur-2xl animate-pulse"></div>
+<div class="absolute top-[32%] left-[42%] flex flex-col items-center group cursor-pointer z-10">
+<div class="bg-orange-500/20 p-2 rounded-full backdrop-blur-sm border border-orange-500">
+<span class="material-symbols-outlined text-orange-500 text-xl">storefront</span>
+</div>
+<div class="mt-1 px-2 py-1 bg-black/80 rounded text-[10px] text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                강남역 상권 (포화)
+                            </div>
+</div>
+<div class="absolute bottom-1/3 right-1/4 size-32 rounded-full bg-gray-400/10 blur-xl border border-gray-500/30 border-dashed animate-pulse delay-75"></div>
+<div class="absolute bottom-[40%] right-[30%] flex flex-col items-center group cursor-pointer z-10">
+<div class="bg-gray-500/30 p-2 rounded-full backdrop-blur-sm border border-gray-400 hover:bg-gray-500/50 transition-colors">
+<span class="material-symbols-outlined text-gray-300 text-xl">add_location_alt</span>
+</div>
+<div class="mt-1 px-2 py-1 bg-black/80 rounded text-[10px] text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                [기회] 서초 3동 - 광고주 부족
+                            </div>
+</div>
+<div class="absolute bottom-6 right-6 flex flex-col gap-2">
+<button class="size-10 bg-[#11221e] border border-[#32675a] text-white rounded-lg flex items-center justify-center hover:bg-[#23483f] transition-colors shadow-lg">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="size-10 bg-[#11221e] border border-[#32675a] text-white rounded-lg flex items-center justify-center hover:bg-[#23483f] transition-colors shadow-lg">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button class="size-10 bg-[#11221e] border border-[#32675a] text-primary rounded-lg flex items-center justify-center hover:bg-[#23483f] transition-colors shadow-lg mt-2">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 h-full">
+<div class="flex flex-col rounded-xl border border-primary/30 bg-gradient-to-b from-[#192b27] to-[#11221e] p-5 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 size-24 bg-primary/10 rounded-full blur-2xl"></div>
+<div class="flex items-center gap-2 mb-4 relative z-10">
+<div class="p-1.5 bg-primary rounded-md">
+<span class="material-symbols-outlined text-[#11221e] text-lg">psychology</span>
+</div>
+<h3 class="text-white font-bold text-sm">Insurance GraphRAG Ad Insights</h3>
+</div>
+<div class="flex flex-col gap-3 relative z-10 overflow-y-auto pr-1">
+<div class="bg-[#23483f]/50 p-3 rounded-lg border border-[#32675a] hover:border-primary/50 transition-colors cursor-pointer">
+<div class="flex justify-between items-start mb-1">
+<span class="text-primary text-xs font-bold">New Opportunity</span>
+<span class="text-[#92c9bb] text-[10px]">Just now</span>
+</div>
+<p class="text-white text-sm font-medium leading-snug">서초 3동 '회색 지대' 발견</p>
+<p class="text-[#92c9bb] text-xs mt-1">2030 유동인구 급증 지역이나 카페 광고 부재. 신규 카페 영업 추천.</p>
+</div>
+<div class="bg-[#23483f]/50 p-3 rounded-lg border border-[#32675a] hover:border-primary/50 transition-colors cursor-pointer">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[#92c9bb] text-xs font-bold">Optimization</span>
+<span class="text-[#92c9bb] text-[10px]">2h ago</span>
+</div>
+<p class="text-white text-sm font-medium leading-snug">베이커리 캠페인 타겟 조정</p>
+<p class="text-[#92c9bb] text-xs mt-1">오전 출근 시간대 노출 효율 15% 상승 예상. A/B 테스트 제안.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col flex-1 rounded-xl border border-[#32675a] bg-[#192b27] p-5 overflow-hidden">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-white font-bold text-base">파트너 활동 내역</h3>
+<button class="text-[#92c9bb] hover:text-white text-xs">전체보기</button>
+</div>
+<div class="flex-1 overflow-y-auto flex flex-col gap-4 pr-2">
+<div class="flex gap-3">
+<div class="flex flex-col items-center">
+<div class="size-2 bg-primary rounded-full mt-2"></div>
+<div class="w-px h-full bg-[#32675a] mt-1"></div>
+</div>
+<div class="pb-2">
+<p class="text-white text-sm font-medium">신규 광고주 '서초 샐러드' 등록</p>
+<p class="text-[#92c9bb] text-xs">담당자: 김매니저 • 5분 전</p>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="flex flex-col items-center">
+<div class="size-2 bg-purple-400 rounded-full mt-2"></div>
+<div class="w-px h-full bg-[#32675a] mt-1"></div>
+</div>
+<div class="pb-2">
+<p class="text-white text-sm font-medium">여름 할인 캠페인 A/B 테스트 시작</p>
+<p class="text-[#92c9bb] text-xs">광고주: 모던 피트니스 • 30분 전</p>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="flex flex-col items-center">
+<div class="size-2 bg-[#92c9bb] rounded-full mt-2"></div>
+<div class="w-px h-full bg-[#32675a] mt-1"></div>
+</div>
+<div class="pb-2">
+<p class="text-white text-sm font-medium">주간 성과 리포트 발송 완료</p>
+<p class="text-[#92c9bb] text-xs">대상: 전체 파트너 • 2시간 전</p>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="flex flex-col items-center">
+<div class="size-2 bg-gray-500 rounded-full mt-2"></div>
+</div>
+<div>
+<p class="text-white text-sm font-medium">광고 승인 요청: 가을 이벤트</p>
+<p class="text-[#92c9bb] text-xs">광고주: 드림 학원 • 3시간 전</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

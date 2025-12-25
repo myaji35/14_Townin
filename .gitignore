@@ -1,0 +1,122 @@
+# === OS Files ===
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# === IDE & Editor ===
+.vscode/
+.idea/
+*.code-workspace
+.history/
+.vscode-upload.json
+
+# === Node.js / JavaScript ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+.npm
+.eslintcache
+.node_repl_history
+*.tgz
+.yarn-integrity
+
+# === Build & Dist ===
+dist/
+build/
+out/
+*.log
+
+# === Environment Variables ===
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# === NestJS Backend ===
+townin-platform/backend/dist/
+townin-platform/backend/node_modules/
+townin-platform/backend/.env
+townin-platform/backend/uploads/
+
+# === React Web (Vite) ===
+townin-platform/web/dist/
+townin-platform/web/node_modules/
+townin-platform/web/.env
+townin-platform/web/.vite/
+
+# === Flutter ===
+townin-platform/townin_app/.dart_tool/
+townin-platform/townin_app/.flutter-plugins
+townin-platform/townin_app/.flutter-plugins-dependencies
+townin-platform/townin_app/.packages
+townin-platform/townin_app/build/
+townin-platform/townin_app/pubspec.lock
+townin-platform/townin_app/*.iml
+townin-platform/townin_app/.gradle/
+townin-platform/townin_app/android/.gradle/
+townin-platform/townin_app/android/app/google-services.json
+townin-platform/townin_app/ios/Pods/
+townin-platform/townin_app/ios/.symlinks/
+townin-platform/townin_app/ios/Flutter/flutter_export_environment.sh
+townin-platform/townin_app/ios/Runner.xcworkspace/xcuserdata/
+townin-platform/townin_app/ios/Runner.xcodeproj/xcuserdata/
+townin-platform/townin_app/macos/Pods/
+townin-platform/townin_app/.flutter-plugins-dependencies
+townin-platform/townin_app/*.g.dart
+townin-platform/townin_app/*.freezed.dart
+
+# === Docker ===
+townin-platform/docker-data/
+
+# === Database ===
+*.db
+*.sqlite
+*.sqlite3
+
+# === Validation MVP ===
+validation-mvp/*/node_modules/
+validation-mvp/*/.env
+validation-mvp/*/venv/
+validation-mvp/*/__pycache__/
+validation-mvp/*/.pytest_cache/
+
+# === pm4py-action-items ===
+pm4py-action-items/node_modules/
+pm4py-action-items/.next/
+pm4py-action-items/.env
+pm4py-action-items/out/
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv
+
+# === Testing ===
+coverage/
+.nyc_output/
+*.lcov
+.cache/
+
+# === Temporary Files ===
+*.tmp
+*.temp
+tmp/
+temp/

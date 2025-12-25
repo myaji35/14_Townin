@@ -1,0 +1,102 @@
+# Docker Compose for Townin Platform Backend Infrastructure
+
+services:
+  # PostgreSQL with PostGIS
+  postgres:
+    image: postgis/postgis:15-3.3
+    container_name: townin-postgres
+    environment:
+      POSTGRES_DB: townin
+      POSTGRES_USER: townin
+      POSTGRES_PASSWORD: townin123
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init-postgis.sql:/docker-entrypoint-initdb.d/01-init-postgis.sql
+    networks:
+      - townin-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U townin"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis for caching
+  redis:
+    image: redis:7-alpine
+    container_name: townin-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - townin-network
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  # InfluxDB for time-series IoT data (Phase 2)
+  influxdb:
+    image: influxdb:2.7-alpine
+    container_name: townin-influxdb
+    environment:
+      DOCKER_INFLUXDB_INIT_MODE: setup
+      DOCKER_INFLUXDB_INIT_USERNAME: admin
+      DOCKER_INFLUXDB_INIT_PASSWORD: townin123
+      DOCKER_INFLUXDB_INIT_ORG: townin
+      DOCKER_INFLUXDB_INIT_BUCKET: iot_sensors
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: townin-influx-token-2024
+    ports:
+      - "8086:8086"
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+    networks:
+      - townin-network
+
+  # Neo4j for GraphRAG (Phase 3 - Optional)
+  # neo4j:
+  #   image: neo4j:5.12-community
+  #   container_name: townin-neo4j
+  #   environment:
+  #     NEO4J_AUTH: neo4j/townin123
+  #     NEO4J_PLUGINS: '["apoc"]'
+  #   ports:
+  #     - "7474:7474"
+  #     - "7687:7687"
+  #   volumes:
+  #     - neo4j_data:/data
+  #   networks:
+  #     - townin-network
+
+  # pgAdmin for database management (optional)
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: townin-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@townin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - townin-network
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
+  redis_data:
+  influxdb_data:
+  # neo4j_data:
+  pgadmin_data:
+
+networks:
+  townin-network:
+    driver: bridge

@@ -1,0 +1,424 @@
+# Sprint Status Tracking File
+# Generated: 2025-11-30 21:23:41
+# Project: Townin Platform (타운인)
+# Tracking System: file-based YAML
+# Story Location: /Users/gangseungsig/Documents/02_GitHub/14_Townin Graph/townin-platform/docs/epics/
+
+# ═══════════════════════════════════════════════════════════════════
+# STATUS DEFINITIONS
+# ═══════════════════════════════════════════════════════════════════
+#
+# EPIC STATUSES:
+#   backlog         - Epic planned but not yet started
+#   in_progress     - Epic actively being worked on
+#   done            - Epic completed (all stories done)
+#   blocked         - Epic cannot proceed (dependency/issue)
+#   on_hold         - Epic paused (deprioritized)
+#
+# STORY STATUSES:
+#   backlog         - Story planned but not yet started
+#   ready           - Story ready to be picked up (dependencies met)
+#   in_progress     - Story actively being worked on
+#   in_review       - Story implementation complete, under review
+#   done            - Story completed and merged
+#   blocked         - Story cannot proceed (dependency/technical issue)
+#   skipped         - Story intentionally skipped
+#
+# RETROSPECTIVE STATUSES:
+#   pending         - Retrospective not yet scheduled
+#   scheduled       - Retrospective meeting scheduled
+#   completed       - Retrospective completed, notes documented
+#   optional        - Retrospective not required for this epic
+#
+# ═══════════════════════════════════════════════════════════════════
+
+generated: 2025-11-30
+project: Townin Platform
+tracking_system: file-system
+story_location: townin-platform/docs/epics
+
+# ═══════════════════════════════════════════════════════════════════
+# DEVELOPMENT STATUS
+# ═══════════════════════════════════════════════════════════════════
+
+development_status:
+
+  # ─────────────────────────────────────────────────────────────────
+  # PHASE 0 - COMPLETED (Admin Dashboard Foundation)
+  # ─────────────────────────────────────────────────────────────────
+
+  epic-001-admin-dashboard-foundation: done
+  epic-001-admin-dashboard-foundation-story-1-1: done
+  epic-001-admin-dashboard-foundation-story-1-2: done
+  epic-001-admin-dashboard-foundation-story-1-3: done
+  epic-001-admin-dashboard-foundation-retrospective: completed
+
+  epic-002-user-management-system: done
+  epic-002-user-management-system-story-2-1: done
+  epic-002-user-management-system-story-2-2: done
+  epic-002-user-management-system-story-2-3: done
+  epic-002-user-management-system-story-2-4: done
+  epic-002-user-management-system-story-2-5: done
+  epic-002-user-management-system-story-2-6: done
+  epic-002-user-management-system-story-2-7: done
+  epic-002-user-management-system-story-2-8: done
+  epic-002-user-management-system-retrospective: completed
+
+  epic-003-flyer-statistics-dashboard: done
+  epic-003-flyer-statistics-dashboard-story-3-1: done
+  epic-003-flyer-statistics-dashboard-story-3-2: done
+  epic-003-flyer-statistics-dashboard-story-3-3: done
+  epic-003-flyer-statistics-dashboard-story-3-4: done
+  epic-003-flyer-statistics-dashboard-story-3-5: done
+  epic-003-flyer-statistics-dashboard-retrospective: completed
+
+  epic-004-region-management-system: done
+  epic-004-region-management-system-story-4-1: done
+  epic-004-region-management-system-story-4-2: done
+  epic-004-region-management-system-story-4-3: done
+  epic-004-region-management-system-story-4-4: done
+  epic-004-region-management-system-story-4-5: done
+  epic-004-region-management-system-story-4-6: done
+  epic-004-region-management-system-story-4-7: done
+  epic-004-region-management-system-retrospective: completed
+
+  epic-005-platform-activity-monitoring: done
+  epic-005-platform-activity-monitoring-story-5-1: done
+  epic-005-platform-activity-monitoring-story-5-2: done
+  epic-005-platform-activity-monitoring-story-5-3: done
+  epic-005-platform-activity-monitoring-story-5-4: done
+  epic-005-platform-activity-monitoring-story-5-5: done
+  epic-005-platform-activity-monitoring-story-5-6: done
+  epic-005-platform-activity-monitoring-retrospective: completed
+
+
+  # ─────────────────────────────────────────────────────────────────
+  # PHASE 1 - CORE INFRASTRUCTURE
+  # ─────────────────────────────────────────────────────────────────
+
+  core-001-authentication-authorization-system: done
+  core-001-authentication-authorization-system-story-1-1: done
+  core-001-authentication-authorization-system-story-1-2: done
+  core-001-authentication-authorization-system-story-1-3: done
+  core-001-authentication-authorization-system-story-1-4: done
+  core-001-authentication-authorization-system-story-1-5: done
+  core-001-authentication-authorization-system-story-1-6: done
+  core-001-authentication-authorization-system-story-1-7: done
+  core-001-authentication-authorization-system-story-1-8: done
+  core-001-authentication-authorization-system-story-1-9: done
+  core-001-authentication-authorization-system-story-1-10: done
+  core-001-authentication-authorization-system-retrospective: optional
+
+  core-002-geospatial-data-infrastructure: done
+  core-002-geospatial-data-infrastructure-story-2-1: done
+  core-002-geospatial-data-infrastructure-story-2-2: done
+  core-002-geospatial-data-infrastructure-story-2-3: done
+  core-002-geospatial-data-infrastructure-story-2-4: done
+  core-002-geospatial-data-infrastructure-story-2-5: done
+  core-002-geospatial-data-infrastructure-story-2-6: done
+  core-002-geospatial-data-infrastructure-story-2-7: done
+  core-002-geospatial-data-infrastructure-story-2-8: done
+  core-002-geospatial-data-infrastructure-retrospective: optional
+
+  core-003-public-data-integration: done
+  core-003-public-data-integration-story-3-1: done
+  core-003-public-data-integration-story-3-2: done
+  core-003-public-data-integration-story-3-3: done
+  core-003-public-data-integration-story-3-4: done
+  core-003-public-data-integration-story-3-5: done
+  core-003-public-data-integration-story-3-6: done
+  core-003-public-data-integration-story-3-7: done
+  core-003-public-data-integration-story-3-8: done
+  core-003-public-data-integration-story-3-9: done
+  core-003-public-data-integration-story-3-10: done
+  core-003-public-data-integration-retrospective: optional
+
+  core-004-realtime-notification-system: done
+  core-004-realtime-notification-system-story-4-1: done
+  core-004-realtime-notification-system-story-4-2: done
+  core-004-realtime-notification-system-story-4-3: done
+  core-004-realtime-notification-system-story-4-4: done
+  core-004-realtime-notification-system-story-4-5: done
+  core-004-realtime-notification-system-story-4-6: done
+  core-004-realtime-notification-system-story-4-7: done
+  core-004-realtime-notification-system-story-4-8: done
+  core-004-realtime-notification-system-story-4-9: done
+  core-004-realtime-notification-system-story-4-10: done
+  core-004-realtime-notification-system-retrospective: optional
+
+  core-005-file-upload-cdn: done
+  core-005-file-upload-cdn-story-5-1: done
+  core-005-file-upload-cdn-story-5-2: done
+  core-005-file-upload-cdn-story-5-3: done
+  core-005-file-upload-cdn-story-5-4: done
+  core-005-file-upload-cdn-story-5-5: done
+  core-005-file-upload-cdn-story-5-6: done
+  core-005-file-upload-cdn-story-5-7: done
+  core-005-file-upload-cdn-story-5-8: done
+  core-005-file-upload-cdn-story-5-9: done
+  core-005-file-upload-cdn-story-5-10: done
+  core-005-file-upload-cdn-retrospective: optional
+
+  core-006-logging-monitoring: done
+  core-006-logging-monitoring-story-6-1: done
+  core-006-logging-monitoring-story-6-2: done
+  core-006-logging-monitoring-story-6-3: done
+  core-006-logging-monitoring-story-6-4: done
+  core-006-logging-monitoring-story-6-5: done
+  core-006-logging-monitoring-story-6-6: done
+  core-006-logging-monitoring-story-6-7: done
+  core-006-logging-monitoring-story-6-8: done
+  core-006-logging-monitoring-story-6-9: done
+  core-006-logging-monitoring-story-6-10: done
+  core-006-logging-monitoring-retrospective: optional
+
+
+  # ─────────────────────────────────────────────────────────────────
+  # PHASE 1 - USER APP
+  # ─────────────────────────────────────────────────────────────────
+
+  usr-001-user-onboarding: in_progress  # Backend done, Frontend pending
+  usr-001-user-onboarding-story-1-1: backlog  # Frontend: Splash screen
+  usr-001-user-onboarding-story-1-2: backlog  # Frontend: Intro slides
+  usr-001-user-onboarding-story-1-3: backlog  # Frontend: Social login buttons
+  usr-001-user-onboarding-story-1-4: done     # Backend: Social OAuth integration (CORE-001)
+  usr-001-user-onboarding-story-1-5: backlog  # Frontend: Location permission
+  usr-001-user-onboarding-story-1-6: done     # Backend: UserHub CRUD APIs
+  usr-001-user-onboarding-story-1-7: backlog  # Frontend: 3-Hub selection UI
+  usr-001-user-onboarding-story-1-8: backlog  # Frontend: Address search integration
+  usr-001-user-onboarding-story-1-9: backlog  # Frontend: Hub nickname input
+  usr-001-user-onboarding-story-1-10: backlog # Frontend: Onboarding completion
+  usr-001-user-onboarding-retrospective: optional
+
+  usr-002-user-profile-hub-management: backlog
+  usr-002-user-profile-hub-management-story-2-1: backlog
+  usr-002-user-profile-hub-management-story-2-2: backlog
+  usr-002-user-profile-hub-management-story-2-3: backlog
+  usr-002-user-profile-hub-management-story-2-4: backlog
+  usr-002-user-profile-hub-management-story-2-5: backlog
+  usr-002-user-profile-hub-management-story-2-6: backlog
+  usr-002-user-profile-hub-management-story-2-7: backlog
+  usr-002-user-profile-hub-management-story-2-8: backlog
+  usr-002-user-profile-hub-management-story-2-9: backlog
+  usr-002-user-profile-hub-management-story-2-10: backlog
+  usr-002-user-profile-hub-management-retrospective: optional
+
+  usr-003-safety-map-cctv: in_progress  # Backend done, Frontend pending
+  usr-003-safety-map-cctv-story-3-1: backlog  # Frontend: Map initialization
+  usr-003-safety-map-cctv-story-3-2: done     # Backend: CCTV nearby search API
+  usr-003-safety-map-cctv-story-3-3: backlog  # Frontend: CCTV markers on map
+  usr-003-safety-map-cctv-story-3-4: done     # Backend: CCTV filter APIs
+  usr-003-safety-map-cctv-story-3-5: backlog  # Frontend: CCTV detail bottom sheet
+  usr-003-safety-map-cctv-story-3-6: backlog  # Frontend: My location button
+  usr-003-safety-map-cctv-story-3-7: backlog  # Frontend: Search by address
+  usr-003-safety-map-cctv-story-3-8: backlog  # Frontend: Route to CCTV
+  usr-003-safety-map-cctv-story-3-9: backlog  # Frontend: CCTV clustering
+  usr-003-safety-map-cctv-story-3-10: backlog # Frontend: Bookmark CCTVs
+  usr-003-safety-map-cctv-retrospective: optional
+
+  usr-004-safety-map-parking: backlog
+  usr-004-safety-map-parking-story-4-1: backlog
+  usr-004-safety-map-parking-story-4-2: backlog
+  usr-004-safety-map-parking-story-4-3: backlog
+  usr-004-safety-map-parking-story-4-4: backlog
+  usr-004-safety-map-parking-story-4-5: backlog
+  usr-004-safety-map-parking-story-4-6: backlog
+  usr-004-safety-map-parking-story-4-7: backlog
+  usr-004-safety-map-parking-story-4-8: backlog
+  usr-004-safety-map-parking-story-4-9: backlog
+  usr-004-safety-map-parking-story-4-10: backlog
+  usr-004-safety-map-parking-retrospective: optional
+
+  usr-005-safety-map-disaster: backlog
+  usr-005-safety-map-disaster-story-5-1: backlog
+  usr-005-safety-map-disaster-story-5-2: backlog
+  usr-005-safety-map-disaster-story-5-3: backlog
+  usr-005-safety-map-disaster-story-5-4: backlog
+  usr-005-safety-map-disaster-story-5-5: backlog
+  usr-005-safety-map-disaster-story-5-6: backlog
+  usr-005-safety-map-disaster-story-5-7: backlog
+  usr-005-safety-map-disaster-story-5-8: backlog
+  usr-005-safety-map-disaster-story-5-9: backlog
+  usr-005-safety-map-disaster-story-5-10: backlog
+  usr-005-safety-map-disaster-retrospective: optional
+
+  usr-006-integrated-safety-map: backlog
+  usr-006-integrated-safety-map-story-6-1: backlog
+  usr-006-integrated-safety-map-story-6-2: backlog
+  usr-006-integrated-safety-map-story-6-3: backlog
+  usr-006-integrated-safety-map-story-6-4: backlog
+  usr-006-integrated-safety-map-story-6-5: backlog
+  usr-006-integrated-safety-map-story-6-6: backlog
+  usr-006-integrated-safety-map-story-6-7: backlog
+  usr-006-integrated-safety-map-story-6-8: backlog
+  usr-006-integrated-safety-map-story-6-9: backlog
+  usr-006-integrated-safety-map-story-6-10: backlog
+  usr-006-integrated-safety-map-retrospective: optional
+
+  usr-007-digital-flyer-viewer: in_progress  # Backend done, Frontend pending
+  usr-007-digital-flyer-viewer-story-7-1: backlog  # Frontend: Flyer list view
+  usr-007-digital-flyer-viewer-story-7-2: done     # Backend: Flyer search/filter APIs
+  usr-007-digital-flyer-viewer-story-7-3: done     # Backend: Flyer detail API
+  usr-007-digital-flyer-viewer-story-7-4: done     # Backend: Like/Bookmark APIs
+  usr-007-digital-flyer-viewer-story-7-5: backlog  # Frontend: Flyer detail page
+  usr-007-digital-flyer-viewer-story-7-6: backlog  # Frontend: Like button
+  usr-007-digital-flyer-viewer-story-7-7: backlog  # Frontend: Bookmark button
+  usr-007-digital-flyer-viewer-story-7-8: done     # Backend: View/Click tracking
+  usr-007-digital-flyer-viewer-story-7-9: backlog  # Frontend: Category filter
+  usr-007-digital-flyer-viewer-story-7-10: backlog # Frontend: Location filter
+  usr-007-digital-flyer-viewer-retrospective: optional
+
+  usr-008-home-dashboard: in_progress  # Backend done, Frontend pending
+  usr-008-home-dashboard-story-8-1: backlog  # Frontend: Dashboard UI layout
+  usr-008-home-dashboard-story-8-2: done     # Backend: Dashboard summary API
+  usr-008-home-dashboard-story-8-3: backlog  # Frontend: Points widget
+  usr-008-home-dashboard-story-8-4: backlog  # Frontend: Hubs widget
+  usr-008-home-dashboard-story-8-5: done     # Backend: Nearby flyers/signboards count
+  usr-008-home-dashboard-story-8-6: backlog  # Frontend: Quick actions
+  usr-008-home-dashboard-story-8-7: done     # Backend: Personalized recommendations API
+  usr-008-home-dashboard-story-8-8: backlog  # Frontend: Recommended flyers carousel
+  usr-008-home-dashboard-story-8-9: backlog  # Frontend: Refresh indicator
+  usr-008-home-dashboard-story-8-10: backlog # Frontend: Navigation to details
+  usr-008-home-dashboard-retrospective: optional
+
+  usr-009-user-points-rewards: in_progress  # Backend done, Frontend pending
+  usr-009-user-points-rewards-story-9-1: done     # Backend: Points entity & transactions
+  usr-009-user-points-rewards-story-9-2: done     # Backend: Earn points API
+  usr-009-user-points-rewards-story-9-3: done     # Backend: Spend points API
+  usr-009-user-points-rewards-story-9-4: done     # Backend: Points history API
+  usr-009-user-points-rewards-story-9-5: done     # Backend: Event-based points (flyer view/click)
+  usr-009-user-points-rewards-story-9-6: backlog  # Frontend: Points balance display
+  usr-009-user-points-rewards-story-9-7: backlog  # Frontend: Points history page
+  usr-009-user-points-rewards-story-9-8: backlog  # Frontend: Earn points notification
+  usr-009-user-points-rewards-story-9-9: backlog  # Frontend: Points shop (future)
+  usr-009-user-points-rewards-story-9-10: backlog # Frontend: Redeem points flow
+  usr-009-user-points-rewards-retrospective: optional
+
+  usr-010-digital-signboard-viewer: in_progress  # Backend done, Frontend pending
+  usr-010-digital-signboard-viewer-story-10-1: backlog  # Frontend: Signboard list view
+  usr-010-digital-signboard-viewer-story-10-2: done     # Backend: Open signboards API
+  usr-010-digital-signboard-viewer-story-10-3: backlog  # Frontend: Signboard detail view
+  usr-010-digital-signboard-viewer-story-10-4: done     # Backend: Signboard by location
+  usr-010-digital-signboard-viewer-story-10-5: backlog  # Frontend: Filter by location
+  usr-010-digital-signboard-viewer-story-10-6: backlog  # Frontend: Contact merchant button
+  usr-010-digital-signboard-viewer-story-10-7: done     # Backend: View/Click tracking
+  usr-010-digital-signboard-viewer-story-10-8: backlog  # Frontend: Nearby signboards map
+  usr-010-digital-signboard-viewer-story-10-9: backlog  # Frontend: Signboard search
+  usr-010-digital-signboard-viewer-story-10-10: backlog # Frontend: Share signboard
+  usr-010-digital-signboard-viewer-retrospective: optional
+
+
+  # ─────────────────────────────────────────────────────────────────
+  # PHASE 1 - MERCHANT APP
+  # ─────────────────────────────────────────────────────────────────
+
+  mrc-001-merchant-onboarding: in_progress  # Backend done, Frontend pending
+  mrc-001-merchant-onboarding-story-1-1: backlog  # Frontend: Business info form
+  mrc-001-merchant-onboarding-story-1-2: done     # Backend: Merchant CRUD APIs
+  mrc-001-merchant-onboarding-story-1-3: backlog  # Frontend: Business category selection
+  mrc-001-merchant-onboarding-story-1-4: backlog  # Frontend: Shop location picker
+  mrc-001-merchant-onboarding-story-1-5: done     # Backend: File upload integration (CORE-005)
+  mrc-001-merchant-onboarding-story-1-6: backlog  # Frontend: Logo upload
+  mrc-001-merchant-onboarding-story-1-7: backlog  # Frontend: Operating hours picker
+  mrc-001-merchant-onboarding-story-1-8: done     # Backend: Admin approval workflow
+  mrc-001-merchant-onboarding-story-1-9: backlog  # Frontend: Approval status screen
+  mrc-001-merchant-onboarding-story-1-10: backlog # Frontend: Profile edit
+  mrc-001-merchant-onboarding-retrospective: optional
+
+  mrc-002-digital-signboard-management: in_progress  # Backend done, Frontend pending
+  mrc-002-digital-signboard-management-story-1-0: backlog  # Frontend: Create signboard form
+  mrc-002-digital-signboard-management-story-2-0: done     # Backend: Signboard CRUD APIs
+  mrc-002-digital-signboard-management-story-3-0: backlog  # Frontend: Design customization
+  mrc-002-digital-signboard-management-story-4-0: done     # Backend: Open/Close signboard API
+  mrc-002-digital-signboard-management-story-5-0: backlog  # Frontend: Toggle open/close
+  mrc-002-digital-signboard-management-story-6-0: backlog  # Frontend: Preview signboard
+  mrc-002-digital-signboard-management-story-7-0: done     # Backend: Signboard stats API
+  mrc-002-digital-signboard-management-story-8-0: backlog  # Frontend: Stats dashboard
+  mrc-002-digital-signboard-management-story-9-0: done     # Backend: View/Click tracking
+  mrc-002-digital-signboard-management-story-10-0: backlog # Frontend: Edit signboard
+  mrc-002-digital-signboard-management-retrospective: optional
+
+  mrc-003-flyer-creation-management: in_progress  # Backend done, Frontend pending
+  mrc-003-flyer-creation-management-story-1-0: backlog  # Frontend: Flyer creation form
+  mrc-003-flyer-creation-management-story-2-0: done     # Backend: Flyer CRUD APIs (already existed)
+  mrc-003-flyer-creation-management-story-3-0: backlog  # Frontend: Product list editor
+  mrc-003-flyer-creation-management-story-4-0: done     # Backend: Draft save/publish
+  mrc-003-flyer-creation-management-story-5-0: backlog  # Frontend: Image upload
+  mrc-003-flyer-creation-management-story-6-0: done     # Backend: Admin approval workflow
+  mrc-003-flyer-creation-management-story-7-0: backlog  # Frontend: Flyer preview
+  mrc-003-flyer-creation-management-story-8-0: backlog  # Frontend: My flyers list
+  mrc-003-flyer-creation-management-story-9-0: done     # Backend: View/Click stats tracking
+  mrc-003-flyer-creation-management-story-10-0: backlog # Frontend: Edit/Delete flyer
+  mrc-003-flyer-creation-management-retrospective: optional
+
+  mrc-004-target-area-selection: in_progress  # Backend done, Frontend pending
+  mrc-004-target-area-selection-story-1-0: backlog  # Frontend: H3 map visualization
+  mrc-004-target-area-selection-story-2-0: done     # Backend: H3 cell selection API
+  mrc-004-target-area-selection-story-3-0: done     # Backend: Reach estimation API
+  mrc-004-target-area-selection-story-4-0: done     # Backend: Cost calculation
+  mrc-004-target-area-selection-story-5-0: backlog  # Frontend: Cell selection UI
+  mrc-004-target-area-selection-story-6-0: done     # Backend: Target area boundaries API
+  mrc-004-target-area-selection-story-7-0: backlog  # Frontend: Reach/Cost summary
+  mrc-004-target-area-selection-story-8-0: backlog  # Frontend: Confirm target areas
+  mrc-004-target-area-selection-retrospective: optional
+
+  mrc-005-merchant-dashboard: in_progress  # Backend done, Frontend pending
+  mrc-005-merchant-dashboard-story-1-0: backlog  # Frontend: Dashboard layout
+  mrc-005-merchant-dashboard-story-2-0: done     # Backend: Dashboard overview API
+  mrc-005-merchant-dashboard-story-3-0: done     # Backend: Flyer statistics API
+  mrc-005-merchant-dashboard-story-4-0: done     # Backend: Signboard statistics API
+  mrc-005-merchant-dashboard-story-5-0: done     # Backend: Performance metrics API
+  mrc-005-merchant-dashboard-story-6-0: done     # Backend: Revenue estimation API
+  mrc-005-merchant-dashboard-story-7-0: backlog  # Frontend: Charts & graphs
+  mrc-005-merchant-dashboard-story-8-0: backlog  # Frontend: Top flyers widget
+  mrc-005-merchant-dashboard-story-9-0: backlog  # Frontend: Quick stats cards
+  mrc-005-merchant-dashboard-story-10-0: backlog # Frontend: Export reports
+  mrc-005-merchant-dashboard-retrospective: optional
+
+
+  # ─────────────────────────────────────────────────────────────────
+  # PHASE 1 - SECURITY GUARD
+  # ─────────────────────────────────────────────────────────────────
+
+  sgd-001-security-guard-recruitment: backlog
+  sgd-001-security-guard-recruitment-story-1-0: backlog
+  sgd-001-security-guard-recruitment-story-2-0: backlog
+  sgd-001-security-guard-recruitment-story-3-0: backlog
+  sgd-001-security-guard-recruitment-story-4-0: backlog
+  sgd-001-security-guard-recruitment-story-5-0: backlog
+  sgd-001-security-guard-recruitment-story-6-0: backlog
+  sgd-001-security-guard-recruitment-story-7-0: backlog
+  sgd-001-security-guard-recruitment-story-8-0: backlog
+  sgd-001-security-guard-recruitment-story-9-0: backlog
+  sgd-001-security-guard-recruitment-story-10-0: backlog
+  sgd-001-security-guard-recruitment-retrospective: optional
+
+  sgd-002-local-merchant-management: backlog
+  sgd-002-local-merchant-management-story-1-0: backlog
+  sgd-002-local-merchant-management-story-2-0: backlog
+  sgd-002-local-merchant-management-story-3-0: backlog
+  sgd-002-local-merchant-management-story-4-0: backlog
+  sgd-002-local-merchant-management-story-5-0: backlog
+  sgd-002-local-merchant-management-story-6-0: backlog
+  sgd-002-local-merchant-management-story-7-0: backlog
+  sgd-002-local-merchant-management-story-8-0: backlog
+  sgd-002-local-merchant-management-story-9-0: backlog
+  sgd-002-local-merchant-management-story-10-0: backlog
+  sgd-002-local-merchant-management-retrospective: optional
+
+  sgd-003-community-engagement: backlog
+  sgd-003-community-engagement-story-1-0: backlog
+  sgd-003-community-engagement-story-2-0: backlog
+  sgd-003-community-engagement-story-3-0: backlog
+  sgd-003-community-engagement-story-4-0: backlog
+  sgd-003-community-engagement-story-5-0: backlog
+  sgd-003-community-engagement-story-6-0: backlog
+  sgd-003-community-engagement-story-7-0: backlog
+  sgd-003-community-engagement-story-8-0: backlog
+  sgd-003-community-engagement-story-9-0: backlog
+  sgd-003-community-engagement-story-10-0: backlog
+  sgd-003-community-engagement-retrospective: optional
+
+# ═══════════════════════════════════════════════════════════════════
+# END OF SPRINT STATUS
+# ═══════════════════════════════════════════════════════════════════

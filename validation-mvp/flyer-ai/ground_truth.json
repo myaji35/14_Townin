@@ -1,0 +1,29 @@
+{
+  "sample_flyer_1.jpg": {
+    "products": [
+      {
+        "product_name": "김치찌개용 김치",
+        "price": "9900",
+        "unit": "원",
+        "promotion": "1+1"
+      },
+      {
+        "product_name": "삼겹살",
+        "price": "12900",
+        "unit": "원/kg",
+        "promotion": null
+      }
+    ]
+  },
+  "sample_flyer_2.jpg": {
+    "products": [
+      {
+        "product_name": "화장품 세트",
+        "price": "29900",
+        "unit": "원",
+        "original_price": "59800",
+        "promotion": "50% 할인"
+      }
+    ]
+  }
+}

@@ -1,0 +1,3697 @@
+{
+  "metadata": {
+    "start_date": "2024-11-24",
+    "duration_days": 7,
+    "total_events": 409,
+    "sensors": {
+      "living_room": "거실",
+      "bedroom": "안방",
+      "kitchen": "부엌",
+      "bathroom": "화장실",
+      "entrance": "현관"
+    }
+  },
+  "events": [
+    {
+      "timestamp": "2024-11-24T06:40:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T06:41:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T06:41:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_open",
+      "battery": 92,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T06:49:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_close",
+      "battery": 89,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T06:50:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T07:58:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T08:00:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T08:03:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T08:05:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 91,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T08:10:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T08:17:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T08:20:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T08:28:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T08:58:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T09:12:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T09:25:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T09:38:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T10:07:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 86,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T10:31:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T10:43:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T11:11:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T11:22:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T11:34:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T11:56:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T12:26:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T12:30:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T12:33:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T12:35:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T12:38:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T12:43:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T12:51:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T12:59:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T13:02:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T13:26:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T13:48:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T14:04:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 91,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T14:34:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T15:04:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T15:22:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T15:49:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T16:17:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T16:34:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T16:46:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T17:00:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T18:32:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T18:37:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T18:39:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T18:43:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T18:45:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T18:50:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T18:55:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T19:00:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T19:03:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T19:11:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 91,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T19:15:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T19:19:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T19:32:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T20:07:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T20:38:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T20:59:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T21:21:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T22:00:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T22:00:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_open",
+      "battery": 89,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T22:10:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_close",
+      "battery": 100,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-24T22:13:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 1,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T06:33:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T06:34:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 91,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T06:34:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_open",
+      "battery": 94,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T06:45:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_close",
+      "battery": 96,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T06:47:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T07:36:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T07:38:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T07:40:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T07:43:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T07:45:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 86,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T07:50:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T07:55:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T08:02:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T08:36:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T08:52:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T09:09:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T09:25:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T09:48:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T10:11:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 86,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T10:41:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 86,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T11:03:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T11:20:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 91,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T12:14:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T12:17:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T12:22:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T12:24:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T12:26:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 86,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T12:28:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T12:31:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T12:36:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T12:40:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T12:43:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T12:49:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T13:14:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T13:38:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T14:05:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T14:21:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 91,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T14:32:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T14:43:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T15:09:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 86,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T15:35:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T15:47:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T16:09:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T16:37:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T17:00:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T18:51:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T18:55:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T18:58:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T19:03:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T19:05:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T19:10:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T19:17:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 91,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T19:24:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T19:51:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T20:22:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T20:53:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T21:27:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T22:00:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T22:00:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_open",
+      "battery": 94,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T22:10:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_close",
+      "battery": 88,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-25T22:13:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 2,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T06:07:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T06:10:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T06:10:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_open",
+      "battery": 93,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T06:19:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_close",
+      "battery": 91,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T06:21:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 91,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T07:28:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T07:33:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T07:35:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T07:40:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T07:42:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T07:46:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T07:50:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T07:55:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T08:00:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T08:08:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T08:15:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 86,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T08:28:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T08:51:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 86,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T09:10:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 86,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T09:31:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T09:44:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T10:13:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T10:28:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T10:38:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T11:01:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T11:16:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T11:27:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T12:26:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T12:30:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T12:33:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T12:36:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T12:40:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T12:42:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T12:47:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T12:54:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T12:57:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T13:02:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T13:09:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T13:26:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T13:55:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T14:15:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T14:37:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T14:48:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T15:14:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T15:37:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T16:06:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T16:25:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T16:45:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T17:12:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 91,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T18:51:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T18:54:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T18:59:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T19:03:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T19:06:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T19:10:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T19:15:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T19:18:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T19:21:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T19:26:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T19:30:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T19:34:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 91,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T19:51:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T20:11:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T20:46:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T21:20:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 91,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T22:00:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T22:00:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_open",
+      "battery": 97,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T22:06:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_close",
+      "battery": 89,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-26T22:08:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 3,
+      "pattern": "normal_active"
+    },
+    {
+      "timestamp": "2024-11-27T07:49:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T07:50:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T07:50:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_open",
+      "battery": 99,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T07:55:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_close",
+      "battery": 92,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T07:56:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T08:49:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T08:53:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T08:58:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T09:01:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T09:06:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T09:09:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T09:14:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T09:19:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T09:27:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T09:31:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T09:49:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T10:29:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T11:03:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T11:55:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 91,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T12:27:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T13:00:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T13:04:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T13:07:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T13:09:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T13:14:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T13:18:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T13:23:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T13:28:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T13:36:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T13:38:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T13:44:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T13:50:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T13:57:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T14:00:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T14:20:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T14:48:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T15:38:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T16:35:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T17:06:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T17:46:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T19:00:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T19:04:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T19:08:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T19:13:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T19:15:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T19:18:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T19:20:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T19:25:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 91,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T19:32:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T19:36:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T21:00:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T21:00:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_open",
+      "battery": 88,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T21:09:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_close",
+      "battery": 91,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-27T21:14:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 4,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T07:49:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T07:50:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T07:50:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_open",
+      "battery": 90,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T07:59:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_close",
+      "battery": 88,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T08:00:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T08:49:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T08:52:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T08:55:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T08:59:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T09:01:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T09:06:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T09:08:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T09:13:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T09:16:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T09:21:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T09:29:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T09:49:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T10:24:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T11:08:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T11:48:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T12:26:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T13:00:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T13:05:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 91,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T13:09:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T13:13:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T13:17:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T13:20:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T13:22:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T13:30:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T13:36:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T14:00:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T14:00:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T14:50:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T15:45:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T16:24:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T17:16:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T19:00:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T19:04:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T19:08:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T19:13:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T19:17:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T19:20:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T19:23:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T19:28:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T19:32:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T19:37:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T21:00:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T21:00:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_open",
+      "battery": 91,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T21:07:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_close",
+      "battery": 92,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-28T21:11:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 5,
+      "pattern": "normal_low_activity"
+    },
+    {
+      "timestamp": "2024-11-29T06:19:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T06:22:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T06:22:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_open",
+      "battery": 93,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T06:27:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_close",
+      "battery": 86,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T06:29:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T07:39:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T07:41:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T07:46:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T07:51:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T07:56:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 86,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T08:02:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T08:05:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T08:11:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T08:39:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T08:53:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T09:10:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T09:39:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T10:03:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T10:31:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T10:59:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T11:15:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T11:27:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T12:17:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T12:19:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T12:24:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T12:28:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 86,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T12:31:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T12:36:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T12:44:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T12:49:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 91,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T13:17:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-29T13:44:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 6,
+      "pattern": "anomaly_long_inactivity"
+    },
+    {
+      "timestamp": "2024-11-30T06:48:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 86,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T06:49:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T06:49:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_open",
+      "battery": 89,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T06:58:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_close",
+      "battery": 99,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T07:00:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T07:48:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T07:51:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T07:53:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T07:55:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T07:57:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T07:59:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T08:04:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T08:08:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T08:13:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T08:18:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T08:22:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T08:26:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 89,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T08:29:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T08:35:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T08:48:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T09:07:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T09:21:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T09:42:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T10:06:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 91,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T10:23:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T10:46:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T11:11:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T11:41:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T12:04:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T12:09:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T12:14:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T12:17:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 98,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T12:22:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T12:27:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 95,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T12:34:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T12:42:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T13:04:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T13:24:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 86,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T13:53:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T14:23:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T14:35:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T15:05:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T15:20:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 85,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T15:31:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 86,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T15:50:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T16:13:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T16:39:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T16:54:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 87,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T18:57:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T19:00:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 100,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T19:03:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T19:08:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T19:13:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T19:15:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T19:19:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T19:21:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T19:26:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T19:32:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T19:38:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T19:42:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T19:48:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 88,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T19:57:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T20:29:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T21:07:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T21:27:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 97,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T21:55:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 86,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T22:30:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 93,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T22:30:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_open",
+      "battery": 89,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T22:40:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "door_close",
+      "battery": 88,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-11-30T22:42:00",
+      "sensor_id": "bedroom",
+      "sensor_name": "안방",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-12-01T02:25:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-12-01T02:32:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-12-01T02:42:00",
+      "sensor_id": "entrance",
+      "sensor_name": "현관",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-12-01T02:50:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 96,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-12-01T03:03:00",
+      "sensor_id": "bathroom",
+      "sensor_name": "화장실",
+      "event_type": "motion",
+      "battery": 90,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-12-01T03:12:00",
+      "sensor_id": "entrance",
+      "sensor_name": "현관",
+      "event_type": "motion",
+      "battery": 94,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-12-01T03:22:00",
+      "sensor_id": "living_room",
+      "sensor_name": "거실",
+      "event_type": "motion",
+      "battery": 99,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    },
+    {
+      "timestamp": "2024-12-01T03:28:00",
+      "sensor_id": "kitchen",
+      "sensor_name": "부엌",
+      "event_type": "motion",
+      "battery": 92,
+      "day": 7,
+      "pattern": "anomaly_midnight_wandering"
+    }
+  ]
+}

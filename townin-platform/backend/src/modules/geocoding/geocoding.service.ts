@@ -1,0 +1,231 @@
+import { Injectable, Logger, BadRequestException, InternalServerErrorException } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
+import { HttpService } from '@nestjs/axios';
+// import { InjectRedis } from '@nestjs-modules/ioredis';
+// import Redis from 'ioredis';
+import { firstValueFrom } from 'rxjs';
+import {
+  AddressToCoordinatesResponse,
+  CoordinatesToAddressResponse,
+  KakaoAddressSearchResponse,
+  KakaoCoord2AddressResponse,
+} from './dto/geocoding.dto';
+
+@Injectable()
+export class GeocodingService {
+  private readonly logger = new Logger(GeocodingService.name);
+  private readonly kakaoApiKey: string;
+  private readonly kakaoBaseUrl = 'https://dapi.kakao.com/v2/local';
+  private readonly cacheTTL = 30 * 24 * 60 * 60; // 30 days in seconds
+  private requestCount = 0;
+  private readonly dailyLimit = 300000; // Kakao free tier limit
+
+  constructor(
+    private readonly httpService: HttpService,
+    private readonly configService: ConfigService,
+    // @InjectRedis() private readonly redis: Redis,
+  ) {
+    this.kakaoApiKey = this.configService.get<string>('KAKAO_REST_API_KEY');
+    if (!this.kakaoApiKey) {
+      this.logger.warn('KAKAO_REST_API_KEY is not configured. Geocoding service will not work.');
+    }
+  }
+
+  /**
+   * Convert address to coordinates using Kakao Local API
+   * @param address Full address in Korean
+   * @returns Coordinates and region information
+   */
+  async addressToCoordinates(address: string): Promise<AddressToCoordinatesResponse> {
+    // Check cache first (Redis disabled)
+    const cacheKey = `geocode:addr2coord:${address}`;
+    // const cached = await this.redis.get(cacheKey);
+    // if (cached) {
+    //   this.logger.debug(`Cache hit for address: ${address}`);
+    //   return JSON.parse(cached);
+    // }
+
+    // Check rate limit
+    this.checkRateLimit();
+
+    try {
+      const url = `${this.kakaoBaseUrl}/search/address.json`;
+      const response = await firstValueFrom(
+        this.httpService.get<KakaoAddressSearchResponse>(url, {
+          params: { query: address },
+          headers: { Authorization: `KakaoAK ${this.kakaoApiKey}` },
+        }),
+      );
+
+      if (!response.data.documents || response.data.documents.length === 0) {
+        throw new BadRequestException(`Address not found: ${address}`);
+      }
+
+      const doc = response.data.documents[0];
+      const result: AddressToCoordinatesResponse = {
+        address: doc.address.address_name,
+        lat: parseFloat(doc.y),
+        lng: parseFloat(doc.x),
+        region: {
+          city: doc.address.region_1depth_name,
+          district: doc.address.region_2depth_name,
+          neighborhood: doc.address.region_3depth_name,
+        },
+        roadAddress: doc.road_address?.address_name,
+        source: 'kakao',
+      };
+
+      // Cache the result
+      // await // this.redis.setex(cacheKey, this.cacheTTL, JSON.stringify(result));
+      this.requestCount++;
+
+      return result;
+    } catch (error) {
+      if (error instanceof BadRequestException) {
+        throw error;
+      }
+      this.logger.error(`Kakao API error for address ${address}:`, error);
+      throw new InternalServerErrorException('Geocoding service is temporarily unavailable');
+    }
+  }
+
+  /**
+   * Convert coordinates to address using Kakao Local API
+   * @param lat Latitude
+   * @param lng Longitude
+   * @returns Address and region information
+   */
+  async coordinatesToAddress(lat: number, lng: number): Promise<CoordinatesToAddressResponse> {
+    // Validate coordinates
+    if (lat < -90 || lat > 90 || lng < -180 || lng > 180) {
+      throw new BadRequestException('Invalid coordinates');
+    }
+
+    // Check cache first (Redis disabled)
+    const cacheKey = `geocode:coord2addr:${lat.toFixed(6)},${lng.toFixed(6)}`;
+    // const cached = await this.redis.get(cacheKey);
+    // if (cached) {
+    //   this.logger.debug(`Cache hit for coordinates: (${lat}, ${lng})`);
+    //   return JSON.parse(cached);
+    // }
+
+    // Check rate limit
+    this.checkRateLimit();
+
+    try {
+      const url = `${this.kakaoBaseUrl}/geo/coord2address.json`;
+      const response = await firstValueFrom(
+        this.httpService.get<KakaoCoord2AddressResponse>(url, {
+          params: { x: lng, y: lat },
+          headers: { Authorization: `KakaoAK ${this.kakaoApiKey}` },
+        }),
+      );
+
+      if (!response.data.documents || response.data.documents.length === 0) {
+        throw new BadRequestException(`No address found for coordinates: (${lat}, ${lng})`);
+      }
+
+      const doc = response.data.documents[0];
+      const result: CoordinatesToAddressResponse = {
+        lat,
+        lng,
+        address: doc.address.address_name,
+        roadAddress: doc.road_address?.address_name,
+        region: {
+          city: doc.address.region_1depth_name,
+          district: doc.address.region_2depth_name,
+          neighborhood: doc.address.region_3depth_name,
+        },
+        source: 'kakao',
+      };
+
+      // Cache the result
+      // await // this.redis.setex(cacheKey, this.cacheTTL, JSON.stringify(result));
+      this.requestCount++;
+
+      return result;
+    } catch (error) {
+      if (error instanceof BadRequestException) {
+        throw error;
+      }
+      this.logger.error(`Kakao API error for coordinates (${lat}, ${lng}):`, error);
+      throw new InternalServerErrorException('Reverse geocoding service is temporarily unavailable');
+    }
+  }
+
+  /**
+   * Batch geocode multiple addresses (with rate limiting awareness)
+   * @param addresses Array of addresses
+   * @returns Array of geocoding results
+   */
+  async batchAddressToCoordinates(addresses: string[]): Promise<AddressToCoordinatesResponse[]> {
+    const results: AddressToCoordinatesResponse[] = [];
+
+    // Process in chunks to avoid rate limiting
+    const chunkSize = 100;
+    for (let i = 0; i < addresses.length; i += chunkSize) {
+      const chunk = addresses.slice(i, i + chunkSize);
+      const chunkResults = await Promise.all(
+        chunk.map(address =>
+          this.addressToCoordinates(address).catch(err => {
+            this.logger.warn(`Failed to geocode address: ${address}`, err.message);
+            return null;
+          }),
+        ),
+      );
+
+      results.push(...chunkResults.filter(r => r !== null));
+
+      // Add delay between chunks to respect rate limits
+      if (i + chunkSize < addresses.length) {
+        await this.delay(1000); // 1 second delay between chunks
+      }
+    }
+
+    return results;
+  }
+
+  /**
+   * Get current API usage statistics
+   */
+  getUsageStats() {
+    return {
+      requestCount: this.requestCount,
+      dailyLimit: this.dailyLimit,
+      remaining: this.dailyLimit - this.requestCount,
+      percentUsed: ((this.requestCount / this.dailyLimit) * 100).toFixed(2),
+    };
+  }
+
+  /**
+   * Check if rate limit is exceeded
+   */
+  private checkRateLimit() {
+    if (this.requestCount >= this.dailyLimit) {
+      throw new InternalServerErrorException(
+        'Daily API rate limit exceeded. Please try again tomorrow.',
+      );
+    }
+
+    if (this.requestCount >= this.dailyLimit * 0.9) {
+      this.logger.warn(
+        `Approaching API rate limit: ${this.requestCount}/${this.dailyLimit} requests used`,
+      );
+    }
+  }
+
+  /**
+   * Reset daily request counter (should be called by a cron job at midnight KST)
+   */
+  resetDailyCounter() {
+    this.logger.log(`Resetting daily counter. Previous count: ${this.requestCount}`);
+    this.requestCount = 0;
+  }
+
+  /**
+   * Utility delay function
+   */
+  private delay(ms: number): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+}

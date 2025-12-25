@@ -1,0 +1,65 @@
+{
+  "summary": {
+    "total_anomalies": 3,
+    "metrics": {
+      "total_days": 7,
+      "ground_truth_anomaly_days": 2,
+      "detected_anomaly_days": 2,
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "true_negatives": 5,
+      "precision": 100.0,
+      "recall": 100.0,
+      "accuracy": 100.0,
+      "f1_score": 100.0,
+      "ground_truth_days": [
+        6,
+        7
+      ],
+      "detected_days": [
+        6,
+        7
+      ]
+    }
+  },
+  "anomalies": [
+    {
+      "type": "long_inactivity",
+      "severity": "high",
+      "day": 6,
+      "start_time": "2024-11-29T13:44:00",
+      "end_time": "end_of_day",
+      "duration_hours": 10.2,
+      "last_location": "안방",
+      "description": "Day 6: 13:44 이후 활동 없음 (하루 종료까지 10.2시간)",
+      "risk": "낙상, 의식불명, 응급상황 가능성"
+    },
+    {
+      "type": "long_inactivity",
+      "severity": "high",
+      "day": 7,
+      "start_time": "2024-12-01T03:28:00",
+      "end_time": "end_of_day",
+      "duration_hours": 20.5,
+      "last_location": "부엌",
+      "description": "Day 7: 03:28 이후 활동 없음 (하루 종료까지 20.5시간)",
+      "risk": "낙상, 의식불명, 응급상황 가능성"
+    },
+    {
+      "type": "midnight_wandering",
+      "severity": "medium",
+      "day": 7,
+      "event_count": 8,
+      "time_range": "2024-12-01T02:25:00 ~ 2024-12-01T03:28:00",
+      "locations": {
+        "거실": 3,
+        "현관": 2,
+        "부엌": 2,
+        "화장실": 1
+      },
+      "description": "Day 7: 야간(0시-5시) 동안 8회 활동",
+      "risk": "치매 초기 증상, 수면장애, 불안/우울"
+    }
+  ]
+}

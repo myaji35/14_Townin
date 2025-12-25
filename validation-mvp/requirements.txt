@@ -1,0 +1,27 @@
+# Townin Validation MVP - Python Dependencies
+
+# Core
+python-dotenv==1.0.0
+
+# AI/LLM
+anthropic==0.18.1
+langchain==0.1.9
+langchain-anthropic==0.1.4
+
+# Neo4j (GraphRAG)
+neo4j==5.16.0
+langchain-community==0.0.20
+
+# Image Processing (Flyer AI)
+google-cloud-vision==3.5.0
+Pillow==10.2.0
+opencv-python==4.9.0.80
+
+# Data Processing
+pandas==2.2.0
+numpy==1.26.3
+pydantic==2.5.3
+
+# Testing & Utilities
+pytest==8.0.0
+requests==2.31.0

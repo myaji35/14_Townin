@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Townin - Hyper-local Life OS</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans+KR:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13ecb6",
+              "primary-dark": "#0eb58b",
+              "background-light": "#f8fcfb",
+              "background-dark": "#10221d",
+              "accent": "#2b2b2b"
+            },
+            fontFamily: {
+              "display": ["Manrope", "Noto Sans KR", "sans-serif"],
+              "sans": ["Manrope", "Noto Sans KR", "sans-serif"],
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+            backgroundImage: {
+               'hero-pattern': "linear-gradient(to right bottom, rgba(16, 34, 29, 0.9), rgba(16, 34, 29, 0.7))",
+            }
+          },
+        },
+      }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }.nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .nav-transparent {
+            background-color: transparent;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }.clip-diagonal-top {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .clip-diagonal-bottom {
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            margin-top: -10rem;
+        }
+    </style>
+</head>
+<body class="font-sans bg-background-light text-[#0d1b18] dark:bg-background-dark dark:text-white overflow-x-hidden antialiased break-keep selection:bg-primary selection:text-[#0d1b18]">
+<div class="relative flex flex-col min-h-screen w-full">
+<header class="fixed top-0 z-50 w-full transition-all duration-300 nav-scrolled group hover:bg-white/95 hover:shadow-sm">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between px-6 lg:px-12">
+<div class="flex items-center gap-2 text-[#0d1b18]">
+<div class="size-10 text-primary bg-[#0d1b18] rounded-full flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined !text-[24px]">share_location</span>
+</div>
+<h2 class="text-[#0d1b18] text-2xl font-black tracking-tight font-display">Townin</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-10">
+<a class="text-[#0d1b18] text-sm font-bold hover:text-primary transition-colors uppercase tracking-wider" href="#">일반 회원</a>
+<a class="text-[#0d1b18] text-sm font-bold hover:text-primary transition-colors uppercase tracking-wider" href="#">소상공인</a>
+<a class="text-[#0d1b18] text-sm font-bold hover:text-primary transition-colors uppercase tracking-wider" href="#">파트너</a>
+<a class="text-[#0d1b18] text-sm font-bold hover:text-primary transition-colors uppercase tracking-wider" href="#">회사 소개</a>
+</nav>
+<div class="flex gap-3">
+<button class="hidden sm:flex px-5 py-2.5 rounded-full border-2 border-[#0d1b18] hover:bg-gray-50 transition-all text-[#0d1b18] text-sm font-bold">
+                    로그인
+                </button>
+<button class="px-6 py-2.5 rounded-full bg-[#0d1b18] hover:bg-[#0d1b18]/80 transition-all text-white text-sm font-bold shadow-lg shadow-black/20">
+                    회원가입
+                </button>
+</div>
+</div>
+</header>
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-hero-pattern z-10"></div>
+<div class="absolute inset-0 bg-cover bg-center animate-[pulse_10s_ease-in-out_infinite]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAS1nSA7iAbiSG9WsWJNThE0Xj057sTs4EvGCTlV88IfskX5FE0KGLHKaCGmkudgucPCd5aErNv3ELj8S48rlVKhQEwH4-ySFys-lzo5uGtngjrDh015lYuBR8Kye5OzqcDZ0LXKqmWDHR7T17rEAN7PsWXLx1ETXvnLKnyF9x40zJOKfxiB2Sg9bJimqN4F-rYECdm8L_iYTWMDk5pYjiUJ0fNWAHzhAgeZ205eSxgvRKfQ2tSV3fQotbi_WOP24GmWO75e05CNOQ"); transform: scale(1.05);'></div>
+<div class="absolute bottom-0 w-full h-32 bg-gradient-to-t from-background-light to-transparent z-10"></div>
+</div>
+<div class="relative z-20 max-w-[1440px] w-full px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-8 flex flex-col gap-8 text-white">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 w-fit">
+<span class="size-2 rounded-full bg-primary animate-ping"></span>
+<span class="text-xs font-bold text-primary uppercase tracking-widest">Hyper-local Life OS</span>
+</div>
+<h1 class="text-5xl sm:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter">
+                    Living <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-primary">Contextually.</span>
+</h1>
+<p class="text-lg sm:text-xl text-gray-300 max-w-2xl font-light leading-relaxed">
+                    당신의 모든 순간이 혜택이 되는 곳.<br/>
+<strong class="text-white font-bold">Insurance GraphRAG</strong> 엔진이 당신의 맥락을 읽고,<br class="hidden sm:block"/> 
+                    최적의 보험, 케어, 생활 서비스를 연결합니다.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-8">
+<button class="group relative px-8 py-5 bg-primary text-[#0d1b18] rounded-full text-lg font-black hover:bg-white transition-all shadow-[0_0_40px_-10px_rgba(19,236,182,0.6)] overflow-hidden">
+<span class="relative z-10 group-hover:translate-x-1 transition-transform inline-flex items-center gap-2">
+                            Townin 시작하기 
+                            <span class="material-symbols-outlined font-bold">arrow_forward</span>
+</span>
+</button>
+<button class="px-8 py-5 border border-white/30 text-white rounded-full text-lg font-bold hover:bg-white/10 backdrop-blur-sm transition-all">
+                        서비스 소개 영상
+                    </button>
+</div>
+</div>
+<div class="hidden lg:flex lg:col-span-4 flex-col gap-6 relative">
+<div class="absolute -inset-4 bg-gradient-to-b from-primary/20 to-transparent blur-3xl rounded-full"></div>
+<div class="bg-white/10 backdrop-blur-xl border border-white/20 p-5 rounded-2xl shadow-2xl transform translate-x-8 hover:-translate-y-2 transition-transform duration-500">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-primary flex items-center justify-center text-[#0d1b18] shadow-lg">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<div>
+<p class="text-xs text-primary font-bold uppercase">Insurance Match</p>
+<p class="text-white font-bold">안전 귀가 보험 자동 적용</p>
+</div>
+</div>
+</div>
+<div class="bg-white/90 backdrop-blur-xl p-5 rounded-2xl shadow-2xl -translate-x-4 hover:-translate-y-2 transition-transform duration-500 delay-100 z-10">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-[#0d1b18] flex items-center justify-center text-primary shadow-lg">
+<span class="material-symbols-outlined">storefront</span>
+</div>
+<div>
+<p class="text-xs text-gray-500 font-bold uppercase">Local Benefit</p>
+<p class="text-[#0d1b18] font-bold">단골 카페 20% 할인 쿠폰</p>
+</div>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur-xl border border-white/20 p-5 rounded-2xl shadow-2xl translate-x-4 hover:-translate-y-2 transition-transform duration-500 delay-200">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-blue-500 flex items-center justify-center text-white shadow-lg">
+<span class="material-symbols-outlined">savings</span>
+</div>
+<div>
+<p class="text-xs text-blue-200 font-bold uppercase">Reward</p>
+<p class="text-white font-bold">+ 1,500 P 적립 완료</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
+<span class="material-symbols-outlined text-4xl">keyboard_arrow_down</span>
+</div>
+</section>
+<section class="relative bg-white pt-32 pb-48 clip-diagonal-top z-10 overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-[#f0fdf9] -z-10"></div>
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+<div class="flex flex-col lg:flex-row items-center gap-20">
+<div class="lg:w-1/2 relative">
+<div class="relative w-full aspect-[4/3]">
+<div class="absolute inset-0 bg-cover bg-center rounded-3xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAw_ceNuLhPoVK72MBQM1Yd5RnFvRrZ6KGLEhKySPqMjFKGlPbI1J9ZlZm1zOQY2TT9JzN1PeDtvO62XfwzmlHMZkQ4RynSr8JQdF31VdK8C1zpLkqjcItZn8aFlSEvALO4SGvRDu6Zga_lAjTPj8Dy9Ron5U2MyI8kzezgvwM4qS257-NuM-MUGWCDwRZ93MhpHQqm_m868vRS0lZJNgrBkI0Frm3dEhKcUpFgRJvewiVWGPx7WjHtprptJEtkNZP73AQztWi3JNY");'></div>
+<div class="absolute -right-10 top-10 bg-white p-4 rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] border-l-4 border-primary animate-[bounce_3s_infinite]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">notifications_active</span>
+<div>
+<p class="text-xs text-gray-400">Context Alarm</p>
+<p class="font-bold text-sm">비 오는 날, 우산 할인 쿠폰!</p>
+</div>
+</div>
+</div>
+<div class="absolute -left-6 bottom-20 bg-[#0d1b18] text-white p-4 rounded-xl shadow-2xl border-r-4 border-primary">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">account_balance_wallet</span>
+<div>
+<p class="text-xs text-gray-400">My Point</p>
+<p class="font-bold text-lg text-primary">35,200 P</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 flex flex-col gap-8">
+<span class="text-primary font-black tracking-widest uppercase text-sm">For Users</span>
+<h2 class="text-4xl lg:text-6xl font-black text-[#0d1b18] leading-tight">
+                        일상이 돈이 되는<br/>
+<span class="underline decoration-primary decoration-8 underline-offset-4">놀라운 경험</span>
+</h2>
+<p class="text-lg text-gray-600 leading-relaxed font-medium">
+                        내 생활 맥락에 맞는 정보를 확인만 하세요.<br/>
+                        Townin이 당신에게 가장 필요한 순간에 혜택을 드립니다.<br/>
+                        광고를 보거나, 미션을 수행하면 <span class="text-[#0d1b18] font-bold bg-primary/20 px-1">현금 같은 포인트</span>가 차곡차곡.
+                    </p>
+<div class="flex gap-4 pt-4">
+<a class="flex items-center gap-2 text-[#0d1b18] font-bold border-b-2 border-[#0d1b18] hover:border-primary hover:text-primary transition-colors pb-1" href="#">
+                             자세히 알아보기 <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="relative bg-[#0d1b18] text-white pt-48 pb-32 clip-diagonal-bottom z-20 -mt-24">
+<div class="absolute top-0 left-0 w-1/3 h-full bg-[#152e27] -z-10"></div>
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+<div class="flex flex-col lg:flex-row-reverse items-center gap-20">
+<div class="lg:w-1/2 relative group">
+<div class="absolute -inset-4 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/30 transition-all duration-500"></div>
+<div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 aspect-video">
+<div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:opacity-100 transition-opacity duration-700 scale-105 group-hover:scale-100" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVPHDwSrRuuHBvEF1Oi1qZ2UmGsM7YGqX4nptUxtEm8d-szUA1wTOy7zJlur27EV23Bo3PTkyj0_43JXpFqEHSp5Ta4Yv56hzNe3yOCzkGZFazdtK-SchTPAydiSKizohlDe0khV_kN8ADIms-__22j-RsTduAo53xmtxW1k7vHGXQTsOhNqJgRZEqG6C8kDGvh9KHwfYr4PrMVh3rHR-spbaAHUMaAu3MjgPcVeaIJLscv8aqTx3-88YyRgfbrQJBxFvSBLwoelk");'></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative size-32">
+<div class="absolute inset-0 border-2 border-primary rounded-full animate-ping opacity-20"></div>
+<div class="absolute inset-4 border border-white rounded-full animate-[spin_10s_linear_infinite]"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-primary drop-shadow-[0_0_10px_rgba(19,236,182,0.8)]">store</span>
+</div>
+<span class="absolute top-0 left-1/2 size-2 bg-white rounded-full animate-bounce"></span>
+<span class="absolute bottom-0 right-1/2 size-2 bg-white rounded-full animate-pulse"></span>
+<span class="absolute top-1/2 left-0 size-2 bg-white rounded-full animate-ping"></span>
+</div>
+</div>
+<div class="absolute bottom-6 right-6 bg-white text-[#0d1b18] p-4 rounded-lg shadow-lg">
+<p class="text-xs font-bold text-gray-500">Today's Visit</p>
+<p class="text-2xl font-black text-primary-dark">+245%</p>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 flex flex-col gap-8 text-right lg:items-end">
+<span class="text-primary font-black tracking-widest uppercase text-sm">For Business</span>
+<h2 class="text-4xl lg:text-6xl font-black leading-tight">
+                        고객이 몰려드는<br/>
+<span class="text-primary">AI 타겟팅</span>의 마법
+                    </h2>
+<p class="text-lg text-gray-400 leading-relaxed font-medium">
+                        불특정 다수에게 뿌리는 전단지는 그만.<br/>
+                        Townin의 AI가 당신의 가게를 좋아할 만한 고객만 찾아냅니다.<br/>
+<span class="text-white font-bold">비용은 절반으로, 효과는 두 배로.</span>
+</p>
+<button class="px-8 py-4 bg-white text-[#0d1b18] hover:bg-primary hover:text-[#0d1b18] rounded-lg text-lg font-bold transition-all w-fit">
+                        사장님 파트너 등록하기
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-6 lg:px-12 bg-background-light relative overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-50"></div>
+<div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#0d1b18] to-transparent opacity-10"></div>
+<div class="max-w-[1440px] mx-auto relative z-10">
+<div class="mb-20 text-center max-w-3xl mx-auto">
+<h2 class="text-4xl lg:text-5xl font-black text-[#0d1b18] mb-6">Townin Value Chain</h2>
+<p class="text-xl text-gray-600">단순한 연결을 넘어, 삶의 질을 높이는 4가지 핵심 가치</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 auto-rows-[300px]">
+<div class="lg:col-span-7 bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between overflow-hidden group">
+<div class="absolute top-0 right-0 p-10 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[200px] text-primary">security</span>
+</div>
+<div>
+<div class="size-14 rounded-2xl bg-[#0d1b18] text-white flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">local_police</span>
+</div>
+<h3 class="text-3xl font-bold text-[#0d1b18] mb-2">Neighborhood Safety</h3>
+<p class="text-gray-500 text-lg">이웃이 함께 만드는 실시간 안심 지도.<br/>위험 요소 공유로 더 안전한 귀갓길을 만듭니다.</p>
+</div>
+<div class="mt-4 h-2 w-full bg-gray-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4 rounded-full"></div>
+</div>
+</div>
+<div class="lg:col-span-5 row-span-2 bg-[#0d1b18] text-white rounded-[2rem] p-8 shadow-xl flex flex-col relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="size-14 rounded-2xl bg-white/20 backdrop-blur text-primary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">diversity_3</span>
+</div>
+<h3 class="text-3xl font-bold mb-4">Family Care <br/>Context</h3>
+<p class="text-gray-300 text-lg mb-auto">멀리 있어도 마음은 가까이.<br/>부모님의 활동 감지부터 아이의 등하교 알림까지, 가족의 안전을 맥락에 맞게 케어합니다.</p>
+<div class="mt-8 bg-white/10 rounded-xl p-4 backdrop-blur-sm border border-white/10">
+<div class="flex items-center gap-3 mb-2">
+<div class="size-2 bg-green-500 rounded-full animate-pulse"></div>
+<span class="text-sm font-bold">Status: Normal</span>
+</div>
+<div class="h-32 flex items-end justify-between gap-1">
+<div class="w-full bg-primary/30 h-[40%] rounded-t-sm"></div>
+<div class="w-full bg-primary/50 h-[70%] rounded-t-sm"></div>
+<div class="w-full bg-primary h-[50%] rounded-t-sm"></div>
+<div class="w-full bg-primary/80 h-[85%] rounded-t-sm"></div>
+<div class="w-full bg-primary/40 h-[60%] rounded-t-sm"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 bg-[#f0fdf9] rounded-[2rem] p-8 shadow-sm hover:shadow-lg transition-all border border-primary/10 flex flex-col justify-center items-center text-center group">
+<div class="size-20 rounded-full bg-white text-primary flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">shopping_bag</span>
+</div>
+<h3 class="text-xl font-bold text-[#0d1b18] mb-2">Smart Shopping</h3>
+<p class="text-gray-500">AI가 추천하는<br/>동네 핫딜 정보</p>
+</div>
+<div class="lg:col-span-3 bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-lg transition-all border border-gray-100 flex flex-col justify-center group relative">
+<div class="absolute inset-0 bg-primary/5 scale-0 group-hover:scale-100 rounded-[2rem] transition-transform origin-bottom-left"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-5xl text-[#0d1b18] mb-4">health_and_safety</span>
+<h3 class="text-xl font-bold text-[#0d1b18] mb-2">Health Data</h3>
+<p class="text-gray-500">생활 데이터 기반<br/>맞춤 건강 관리</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="relative h-[600px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-[#0d1b18]">
+<div class="absolute inset-0 opacity-40 bg-cover bg-center grayscale mix-blend-luminosity" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAS1nSA7iAbiSG9WsWJNThE0Xj057sTs4EvGCTlV88IfskX5FE0KGLHKaCGmkudgucPCd5aErNv3ELj8S48rlVKhQEwH4-ySFys-lzo5uGtngjrDh015lYuBR8Kye5OzqcDZ0LXKqmWDHR7T17rEAN7PsWXLx1ETXvnLKnyF9x40zJOKfxiB2Sg9bJimqN4F-rYECdm8L_iYTWMDk5pYjiUJ0fNWAHzhAgeZ205eSxgvRKfQ2tSV3fQotbi_WOP24GmWO75e05CNOQ");'></div>
+<div class="absolute inset-0 bg-gradient-to-r from-[#0d1b18] via-[#0d1b18]/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-[1440px] w-full px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2">
+<div class="flex flex-col justify-center gap-10">
+<div>
+<span class="text-primary font-bold tracking-widest uppercase mb-2 block">Together</span>
+<h2 class="text-5xl lg:text-7xl font-black text-white leading-tight">
+                        Grow with <br/>
+<span class="text-primary">Townin.</span>
+</h2>
+</div>
+<p class="text-xl text-gray-400 font-light max-w-md">
+                    지역 전문가와 파트너가 함께 만드는 하이퍼 로컬 생태계.<br/>
+                    지금 바로 참여하여 새로운 비즈니스 기회를 잡으세요.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<a class="group flex items-center justify-between px-8 py-6 bg-white hover:bg-primary transition-colors w-full sm:w-auto min-w-[240px]" href="#">
+<div>
+<span class="block text-xs text-gray-500 font-bold uppercase group-hover:text-[#0d1b18]">Partnership</span>
+<span class="block text-xl font-black text-[#0d1b18]">제휴 문의하기</span>
+</div>
+<span class="material-symbols-outlined text-2xl group-hover:translate-x-2 transition-transform text-[#0d1b18]">arrow_forward</span>
+</a>
+<a class="group flex items-center justify-between px-8 py-6 bg-transparent border border-white/30 hover:bg-white/10 transition-colors w-full sm:w-auto min-w-[240px]" href="#">
+<div>
+<span class="block text-xs text-gray-400 font-bold uppercase">Expert</span>
+<span class="block text-xl font-black text-white">전문가 등록</span>
+</div>
+<span class="material-symbols-outlined text-2xl text-white group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="hidden lg:block relative">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-white/10 rounded-full animate-[spin_20s_linear_infinite]">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full shadow-[0_0_20px_rgba(19,236,182,0.8)]"></div>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] border border-white/20 rounded-full animate-[spin_15s_linear_infinite_reverse]">
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-white rounded-full"></div>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] border border-white/5 rounded-full"></div>
+</div>
+</div>
+</section>
+<footer class="bg-background-light pt-20 pb-10 border-t border-gray-200">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+<div class="max-w-xs">
+<div class="flex items-center gap-2 text-[#0d1b18] mb-6">
+<div class="size-8 text-white bg-[#0d1b18] rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined !text-[20px]">share_location</span>
+</div>
+<h2 class="text-[#0d1b18] text-xl font-black tracking-tight">Townin</h2>
+</div>
+<p class="text-sm text-gray-500 font-medium leading-relaxed">
+                        Data-driven Hyper-local Life OS.<br/>
+                        Connecting life contexts with optimal services.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-12 lg:gap-24">
+<div>
+<h4 class="font-bold text-[#0d1b18] mb-6">Product</h4>
+<ul class="space-y-3 text-sm text-gray-500 font-medium">
+<li><a class="hover:text-primary transition-colors" href="#">Features</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">For Users</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">For Business</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#0d1b18] mb-6">Company</h4>
+<ul class="space-y-3 text-sm text-gray-500 font-medium">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#0d1b18] mb-6">Legal</h4>
+<ul class="space-y-3 text-sm text-gray-500 font-medium">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-gray-400 font-medium">© 2024 Townin Inc. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-[#0d1b18] hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">thumb_up</span>
+</a>
+<a class="size-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-[#0d1b18] hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+<a class="size-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-[#0d1b18] hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

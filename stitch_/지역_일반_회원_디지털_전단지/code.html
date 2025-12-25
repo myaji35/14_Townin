@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Townin OS - Personalized Flyers</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecb6",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#11221e",
+                        "surface-dark": "#1d3632",
+                        "surface-active": "#23483f",
+                        "text-secondary": "#92c9bb",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #11221e; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #23483f; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #13ecb6; 
+        }
+        .flyer-card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(19, 236, 182, 0.15);
+        }
+        .ai-badge-glow {
+            box-shadow: 0 0 15px rgba(19, 236, 182, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white overflow-hidden h-screen flex">
+<aside class="w-[280px] bg-[#11221e] border-r border-[#23483f] flex flex-col h-full shrink-0 z-20">
+<div class="p-6 pb-2">
+<div class="flex items-center gap-3 mb-8">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 bg-[#13ecb6]" data-alt="Townin OS Logo abstract geometric" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmAqMCEqWCjfdnMDGBuBz6mnHY75VufS1hNxnAqChvIISqTmXN0p70loJ1QxzEDU9Fl-Y9KQ1qXfwMRtyjvfStBad9YT3dNuM7CnWrnpAyLkRIQkG65n_04b59cXOjXxNsNAxNaoL3F9I4KAHypG-QcFSP1AmJpXdVHFiJzu1hoaLoGWWRnU2XSVUbgNAdP3g-TsWVLhTxL9W5HUPT8-8G8eNvxWq9hANF32cEKxresv2jTTzV1P-Vhe56szmvZ-b8qKkdOQKU87w");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-lg font-bold leading-none">Townin OS</h1>
+<p class="text-[#92c9bb] text-xs font-normal mt-1">Hyper-local Life</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mb-8">
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#92c9bb] hover:bg-[#1d3632] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">home</span>
+<span class="text-sm font-medium">Home</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg bg-[#23483f] text-white" href="#">
+<span class="material-symbols-outlined text-xl fill-1">map</span>
+<span class="text-sm font-medium">Digital Flyers</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#92c9bb] hover:bg-[#1d3632] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">account_balance_wallet</span>
+<span class="text-sm font-medium">My Wallet</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-[#92c9bb] hover:bg-[#1d3632] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">groups</span>
+<span class="text-sm font-medium">Community</span>
+</a>
+</nav>
+</div>
+<div class="px-6 flex-1 overflow-y-auto">
+<div class="bg-gradient-to-br from-[#1d3632] to-[#162b27] rounded-xl p-5 border border-[#23483f] mb-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-3 opacity-10">
+<span class="material-symbols-outlined text-6xl text-white">savings</span>
+</div>
+<h3 class="text-[#92c9bb] text-xs font-bold uppercase tracking-wider mb-2">My Points Status</h3>
+<div class="flex items-baseline gap-1 mb-2">
+<span class="text-3xl font-bold text-white">2,450</span>
+<span class="text-sm text-[#13ecb6] font-bold">P</span>
+</div>
+<div class="w-full bg-[#11221e] h-1.5 rounded-full mb-2 overflow-hidden">
+<div class="bg-[#13ecb6] h-full rounded-full" style="width: 65%"></div>
+</div>
+<p class="text-[10px] text-[#92c9bb] flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-[#13ecb6]">arrow_upward</span>
+                    350P earned this week
+                </p>
+</div>
+<div>
+<h4 class="text-white text-xs font-bold uppercase tracking-wider mb-4 opacity-70">Filter Categories</h4>
+<div class="flex flex-col gap-1">
+<label class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-[#1d3632] cursor-pointer group transition-colors">
+<div class="relative flex items-center">
+<input checked="" class="peer size-4 appearance-none rounded border border-[#23483f] bg-[#11221e] checked:bg-[#13ecb6] checked:border-[#13ecb6] focus:ring-0 focus:ring-offset-0 transition-all" type="checkbox"/>
+<span class="material-symbols-outlined text-white text-xs absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 peer-checked:opacity-100 pointer-events-none">check</span>
+</div>
+<span class="text-sm text-white font-medium">All Categories</span>
+</label>
+<label class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-[#1d3632] cursor-pointer group transition-colors">
+<div class="relative flex items-center">
+<input class="peer size-4 appearance-none rounded border border-[#23483f] bg-[#11221e] checked:bg-[#13ecb6] checked:border-[#13ecb6] focus:ring-0 focus:ring-offset-0 transition-all" type="checkbox"/>
+<span class="material-symbols-outlined text-white text-xs absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 peer-checked:opacity-100 pointer-events-none">check</span>
+</div>
+<span class="text-sm text-[#92c9bb] group-hover:text-white transition-colors">Food &amp; Dining</span>
+</label>
+<label class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-[#1d3632] cursor-pointer group transition-colors">
+<div class="relative flex items-center">
+<input class="peer size-4 appearance-none rounded border border-[#23483f] bg-[#11221e] checked:bg-[#13ecb6] checked:border-[#13ecb6] focus:ring-0 focus:ring-offset-0 transition-all" type="checkbox"/>
+<span class="material-symbols-outlined text-white text-xs absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 peer-checked:opacity-100 pointer-events-none">check</span>
+</div>
+<span class="text-sm text-[#92c9bb] group-hover:text-white transition-colors">Retail Shopping</span>
+</label>
+<label class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-[#1d3632] cursor-pointer group transition-colors">
+<div class="relative flex items-center">
+<input class="peer size-4 appearance-none rounded border border-[#23483f] bg-[#11221e] checked:bg-[#13ecb6] checked:border-[#13ecb6] focus:ring-0 focus:ring-offset-0 transition-all" type="checkbox"/>
+<span class="material-symbols-outlined text-white text-xs absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 peer-checked:opacity-100 pointer-events-none">check</span>
+</div>
+<span class="text-sm text-[#92c9bb] group-hover:text-white transition-colors">Health &amp; Wellness</span>
+</label>
+<label class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-[#1d3632] cursor-pointer group transition-colors">
+<div class="relative flex items-center">
+<input class="peer size-4 appearance-none rounded border border-[#23483f] bg-[#11221e] checked:bg-[#13ecb6] checked:border-[#13ecb6] focus:ring-0 focus:ring-offset-0 transition-all" type="checkbox"/>
+<span class="material-symbols-outlined text-white text-xs absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 peer-checked:opacity-100 pointer-events-none">check</span>
+</div>
+<span class="text-sm text-[#92c9bb] group-hover:text-white transition-colors">Life Services</span>
+</label>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-[#23483f]">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-center bg-cover bg-no-repeat" data-alt="User profile avatar smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD7wZTvAZC5Ja_qOEbbPM44CjlkbtRTc7N1GsOZY4bX6h0yuznwe-DAtt0q59b5BVKrQ7pFcrnyeUTc_0icVuOffnbDFbH5XoiZ7yr5vxV5s3rG-bcK0bsDrb2xTfqHJ9RVyFctxjTeK744kmYxU6JPr6kXH1k5RX5msXgtARREcbNYrUqi3L4IIjjJtWcVLX8oj-mBVTIuA5yvxY_-EpdoHRpgHrtP0crc21Y41NBnd8E37F29MxcApw3JzPPSXs0oEQef76DH7A8");'></div>
+<div class="flex flex-col">
+<p class="text-white text-sm font-medium">Alex Johnson</p>
+<p class="text-[#92c9bb] text-xs">Premium Member</p>
+</div>
+<button class="ml-auto text-[#92c9bb] hover:text-white">
+<span class="material-symbols-outlined">logout</span>
+</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-full overflow-hidden relative">
+<header class="h-16 border-b border-[#23483f] bg-[#11221e]/90 backdrop-blur-sm flex items-center justify-between px-8 shrink-0 z-10 sticky top-0">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 text-white bg-[#23483f] px-3 py-1.5 rounded-lg border border-[#32675a]">
+<span class="material-symbols-outlined text-[#13ecb6] text-lg">location_on</span>
+<span class="text-sm font-medium">Mapo-gu, Seoul</span>
+<span class="material-symbols-outlined text-sm text-[#92c9bb]">expand_more</span>
+</div>
+<div class="h-6 w-px bg-[#23483f]"></div>
+<h2 class="text-lg font-bold text-white tracking-tight">Personalized Flyers</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative w-64 group">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-[#92c9bb] group-focus-within:text-[#13ecb6] transition-colors">search</span>
+<input class="w-full bg-[#1d3632] border-none rounded-lg py-2 pl-10 pr-4 text-sm text-white focus:ring-1 focus:ring-[#13ecb6] placeholder:text-[#5a7a72]" placeholder="Search shops or items..." type="text"/>
+</div>
+<button class="relative text-white hover:text-[#13ecb6] transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 size-2 bg-red-500 rounded-full border-2 border-[#11221e]"></span>
+</button>
+</div>
+</header>
+<div class="flex-1 flex overflow-hidden">
+<div class="flex-1 overflow-y-auto p-8 relative">
+<div class="mb-8 bg-gradient-to-r from-[#13ecb6]/10 via-[#1d3632] to-[#11221e] p-6 rounded-2xl border border-[#13ecb6]/20 relative overflow-hidden group">
+<div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+<div class="flex items-start md:items-center gap-5 relative z-10">
+<div class="bg-[#13ecb6] p-3 rounded-xl shadow-[0_0_20px_rgba(19,236,182,0.3)] animate-pulse shrink-0">
+<span class="material-symbols-outlined text-[#11221e] text-2xl">psychology</span>
+</div>
+<div class="flex-1">
+<h2 class="text-xl font-bold text-white mb-1 flex items-center gap-2">
+                                AI GraphRAG Analysis Complete
+                                <span class="text-[10px] bg-[#13ecb6]/20 text-[#13ecb6] px-2 py-0.5 rounded border border-[#13ecb6]/30 uppercase tracking-wide">Beta</span>
+</h2>
+<p class="text-[#92c9bb] text-sm leading-relaxed">We've connected your lifestyle context with local services. Found 12 flyers matching your current health goals and shopping patterns.</p>
+</div>
+</div>
+</div>
+<div class="mb-10">
+<div class="flex items-center justify-between mb-5">
+<h3 class="text-xl font-bold text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-[#13ecb6]">stars</span>
+                            This Week's Recommendations
+                        </h3>
+<div class="flex gap-2">
+<button class="size-8 rounded-full bg-[#1d3632] border border-[#23483f] flex items-center justify-center text-white hover:bg-[#23483f]">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+</button>
+<button class="size-8 rounded-full bg-[#1d3632] border border-[#23483f] flex items-center justify-center text-white hover:bg-[#23483f]">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6">
+<div class="flex flex-col bg-[#1d3632] rounded-xl overflow-hidden border border-[#13ecb6]/40 hover:border-[#13ecb6] transition-all duration-300 flyer-card-hover group shadow-lg h-full">
+<div class="h-52 bg-cover bg-center relative" data-alt="Healthy organic meal" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7ZwBoUTMgnwMX7lYisB5IfbeT9p85FQhP7fsGPjDesXOw7bFKL5q8DLjGnuGKiWYsuBSAMfLkb2vo-gdozoCWaeAX9PoNaYTZlGlL27WWO34_zLS3eBOrqBZCBC4dQjhQT2XRtUxbDHdg0svOmkNWDMvsN-Y1e8vk4xTZYcUoov6QPlRlXZfgxnfdvxKd8gTGO7k_XU_BrqgPBmBGuIUAgHvRJyJymuvwveQ633QwdGVzqq6yDLv3AzMBGdLipZMDBCGPL7sICTI");'>
+<div class="absolute top-0 left-0 bg-[#13ecb6] text-[#11221e] text-xs font-bold px-3 py-1.5 rounded-br-xl z-10 flex items-center gap-1 ai-badge-glow">
+<span class="material-symbols-outlined text-sm">auto_awesome</span> AI Recommended
+                                </div>
+<div class="absolute bottom-3 right-3 bg-black/70 backdrop-blur-sm text-white text-xs px-2 py-1 rounded">
+<span class="font-bold text-[#13ecb6]">Match:</span> Health Goal
+                                </div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[#92c9bb] text-xs font-bold uppercase tracking-wider">Fresh Greens Market</span>
+<span class="text-[#92c9bb] text-xs">Valid until Oct 31</span>
+</div>
+<h4 class="text-white font-bold text-xl leading-tight mb-2">30% OFF Organic Salad Subscription</h4>
+<p class="text-[#92c9bb] text-sm mb-6 line-clamp-2">Exclusive discount based on your recent activity tracking. Perfect for your weekday lunch plan.</p>
+<button class="mt-auto w-full bg-[#13ecb6] hover:bg-[#10cfa0] text-[#11221e] font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all shadow-[0_4px_14px_rgba(19,236,182,0.2)] hover:shadow-[0_6px_20px_rgba(19,236,182,0.3)]">
+<span class="material-symbols-outlined text-xl">monetization_on</span>
+                                    Earn Points
+                                </button>
+</div>
+</div>
+<div class="flex flex-col bg-[#1d3632] rounded-xl overflow-hidden border border-[#13ecb6]/40 hover:border-[#13ecb6] transition-all duration-300 flyer-card-hover group shadow-lg h-full">
+<div class="h-52 bg-cover bg-center relative" data-alt="Yoga class stretching" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB8qrckN-PhYtjsLeZO1o_1mYpYsSwU2m_vVABIxcB__1WtpaAd-uklk0L9nTBby4GsxaWl_OpCUOw9oMZRAglgXBvLG--BHxxtEP0RfX_SeJzSU2EqB-cOS8SROc9K6LkApr2sD6k1O0DO-ykeIQDxR6GcXdf9ds2jv0q6T3EDHwd-3zM0i6DudC1A6xRJWHUVNEA9r_v3upFdkg8MqVJ21iIkZvBjH5WiEpk9gYzbTbSxDrzVU3BiHjXJDY5m5U2n-xNC-IpJhEA");'>
+<div class="absolute top-0 left-0 bg-[#13ecb6] text-[#11221e] text-xs font-bold px-3 py-1.5 rounded-br-xl z-10 flex items-center gap-1 ai-badge-glow">
+<span class="material-symbols-outlined text-sm">auto_awesome</span> AI Recommended
+                                </div>
+<div class="absolute bottom-3 right-3 bg-black/70 backdrop-blur-sm text-white text-xs px-2 py-1 rounded">
+<span class="font-bold text-[#13ecb6]">Match:</span> Wellness
+                                </div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[#92c9bb] text-xs font-bold uppercase tracking-wider">Zen Yoga Studio</span>
+<span class="text-[#92c9bb] text-xs">Valid: 3 days left</span>
+</div>
+<h4 class="text-white font-bold text-xl leading-tight mb-2">Free Trial + 500P Bonus for Joiners</h4>
+<p class="text-[#92c9bb] text-sm mb-6 line-clamp-2">Recommended because you searched for 'stress relief' recently.</p>
+<button class="mt-auto w-full bg-[#13ecb6] hover:bg-[#10cfa0] text-[#11221e] font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all shadow-[0_4px_14px_rgba(19,236,182,0.2)] hover:shadow-[0_6px_20px_rgba(19,236,182,0.3)]">
+<span class="material-symbols-outlined text-xl">monetization_on</span>
+                                    Earn Points
+                                </button>
+</div>
+</div>
+<div class="flex flex-col bg-[#1d3632] rounded-xl overflow-hidden border border-[#23483f] hover:border-[#13ecb6] transition-all duration-300 flyer-card-hover group shadow-lg h-full">
+<div class="h-52 bg-cover bg-center relative" data-alt="Coffee latte art" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkK4hJuAfXQVEki7xEcjNnMmgy5yLROsYfSxW8B7m3kMSQhn9upIrhBITy5x0Ag0u-00SH_Vfm8JfhbrmKvNfDbotQWh6w6prYuHn7Nr84bcF41hxxCWDunxb6HgALI76QwrobpRE39pCfBi7HZipDPTBlOkJkrwWaD31f4fQAMOAIaa7uAPeAiUUIAjwHj8EFY7gQPkTvP1ZPIgzaQxAvkFP55BdGTEOEsTZoiQiIBjB-oIRNmyhbT3eAVv1PyaI_G8NyOPia9-4");'>
+<div class="absolute top-3 right-3 bg-[#23483f] border border-[#32675a] text-white text-xs font-bold px-2 py-1 rounded shadow-md">
+                                    HOT DEAL
+                                </div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[#92c9bb] text-xs font-bold uppercase tracking-wider">Star Coffee</span>
+<span class="text-[#92c9bb] text-xs">Valid until Sunday</span>
+</div>
+<h4 class="text-white font-bold text-xl leading-tight mb-2">Buy 1 Get 1 Free: Autumn Latte</h4>
+<p class="text-[#92c9bb] text-sm mb-6 line-clamp-2">Seasonal special offer for neighborhood residents.</p>
+<button class="mt-auto w-full bg-[#23483f] border border-[#13ecb6]/30 hover:bg-[#13ecb6] hover:text-[#11221e] text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-xl">monetization_on</span>
+                                    Earn Points
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold text-white mb-5">Explore Neighborhood</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<div class="flex flex-col bg-[#1d3632] rounded-xl overflow-hidden border border-[#23483f] hover:border-[#13ecb6]/50 transition-all duration-300 group">
+<div class="h-40 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwhXwLuGwEIGOdyGBIF7ElympCC67jeKMU7gM0O1LfvOd9BVz1jN5ffTSy6YdxBybdS-wy-s6f5_n2P-3GxgcA5aeMG9ST17CgAD6dg_cRnFW0KfYYVW8gxg69EEwY1nkmspAIzwv8jUlqPSYj200OgEYrgvm7IClz9X1y_lAN1IEVrEhy2f6cLOpCQzpumQDnK7G5XPvgYyTQbsLcHTXrTcLM3GemQnVV6bthLN2QBMG0bSGqFMFsqcQg6phwv3o4xl3PUa4RjG8");'></div>
+<div class="p-4 flex flex-col flex-1">
+<div class="flex justify-between text-xs mb-1">
+<span class="text-[#92c9bb] uppercase">Burger King</span>
+<span class="text-[#13ecb6]">200m away</span>
+</div>
+<h4 class="text-white font-bold text-base mb-4">Whopper Junior Set $4.99</h4>
+<button class="mt-auto w-full py-2 border border-[#23483f] rounded text-[#92c9bb] text-sm hover:text-white hover:border-[#13ecb6] transition-colors">View Details</button>
+</div>
+</div>
+<div class="flex flex-col bg-[#1d3632] rounded-xl overflow-hidden border border-[#23483f] hover:border-[#13ecb6]/50 transition-all duration-300 group">
+<div class="h-40 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDKVM8i1LPXQ71vOcUUhGqFWUCKJIRmEJCQ13PWdCy6CBJUM8h8zbnUq3QSWdXT38m8OIv8DEUCqV4BKaVhg73KNstGae5itd_LCkjkoOpHcwu4JkcmHVkOP7UEIdmYXfpZ4d6JLplP-P8cbOooYITtWrxreDSPFOGxoiVLXWepybJyickNmQVuN8-X_6JL_nhEjkojIf_cZzEEa0wpDXrG-KU1-uvbSh9zJEcZU7W4HT36SCraprVvgUxOKZ46jvjhKKutRD2GdI4");'></div>
+<div class="p-4 flex flex-col flex-1">
+<div class="flex justify-between text-xs mb-1">
+<span class="text-[#92c9bb] uppercase">Local Mart</span>
+<span class="text-[#13ecb6]">150m away</span>
+</div>
+<h4 class="text-white font-bold text-base mb-4">Fresh Fruits 20% Discount</h4>
+<button class="mt-auto w-full py-2 border border-[#23483f] rounded text-[#92c9bb] text-sm hover:text-white hover:border-[#13ecb6] transition-colors">View Details</button>
+</div>
+</div>
+<div class="flex flex-col bg-[#1d3632] rounded-xl overflow-hidden border border-[#23483f] hover:border-[#13ecb6]/50 transition-all duration-300 group">
+<div class="h-40 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBPQg0bfYCXG8PjvXnTkr99yx8K4j_XYeMMHxM0saMvoQ_zgLQ194xfbv8TKE_BPL84BzW-uLs4kJaUbKJQl0zq2EFA2n2Pm5eqUvDkVcmGwr-fI54ZCe6N4zFhTuxIlOar9VQeMx3wHhdPSfs0CCJSVBGl1W4-dxOF7OfBsy56aUFEgMnO3r7jSKT8YuZl9szsThr9Rp-6Byejb4LzUqVVzbY5O3YygV69d3IC1RqEgjlKu_SI_slK-xDszWNtqMITcdlMLEWXH2c");'></div>
+<div class="p-4 flex flex-col flex-1">
+<div class="flex justify-between text-xs mb-1">
+<span class="text-[#92c9bb] uppercase">Clean &amp; Press</span>
+<span class="text-[#13ecb6]">400m away</span>
+</div>
+<h4 class="text-white font-bold text-base mb-4">Winter Coat Cleaning Special</h4>
+<button class="mt-auto w-full py-2 border border-[#23483f] rounded text-[#92c9bb] text-sm hover:text-white hover:border-[#13ecb6] transition-colors">View Details</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-[320px] xl:w-[400px] h-full relative border-l border-[#23483f] bg-[#1a2e2a] hidden lg:block shrink-0">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 grayscale mix-blend-luminosity" data-alt="Map of Seoul city streets dark mode" data-location="Seoul Map" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2gOW1725ijy5UmBEj78roBNIHkQLoyJB-n0PbP-ST7buuIFzhpir2oLUbOac9ey96AoutD4edb0aR8858T3nhRW3FyJrYiaiAlB-rOySyzZTx0LKBxkRqRikxVXTgTO7voQBbRQB3EBGp79pg9Q9fvkitjsNmVsYxMlHXPDDlyPtZDkNydHqYtIbeCUCu27_6cXOnyRAtEfGbQTJLPZwi6FBpIfNgkockbwTbQ-vTPcgmIDES-cScnn7AD6yBRkBtTScBAIRLt5U");'></div>
+<div class="absolute inset-0 bg-[#11221e]/40 pointer-events-none"></div>
+<div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+<button class="size-10 bg-[#1d3632] text-white rounded-lg shadow-lg flex items-center justify-center hover:bg-[#23483f] transition-colors border border-[#23483f]">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+<button class="size-10 bg-[#1d3632] text-white rounded-lg shadow-lg flex items-center justify-center hover:bg-[#23483f] transition-colors border border-[#23483f]">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="size-10 bg-[#1d3632] text-white rounded-lg shadow-lg flex items-center justify-center hover:bg-[#23483f] transition-colors border border-[#23483f]">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+<div class="absolute top-[30%] left-[40%] group cursor-pointer z-10">
+<div class="relative flex items-center justify-center">
+<span class="material-symbols-outlined text-[#13ecb6] text-4xl drop-shadow-[0_0_10px_rgba(19,236,182,0.8)] animate-bounce">location_on</span>
+<div class="absolute -bottom-1 w-4 h-1 bg-[#13ecb6] rounded-full opacity-50 blur-[2px]"></div>
+<div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-[#11221e] border border-[#13ecb6] rounded-lg px-3 py-1.5 shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-20">
+<p class="text-white text-xs font-bold">Fresh Greens Market</p>
+<p class="text-[#13ecb6] text-[10px]">AI Recommended</p>
+</div>
+</div>
+</div>
+<div class="absolute top-[50%] left-[60%] group cursor-pointer z-10">
+<div class="relative flex items-center justify-center">
+<span class="material-symbols-outlined text-[#92c9bb] text-3xl drop-shadow-md">location_on</span>
+</div>
+</div>
+<div class="absolute top-[20%] left-[20%] group cursor-pointer z-10">
+<div class="relative flex items-center justify-center">
+<span class="material-symbols-outlined text-[#13ecb6] text-3xl drop-shadow-[0_0_8px_rgba(19,236,182,0.6)]">location_on</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4 bg-[#1d3632]/90 backdrop-blur-md p-3 rounded-lg border border-[#23483f]">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#13ecb6] mt-0.5">auto_awesome</span>
+<div>
+<p class="text-white text-xs font-bold">Personalized Map</p>
+<p class="text-[#92c9bb] text-[10px] leading-tight mt-1">Glowing pins indicate shops matching your GraphRAG lifestyle profile.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+</body></html>

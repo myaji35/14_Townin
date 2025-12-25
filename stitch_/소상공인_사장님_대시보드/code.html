@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Townin Partner Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecb6",
+                        "primary-dark": "#0eb58e",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#11221e",
+                        "surface-dark": "#1a2c28",
+                        "surface-border": "#32675a",
+                        "text-secondary": "#92c9bb",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-hidden">
+<div class="flex h-screen w-full">
+<aside class="w-64 flex-shrink-0 border-r border-surface-border hidden lg:flex flex-col bg-background-dark p-4 justify-between">
+<div class="flex flex-col gap-8">
+<div class="flex items-center gap-3 px-2">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border border-surface-border" data-alt="Townin Logo Abstract Gradient" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5NF6rZnLCCGDfTJmQzA-79H4ug_RGsk-nB5epUf-pSu4PogXvgeTbRjDZRUIO_5kjYe2J5g-UyiuAyx59NYZnQOnzhhWSRg2umVrv5OlWLYAa2L9xxH8R3abWIQgYLR-TP-3T6HI0zRrp3I-91iMmT8TsS3-WnGR6uSzkBp0YYsj0wDzvFzRgker6WbxoGfpuMa6tuva2YTUYbg7TIQul-6xNw_WSYq06v8HdlPLThd9xRbVm51-7z5Y6kLiuhiQ-icaBZz7-Nm8");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-lg font-bold leading-tight">Townin Partners</h1>
+<p class="text-text-secondary text-xs font-medium">SaaS OS</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-surface-border/50 text-white group hover:bg-surface-border transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<span class="text-sm font-bold">Ad Performance</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-secondary hover:bg-surface-border/30 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">campaign</span>
+<span class="text-sm font-medium">Flyer Management</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-secondary hover:bg-surface-border/30 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="text-sm font-medium">Marketing Map</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-secondary hover:bg-surface-border/30 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-sm font-medium">My Store</span>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-secondary hover:bg-surface-border/30 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+<div class="px-4 py-3 flex items-center gap-3 border-t border-surface-border pt-4 mt-2">
+<div class="size-8 rounded-full bg-surface-border flex items-center justify-center text-xs font-bold text-primary">SP</div>
+<div class="flex flex-col">
+<p class="text-sm font-bold text-white">Seongsu Pasta</p>
+<p class="text-xs text-text-secondary">Owner</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-y-auto relative scroll-smooth">
+<div class="lg:hidden flex items-center justify-between p-4 border-b border-surface-border bg-background-dark">
+<h1 class="text-lg font-bold text-white">Townin</h1>
+<button class="text-white material-symbols-outlined">menu</button>
+</div>
+<div class="max-w-[1400px] w-full mx-auto p-4 md:p-8 flex flex-col gap-6">
+<div class="flex flex-wrap justify-between items-end gap-4 pb-2">
+<div class="flex flex-col gap-1">
+<h1 class="text-3xl md:text-4xl font-black text-white tracking-tight">Seongsu-dong Pasta House</h1>
+<p class="text-text-secondary text-base">Analyze your local ad performance and optimize campaigns.</p>
+</div>
+<button class="flex items-center gap-2 bg-surface-border/50 hover:bg-surface-border text-white px-4 py-2 rounded-lg text-sm font-bold transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+                        Edit Store Info
+                    </button>
+</div>
+<div class="w-full bg-surface-dark border border-surface-border rounded-xl p-5 md:p-6 flex flex-col md:flex-row items-center justify-between gap-6 shadow-lg relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+<div class="flex items-start gap-4 z-10">
+<div class="p-3 bg-background-dark rounded-full border border-surface-border text-primary shadow-inner">
+<span class="material-symbols-outlined text-3xl">broadcast_on_personal</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-xl font-bold text-white flex items-center gap-2">
+                                Digital Signage Status
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-primary/20 text-primary border border-primary/30 uppercase tracking-wide">Live</span>
+</h2>
+<p class="text-text-secondary text-sm md:text-base max-w-xl mt-1">
+                                Toggle your store's online visibility on the Townin Map. <br class="hidden md:block"/>Active status boosts your ranking in local "Open Now" searches.
+                            </p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer z-10">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-32 h-14 bg-background-dark peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:start-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-[48px] after:w-[58px] after:transition-all peer-checked:bg-primary shadow-inner border border-surface-border"></div>
+<span class="absolute left-4 font-bold text-text-secondary text-xs tracking-wider peer-checked:hidden">CLOSED</span>
+<span class="absolute right-5 font-bold text-background-dark text-xs tracking-wider hidden peer-checked:block">OPEN</span>
+</label>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+<div class="xl:col-span-2 flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<h2 class="text-xl font-bold text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">monitoring</span>
+                            Ad Performance Analytics
+                        </h2>
+<div class="flex bg-surface-dark border border-surface-border rounded-lg p-1">
+<button class="px-3 py-1 text-xs font-bold rounded bg-primary text-surface-dark">7 Days</button>
+<button class="px-3 py-1 text-xs font-bold rounded text-text-secondary hover:text-white">30 Days</button>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-surface-dark border border-surface-border rounded-xl p-4 flex flex-col justify-between h-28 hover:border-primary/50 transition-colors">
+<p class="text-text-secondary text-xs font-bold uppercase tracking-wide">Impressions</p>
+<div class="flex items-end gap-2">
+<h3 class="text-2xl font-bold text-white">42,500</h3>
+<span class="text-[10px] text-primary bg-primary/10 px-1.5 py-0.5 rounded font-bold mb-1">▲ 12%</span>
+</div>
+<div class="w-full bg-background-dark h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full w-[75%]"></div>
+</div>
+</div>
+<div class="bg-surface-dark border border-surface-border rounded-xl p-4 flex flex-col justify-between h-28 hover:border-primary/50 transition-colors">
+<p class="text-text-secondary text-xs font-bold uppercase tracking-wide">Click Rate (CTR)</p>
+<div class="flex items-end gap-2">
+<h3 class="text-2xl font-bold text-white">3.8%</h3>
+<span class="text-[10px] text-primary bg-primary/10 px-1.5 py-0.5 rounded font-bold mb-1">▲ 0.5%</span>
+</div>
+<div class="w-full bg-background-dark h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-blue-400 h-full w-[60%]"></div>
+</div>
+</div>
+<div class="bg-surface-dark border border-surface-border rounded-xl p-4 flex flex-col justify-between h-28 hover:border-primary/50 transition-colors">
+<p class="text-text-secondary text-xs font-bold uppercase tracking-wide">Conversion Rate</p>
+<div class="flex items-end gap-2">
+<h3 class="text-2xl font-bold text-white">1.2%</h3>
+<span class="text-[10px] text-red-400 bg-red-400/10 px-1.5 py-0.5 rounded font-bold mb-1">▼ 0.1%</span>
+</div>
+<div class="w-full bg-background-dark h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-purple-400 h-full w-[30%]"></div>
+</div>
+</div>
+<div class="bg-surface-dark border border-surface-border rounded-xl p-4 flex flex-col justify-between h-28 hover:border-primary/50 transition-colors">
+<p class="text-text-secondary text-xs font-bold uppercase tracking-wide">Points Rewarded</p>
+<div class="flex items-end gap-2">
+<h3 class="text-2xl font-bold text-white">8,450</h3>
+<span class="text-[10px] text-text-secondary">P</span>
+</div>
+<div class="w-full bg-background-dark h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-yellow-400 h-full w-[85%]"></div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 bg-surface-dark border border-surface-border rounded-xl p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-bold text-white">Campaign Trends</h3>
+<p class="text-xs text-text-secondary">Impressions vs Clicks over time</p>
+</div>
+<div class="flex items-center gap-3 text-xs">
+<div class="flex items-center gap-1"><span class="size-2 rounded-full bg-primary"></span><span class="text-text-secondary">Impressions</span></div>
+<div class="flex items-center gap-1"><span class="size-2 rounded-full bg-blue-400"></span><span class="text-text-secondary">Clicks</span></div>
+</div>
+</div>
+<div class="relative w-full h-48">
+<svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 40">
+<line stroke="#32675a" stroke-dasharray="2" stroke-width="0.2" x1="0" x2="100" y1="10" y2="10"></line>
+<line stroke="#32675a" stroke-dasharray="2" stroke-width="0.2" x1="0" x2="100" y1="20" y2="20"></line>
+<line stroke="#32675a" stroke-dasharray="2" stroke-width="0.2" x1="0" x2="100" y1="30" y2="30"></line>
+<path d="M0 30 C 15 28, 20 15, 30 18 C 45 22, 50 10, 60 12 C 75 15, 80 5, 100 8" fill="none" stroke="#13ecb6" stroke-width="0.8" vector-effect="non-scaling-stroke"></path>
+<path d="M0 30 C 15 28, 20 15, 30 18 C 45 22, 50 10, 60 12 C 75 15, 80 5, 100 8 V 40 H 0 Z" fill="url(#chartGradient)" opacity="0.2"></path>
+<path d="M0 35 C 15 34, 20 28, 30 30 C 45 32, 50 25, 60 26 C 75 28, 80 22, 100 24" fill="none" stroke="#60a5fa" stroke-width="0.8" vector-effect="non-scaling-stroke"></path>
+<defs>
+<linearGradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#13ecb6" stop-opacity="0.5"></stop>
+<stop offset="100%" stop-color="#13ecb6" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+<div class="flex justify-between text-[10px] text-text-secondary mt-1 px-1">
+<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-dark border border-surface-border rounded-xl p-5 flex flex-col">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-lg">science</span>
+<div>
+<h3 class="font-bold text-white text-sm">A/B Test Live</h3>
+<p class="text-[10px] text-text-secondary">Campaign: Weekend Lunch</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 flex-1 justify-center">
+<div class="group">
+<div class="flex justify-between text-xs mb-1">
+<span class="text-text-secondary">Group A (Original)</span>
+<span class="text-white font-bold">2.1% CTR</span>
+</div>
+<div class="w-full bg-background-dark h-2 rounded-full overflow-hidden">
+<div class="bg-gray-500 h-full w-[35%]"></div>
+</div>
+</div>
+<div class="group">
+<div class="flex justify-between text-xs mb-1">
+<span class="text-white font-bold flex items-center gap-1">
+                                            Group B (New)
+                                            <span class="bg-primary text-background-dark text-[9px] px-1 rounded font-bold">WINNING</span>
+</span>
+<span class="text-primary font-bold">4.5% CTR</span>
+</div>
+<div class="w-full bg-background-dark h-2 rounded-full overflow-hidden relative">
+<div class="absolute inset-0 bg-primary/20 animate-pulse"></div>
+<div class="bg-primary h-full w-[75%] relative"></div>
+</div>
+</div>
+<div class="mt-2 p-3 bg-surface-border/20 rounded-lg border border-surface-border/50">
+<p class="text-[11px] text-text-secondary leading-snug">
+<strong class="text-primary">Insight:</strong> Group B with food photography is performing <span class="text-white">2.1x better</span> than the text-only version.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-r from-surface-dark to-surface-border/30 border border-surface-border rounded-xl p-6 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="flex flex-col md:flex-row items-start md:items-center gap-4 relative z-10">
+<div class="p-3 rounded-full bg-background-dark border border-surface-border text-primary shrink-0">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-white mb-1">AI Optimization Insight</h3>
+<p class="text-sm text-text-secondary max-w-2xl">
+                                Your "Dinner Special" campaign has a high impression count but low conversion.
+                                <span class="text-white font-medium">We recommend increasing the point reward by 50P</span> to match the neighborhood average of 150P. This is projected to boost CTR by ~15%.
+                            </p>
+</div>
+<button class="shrink-0 bg-primary hover:bg-primary-dark text-background-dark px-4 py-2 rounded-lg text-sm font-bold transition-colors">
+                            Apply Recommendation
+                        </button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 h-full">
+<button class="w-full bg-primary hover:bg-primary-dark text-surface-dark text-lg font-bold py-4 px-6 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-all transform hover:-translate-y-1">
+<span class="material-symbols-outlined">add_circle</span>
+                    New Ad Campaign
+                </button>
+<div class="bg-surface-dark border border-surface-border rounded-xl p-6 flex flex-col gap-4">
+<div class="flex items-center gap-2 text-white font-bold">
+<span class="material-symbols-outlined text-primary">document_scanner</span>
+                            AI Flyer Scanner
+                        </div>
+<p class="text-sm text-text-secondary">Upload a physical flyer. AI will digitize and optimize it for the map.</p>
+<div class="border-2 border-dashed border-surface-border rounded-xl h-32 flex flex-col items-center justify-center gap-2 hover:border-primary/50 hover:bg-surface-border/20 transition-all cursor-pointer group">
+<div class="p-2 rounded-full bg-background-dark text-text-secondary group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">cloud_upload</span>
+</div>
+<span class="text-xs font-medium text-text-secondary group-hover:text-white transition-colors">Click or Drag to Upload</span>
+</div>
+</div>
+<div class="bg-surface-dark border border-surface-border rounded-xl flex-1 flex flex-col overflow-hidden min-h-[300px]">
+<div class="p-5 border-b border-surface-border flex justify-between items-center bg-surface-dark sticky top-0 z-10">
+<h3 class="font-bold text-white">Active Campaigns</h3>
+<button class="text-xs font-bold text-primary hover:text-white transition-colors">View All</button>
+</div>
+<div class="flex-1 overflow-y-auto p-2 flex flex-col gap-2">
+<div class="p-3 rounded-lg hover:bg-surface-border/30 transition-colors flex gap-3 group border border-transparent hover:border-surface-border/50">
+<div class="w-12 h-12 bg-gray-700 rounded-md bg-cover bg-center shrink-0 border border-surface-border" data-alt="Digital flyer for Lunch Special Pasta set menu" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwZZ_LNP2ns9jvImZaiUUlumAYFK5pfUZcAFRHnS0QLyuB-oGivdU1l_fCSmxheVoYaxoO6UhJAvu5v4qVF2E7_WAzK_6n2XVuACwDR3tXPloSgv2LWkFaZAQDtWUaUmG9jozkLFbtfuHFOXsKABPygPkaoOFMP5wMAVKqu9EYIQwW-UQdYll1JVoMZ2h-X3iM-7BkEKoBPa16zV0mCMR_kaOx0ufJkSC6rxDP-pKkxMc2pnmm1cBkA0HDuLrbDA8DAmRe1wS5qVk");'></div>
+<div class="flex flex-col flex-1 justify-center">
+<div class="flex justify-between items-start">
+<p class="text-sm font-bold text-white leading-tight">Lunch Special Set</p>
+<span class="text-[10px] bg-green-500/20 text-green-400 px-1.5 rounded font-bold">Active</span>
+</div>
+<p class="text-xs text-text-secondary mt-1">Impr: 12k • CTR: 3.2%</p>
+</div>
+</div>
+<div class="p-3 rounded-lg hover:bg-surface-border/30 transition-colors flex gap-3 group border border-transparent hover:border-surface-border/50 bg-surface-border/10">
+<div class="w-12 h-12 bg-gray-700 rounded-md bg-cover bg-center shrink-0 border border-surface-border" data-alt="Digital flyer for Dinner Wine Pairing event" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDUa3d-bgoiiJjqvSpYu6h8-n0jvNTHi7adXLDeAXPcjvJ6-voxj9ZjMNcura3gfz2T3AZGqicE33UC5V7BIXCmvaTAZApjUJIhOvCnsxCScMno0NOaNim3aN3Om-ilAMm1p7g8bcYZTkDAmR0R93Qt0HzYD7hLm0LxUVjDKhrK1VVZ-vjrTqumuK3-VKI4ZJx5WxR1TK5rMqpxoYbAQLBE5ol5JTCTQBMIYRuXLJPjR5nLv6CtGqBlJxoHvbPvkWD1uHsxI7sReCM");'></div>
+<div class="flex flex-col flex-1 justify-center">
+<div class="flex justify-between items-start">
+<p class="text-sm font-bold text-white leading-tight">Weekend Wine</p>
+<span class="text-[10px] bg-primary/20 text-primary px-1.5 rounded font-bold">A/B Testing</span>
+</div>
+<p class="text-xs text-text-secondary mt-1">Impr: 5k • CTR: 4.5%</p>
+</div>
+</div>
+<div class="p-3 rounded-lg hover:bg-surface-border/30 transition-colors flex gap-3 group border border-transparent hover:border-surface-border/50 opacity-60">
+<div class="w-12 h-12 bg-gray-700 rounded-md bg-cover bg-center shrink-0 border border-surface-border grayscale" data-alt="Digital flyer for Seasonal Risotto menu" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAN3fsjI-ZHkGe1ajFYf0YO_t88jUoWVDT9-sAJ2Ut23on-YCslXd85aaXWLFqcndbVt3NIl9zWNdv-6MkY4IlaQIRC4N4ChTLq2kiJdO7ZScjOkyX23OurvwIEZsvc-BmQSN3JHoxNqYMVOA85_oxBqg_Tk_VQcQaoZPM8DbRMch1NC6UBD9RXS_TpYIX9B2puc4NX7Hk4YZPwdNfgBT7gJtaUhRJZa6GrQagShtDbCQGxFYbGzHJ1P8WGILOtCFuNQh0jRX7I1Kg");'></div>
+<div class="flex flex-col flex-1 justify-center">
+<div class="flex justify-between items-start">
+<p class="text-sm font-bold text-white leading-tight">Seasonal Risotto</p>
+<span class="text-[10px] bg-gray-500/20 text-gray-400 px-1.5 rounded font-bold">Paused</span>
+</div>
+<p class="text-xs text-text-secondary mt-1">Budget Reached</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-[#11221e] border-t border-surface-border p-3 text-center mt-auto">
+<p class="text-xs text-text-secondary">
+<span class="text-primary font-bold">Townin Insight:</span> Based on recent visitor demographics, updating your liability insurance could save you 15%. <a class="underline hover:text-white" href="#">View Details</a>
+</p>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
