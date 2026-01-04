@@ -1,0 +1,233 @@
+// Mock 데이터 - 의정부시 기반
+class MockData {
+  // 의정부시 3-Hub 위치
+  static final userHubs = [
+    {
+      'id': 'home',
+      'name': '집',
+      'location': '의정부동, 의정부시',
+      'address': '경기도 의정부시 의정부동 195-45',
+      'gridCell': 'uijeongbu_01',
+      'isPrimary': true,
+    },
+    {
+      'id': 'work',
+      'name': '회사',
+      'location': '신곡동, 의정부시',
+      'address': '경기도 의정부시 신곡동 724-8',
+      'gridCell': 'uijeongbu_02',
+      'isPrimary': false,
+    },
+    {
+      'id': 'family',
+      'name': '가족 집',
+      'location': '장암동, 의정부시',
+      'address': '경기도 의정부시 장암동 156-2',
+      'gridCell': 'uijeongbu_03',
+      'isPrimary': false,
+    },
+  ];
+
+  // 의정부시 디지털 전단지
+  static final flyers = [
+    {
+      'id': '1',
+      'storeName': '의정부 신선마트',
+      'title': '유기농 채소 30% 할인',
+      'description': '건강 목표에 맞춘 특별 할인! 매일매일 신선한 유기농 채소를 만나보세요.',
+      'category': 'food',
+      'imageUrl': 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&auto=format&fit=crop',
+      'validUntil': '2025-12-31',
+      'points': 25,
+      'distance': '250m',
+      'gridCell': 'uijeongbu_01',
+      'aiMatch': 'Health Goal',
+      'isAiRecommended': true,
+      'tags': ['건강', '유기농', '채소'],
+    },
+    {
+      'id': '2',
+      'storeName': '의정부 요가센터',
+      'title': '무료 체험 + 500P 보너스',
+      'description': '스트레스 해소에 최적! 요가 무료 체험권을 받으세요.',
+      'category': 'wellness',
+      'imageUrl': 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&auto=format&fit=crop',
+      'validUntil': '3일 남음',
+      'points': 25,
+      'distance': '420m',
+      'gridCell': 'uijeongbu_01',
+      'aiMatch': 'Wellness',
+      'isAiRecommended': true,
+      'tags': ['요가', '건강', '웰니스'],
+    },
+    {
+      'id': '3',
+      'storeName': '스타벅스 의정부역점',
+      'title': '1+1 가을 라떼',
+      'description': '계절 한정 스페셜 오퍼! 가을 라떼 1+1 혜택',
+      'category': 'cafe',
+      'imageUrl': 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&auto=format&fit=crop',
+      'validUntil': '일요일까지',
+      'points': 25,
+      'distance': '350m',
+      'gridCell': 'uijeongbu_02',
+      'isAiRecommended': false,
+      'isHotDeal': true,
+      'tags': ['카페', '커피', '할인'],
+    },
+    {
+      'id': '4',
+      'storeName': '의정부 중앙시장',
+      'title': '신선한 과일 20% 할인',
+      'description': '매일 아침 입고되는 신선한 제철 과일을 만나보세요.',
+      'category': 'food',
+      'imageUrl': 'https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=800',
+      'validUntil': '주말까지',
+      'points': 20,
+      'distance': '550m',
+      'gridCell': 'uijeongbu_01',
+      'isAiRecommended': false,
+      'tags': ['과일', '시장', '할인'],
+    },
+    {
+      'id': '5',
+      'storeName': '세탁특급 장암점',
+      'title': '겨울 코트 세탁 특가',
+      'description': '겨울 코트 전문 세탁! 11월 한정 특별 할인',
+      'category': 'service',
+      'imageUrl': 'https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=800',
+      'validUntil': '11월 15일까지',
+      'points': 15,
+      'distance': '680m',
+      'gridCell': 'uijeongbu_03',
+      'isAiRecommended': false,
+      'tags': ['세탁', '서비스'],
+    },
+  ];
+
+  // 의정부시 보안관 (Security Guards)
+  static final securityGuards = [
+    {
+      'rank': 1,
+      'name': '김민수',
+      'badgeName': '의정부동 보안관',
+      'district': '의정부동',
+      'earnings': 2450,
+      'adViews': 489,
+      'gridCell': 'uijeongbu_01',
+      'avatar': 'https://i.pravatar.cc/150?img=12',
+      'badge': 'gold',
+    },
+    {
+      'rank': 2,
+      'name': '박수진',
+      'badgeName': '신곡동 보안관',
+      'district': '신곡동',
+      'earnings': 2180,
+      'adViews': 436,
+      'gridCell': 'uijeongbu_02',
+      'avatar': 'https://i.pravatar.cc/150?img=45',
+      'badge': 'silver',
+    },
+    {
+      'rank': 3,
+      'name': '이재성',
+      'badgeName': '장암동 보안관',
+      'district': '장암동',
+      'earnings': 1920,
+      'adViews': 384,
+      'gridCell': 'uijeongbu_03',
+      'avatar': 'https://i.pravatar.cc/150?img=33',
+      'badge': 'bronze',
+    },
+    {
+      'rank': 4,
+      'name': '최혜원',
+      'badgeName': '호원동 보안관',
+      'district': '호원동',
+      'earnings': 1650,
+      'adViews': 330,
+      'gridCell': 'uijeongbu_04',
+      'avatar': 'https://i.pravatar.cc/150?img=26',
+    },
+    {
+      'rank': 5,
+      'name': '정동욱',
+      'badgeName': '가능동 보안관',
+      'district': '가능동',
+      'earnings': 1420,
+      'adViews': 284,
+      'gridCell': 'uijeongbu_05',
+      'avatar': 'https://i.pravatar.cc/150?img=52',
+    },
+  ];
+
+  // 사용자 정보
+  static final currentUser = {
+    'id': 'user_001',
+    'name': '김철수',
+    'email': 'user1@example.com',
+    'points': 2450,
+    'level': 7,
+    'role': 'user',
+    'ageRange': '30s',
+    'householdType': 'couple',
+    'avatarUrl':
+        'https://lh3.googleusercontent.com/aida-public/AB6AXuD7wZTvAZC5Ja_qOEbbPM44CjlkbtRTc7N1GsOZY4bX6h0yuznwe-DAtt0q59b5BVKrQ7pFcrnyeUTc_0icVuOffnbDFbH5XoiZ7yr5vxV5s3rG-bcK0bsDrb2xTfqHJ9RVyFctxjTeK744kmYxU6JPr6kXH1k5RX5msXgtARREcbNYrUqi3L4IIjjJtWcVLX8oj-mBVTIuA5yvxY_-EpdoHRpgHrtP0crc21Y41NBnd8E37F29MxcApw3JzPPSXs0oEQef76DH7A8',
+  };
+
+  // 거래 내역
+  static final transactions = [
+    {
+      'id': 'tx_001',
+      'type': 'earn',
+      'title': '의정부 신선마트 - 전단지 조회',
+      'points': 25,
+      'timestamp': DateTime.now().subtract(const Duration(hours: 2)),
+      'category': 'flyer',
+    },
+    {
+      'id': 'tx_002',
+      'type': 'earn',
+      'title': '주간 챌린지 완료',
+      'points': 100,
+      'timestamp': DateTime.now().subtract(const Duration(days: 1)),
+      'category': 'bonus',
+    },
+    {
+      'id': 'tx_003',
+      'type': 'earn',
+      'title': '의정부 요가센터 - 무료 체험권',
+      'points': 25,
+      'timestamp': DateTime.now().subtract(const Duration(days: 2)),
+      'category': 'flyer',
+    },
+    {
+      'id': 'tx_004',
+      'type': 'spend',
+      'title': '스타벅스 기프트카드 교환',
+      'points': 500,
+      'timestamp': DateTime.now().subtract(const Duration(days: 3)),
+      'category': 'reward',
+    },
+    {
+      'id': 'tx_005',
+      'type': 'earn',
+      'title': '보안관 보너스',
+      'points': 5,
+      'timestamp': DateTime.now().subtract(const Duration(days: 3)),
+      'category': 'bonus',
+    },
+  ];
+
+  // 통계
+  static final stats = {
+    'totalEarned': 2850,
+    'totalSpent': 500,
+    'currentBalance': 2450,
+    'thisWeek': 350,
+    'level': 7,
+    'nextLevel': 8,
+    'pointsToNext': 550,
+  };
+}

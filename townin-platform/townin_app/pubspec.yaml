@@ -42,6 +42,13 @@ dependencies:
   geocoding: ^2.1.1
   location: ^5.0.3
 
+  # AR & Sensors
+  arcore_flutter_plugin: ^0.1.0  # Android ARCore
+  arkit_plugin: ^1.0.7           # iOS ARKit
+  camera: ^0.10.5+9              # Camera access
+  sensors_plus: ^4.0.2           # Compass, Accelerometer
+  vector_math: ^2.1.4            # 3D math
+
   # Utils
   intl: ^0.18.1
   logger: ^2.0.2+1
@@ -92,9 +99,9 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/
-    - assets/icons/
-    - assets/animations/
+    - assets/images/flyers/market.png
+    - assets/images/flyers/yoga.png
+    - assets/images/flyers/coffee.png
     - assets/fonts/
 
   # fonts:

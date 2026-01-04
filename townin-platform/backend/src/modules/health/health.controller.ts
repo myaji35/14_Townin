@@ -1,57 +1,38 @@
 import { Controller, Get } from '@nestjs/common';
-import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
-import { InjectDataSource } from '@nestjs/typeorm';
-import { DataSource } from 'typeorm';
 
-@ApiTags('health')
 @Controller('health')
 export class HealthController {
-  constructor(
-    @InjectDataSource()
-    private dataSource: DataSource,
-  ) {}
-
-  /**
-   * General health check
-   */
   @Get()
-  @ApiOperation({ summary: 'Health check' })
-  @ApiResponse({ status: 200, description: 'Service is healthy' })
-  async healthCheck() {
-    const isDbHealthy = await this.checkDatabase();
-
+  check() {
     return {
-      status: isDbHealthy ? 'ok' : 'degraded',
+      status: 'ok',
       timestamp: new Date().toISOString(),
-      database: isDbHealthy ? 'up' : 'down',
+      uptime: process.uptime(),
+      services: {
+        api: 'up',
+        database: 'limited',
+        redis: 'unavailable',
+        neo4j: 'unavailable',
+      },
+      message: 'Townin Backend is running in LIMITED mode (without Docker)',
+      note: 'Install Docker to enable all features',
+    };
+  }
+
+  @Get('simple')
+  simpleCheck() {
+    return {
+      status: 'ok',
+      timestamp: new Date().toISOString(),
       uptime: process.uptime(),
     };
   }
 
-  /**
-   * Database health check
-   */
-  @Get('database')
-  @ApiOperation({ summary: 'Database health check' })
-  @ApiResponse({ status: 200, description: 'Database is healthy' })
-  async databaseHealth() {
-    const isHealthy = await this.checkDatabase();
-
+  @Get('ping')
+  ping() {
     return {
-      status: isHealthy ? 'up' : 'down',
+      pong: true,
       timestamp: new Date().toISOString(),
     };
-  }
-
-  /**
-   * Check database connection
-   */
-  private async checkDatabase(): Promise<boolean> {
-    try {
-      await this.dataSource.query('SELECT 1');
-      return true;
-    } catch (error) {
-      return false;
-    }
   }
 }

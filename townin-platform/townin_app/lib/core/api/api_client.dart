@@ -1,8 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class ApiClient {
-  static const String baseUrl = 'http://localhost:3000/api';
+  // Web 환경에서는 Mock 모드 사용 (CORS 문제 회피)
+  static const bool useMockData = kIsWeb;
+  static const String baseUrl = 'http://localhost:4030/api/v1';
 
   final Dio _dio;
   final FlutterSecureStorage _storage;

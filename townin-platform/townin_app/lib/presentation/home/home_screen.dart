@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import '../../core/theme/app_theme.dart';
+import '../../core/mock/mock_data.dart';
 import '../../core/i18n/language_provider.dart';
 import '../../core/widgets/language_toggle.dart';
 import 'providers/home_provider.dart';
@@ -107,7 +109,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 const Text('📍', style: TextStyle(fontSize: 16)),
                 const SizedBox(width: AppTheme.space2),
                 Text(
-                  l10n.seoulGangnam,
+                  '의정부시, 의정부동',
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: AppTheme.textPrimary,
                         fontWeight: FontWeight.w600,
@@ -271,32 +273,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 
   Widget _buildFlyersGrid(HomeState state) {
-    final mockFlyers = [
-      {
-        'title': 'Organic Garden Salad',
-        'description': 'Fresh seasonal vegetables with premium olive oil dressing',
-        'discount': '30% OFF',
-        'distance': '0.3km',
-        'isAI': true,
-      },
-      {
-        'title': 'Premium Yoga Studio',
-        'description': 'Experience mindfulness with certified instructors',
-        'discount': 'Free Trial',
-        'distance': '0.8km',
-        'isAI': true,
-      },
-      {
-        'title': 'Artisan Coffee',
-        'description': 'Single-origin beans roasted daily',
-        'discount': 'Buy 2 Get 1',
-        'distance': '0.5km',
-        'isAI': false,
-      },
-    ];
+    // MockData에서 전단지 가져오기 (카테고리 정보 포함)
+    final flyers = MockData.flyers.take(3).toList();
 
     return Column(
-      children: mockFlyers
+      children: flyers
           .map((flyer) => Padding(
                 padding: const EdgeInsets.only(bottom: AppTheme.space4),
                 child: _buildFlyerCard(flyer),
@@ -323,14 +304,78 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             ),
             child: Stack(
               children: [
-                Center(
-                  child: Icon(
-                    Icons.image,
-                    size: 48,
-                    color: AppTheme.textMuted,
+                // Unsplash 이미지 표시
+                if (flyer['imageUrl'] != null)
+                  Image.network(
+                    flyer['imageUrl'],
+                    width: double.infinity,
+                    height: 160,
+                    fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) {
+                      // 이미지 로드 실패 시 카테고리별 컬러 그라디언트
+                      return Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: _getCategoryGradient(flyer['category']),
+                          ),
+                          borderRadius: const BorderRadius.vertical(
+                            top: Radius.circular(AppTheme.radiusMd),
+                          ),
+                        ),
+                        child: Center(
+                          child: Icon(
+                            _getCategoryIcon(flyer['category']),
+                            size: 64,
+                            color: Colors.white.withOpacity(0.9),
+                          ),
+                        ),
+                      );
+                    },
+                    loadingBuilder: (context, child, loadingProgress) {
+                      if (loadingProgress == null) return child;
+                      return Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: _getCategoryGradient(flyer['category']),
+                          ),
+                        ),
+                        child: Center(
+                          child: CircularProgressIndicator(
+                            value: loadingProgress.expectedTotalBytes != null
+                                ? loadingProgress.cumulativeBytesLoaded /
+                                    loadingProgress.expectedTotalBytes!
+                                : null,
+                            color: Colors.white,
+                          ),
+                        ),
+                      );
+                    },
+                  )
+                else
+                  Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: _getCategoryGradient(flyer['category']),
+                      ),
+                      borderRadius: const BorderRadius.vertical(
+                        top: Radius.circular(AppTheme.radiusMd),
+                      ),
+                    ),
+                    child: Center(
+                      child: Icon(
+                        _getCategoryIcon(flyer['category']),
+                        size: 64,
+                        color: Colors.white.withOpacity(0.9),
+                      ),
+                    ),
                   ),
-                ),
-                if (flyer['isAI'] == true)
+                if (flyer['isAiRecommended'] == true)
                   Positioned(
                     top: AppTheme.space3,
                     left: AppTheme.space3,
@@ -363,11 +408,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       vertical: AppTheme.space1,
                     ),
                     decoration: BoxDecoration(
-                      color: AppTheme.error,
+                      color: flyer['isHotDeal'] == true ? AppTheme.error : AppTheme.accentGold,
                       borderRadius: BorderRadius.circular(AppTheme.radiusPill),
                     ),
                     child: Text(
-                      flyer['discount'],
+                      flyer['isHotDeal'] == true ? '핫딜' : '${flyer['points']}P',
                       style: Theme.of(context).textTheme.labelSmall?.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.w700,
@@ -482,5 +527,37 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         ),
       ],
     );
+  }
+
+  // 카테고리별 그라디언트 색상
+  List<Color> _getCategoryGradient(String? category) {
+    switch (category) {
+      case 'food':
+        return [const Color(0xFF4CAF50), const Color(0xFF66BB6A)]; // Green
+      case 'wellness':
+        return [const Color(0xFF9C27B0), const Color(0xFFBA68C8)]; // Purple
+      case 'cafe':
+        return [const Color(0xFF795548), const Color(0xFFA1887F)]; // Brown
+      case 'service':
+        return [const Color(0xFF2196F3), const Color(0xFF64B5F6)]; // Blue
+      default:
+        return [AppTheme.accentGold, const Color(0xFFFFB74D)]; // Gold
+    }
+  }
+
+  // 카테고리별 아이콘
+  IconData _getCategoryIcon(String? category) {
+    switch (category) {
+      case 'food':
+        return Icons.restaurant;
+      case 'wellness':
+        return Icons.spa;
+      case 'cafe':
+        return Icons.local_cafe;
+      case 'service':
+        return Icons.build;
+      default:
+        return Icons.local_offer;
+    }
   }
 }

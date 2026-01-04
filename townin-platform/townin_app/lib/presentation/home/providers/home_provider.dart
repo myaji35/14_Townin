@@ -82,6 +82,16 @@ class HomeNotifier extends StateNotifier<HomeState> {
   HomeNotifier(this._apiClient) : super(HomeState());
 
   Future<void> loadDashboard() async {
+    // Mock 모드에서는 API 호출 건너뛰기
+    if (ApiClient.useMockData) {
+      // Web 환경에서는 Mock 데이터만 사용
+      state = state.copyWith(
+        isLoading: false,
+        dashboard: null, // Mock 데이터는 화면에서 직접 사용
+      );
+      return;
+    }
+
     state = state.copyWith(isLoading: true, error: null);
 
     try {

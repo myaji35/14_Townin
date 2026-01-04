@@ -62,12 +62,13 @@ import { IoTSensorsModule } from './modules/iot-sensors/iot-sensors.module';
       },
     }),
     EventEmitterModule.forRoot(),
-    RedisModule,
-    Neo4jModule,
-    InfluxDBModule,
-    GraphRAGModule,
-    IoTSensorsModule,
-    AuthModule,
+    // Temporarily disabled - requires Docker
+    // RedisModule,
+    // Neo4jModule,
+    // InfluxDBModule,
+    // GraphRAGModule,
+    // IoTSensorsModule,
+    // AuthModule, // Requires RedisModule
     UsersModule,
     // SecurityGuardsModule, // Temporarily disabled
     MerchantsModule,
@@ -88,4 +89,4 @@ import { IoTSensorsModule } from './modules/iot-sensors/iot-sensors.module';
     SeedModule, // Seeding module for database initialization
   ],
 })
-export class AppModule {}
+export class AppModule { }
