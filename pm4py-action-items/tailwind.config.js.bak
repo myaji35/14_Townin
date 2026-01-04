@@ -1,0 +1,55 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        primary: "#13ecb6",
+        "background-light": "#f6f8f8",
+        "background-dark": "#11221e",
+        "surface-dark": "#1d3632",
+        "surface-active": "#23483f",
+        "text-secondary": "#92c9bb",
+        townin: {
+          bg: '#11221e',
+          surface: '#1d3632',
+          border: '#23483f',
+          accent: '#13ecb6',
+          text: '#92c9bb',
+        },
+      },
+      fontFamily: {
+        sans: ['var(--font-manrope)', 'sans-serif'],
+        display: ['var(--font-manrope)', 'sans-serif'],
+      },
+      keyframes: {
+        slideIn: {
+          '0%': { transform: 'translateX(100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        scaleIn: {
+          '0%': { transform: 'scale(0.9)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+      },
+      animation: {
+        slideIn: 'slideIn 0.3s ease-out',
+        fadeIn: 'fadeIn 0.2s ease-in',
+        scaleIn: 'scaleIn 0.2s ease-out',
+      },
+      backgroundImage: {
+        'grainy': "url('https://grainy-gradients.vercel.app/noise.svg')",
+      }
+    },
+  },
+  plugins: [],
+}

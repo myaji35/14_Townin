@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@theme {
+  /* === Premium Gold Design System (from css.md) === */
+
+  /* Background Colors */
+  --color-bg-app: #0B0D10;
+  --color-bg-sidebar: #0E1014;
+  --color-bg-card: #14171C;
+  --color-bg-card-hover: #1A1D24;
+
+  /* Gold Accent Colors */
+  --color-accent-gold: #F5A623;
+  --color-accent-gold-dim: rgba(245, 166, 35, 0.15);
+  --color-accent-gold-glow: rgba(245, 166, 35, 0.4);
+
+  /* Text Colors */
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #B0B3B8;
+  --color-text-muted: #6B6F76;
+
+  /* Border & Shadow */
+  --color-border-subtle: rgba(255, 255, 255, 0.05);
+  --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+
+  /* Border Radius */
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 8px;
+  --radius-pill: 999px;
+
+  /* Typography */
+  --font-display: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Manrope', sans-serif;
+
+  /* Legacy Townin Colors (for backward compatibility) */
+  --color-townin-bg: #11221e;
+  --color-townin-surface: #1d3632;
+  --color-townin-border: #23483f;
+  --color-townin-accent: #13ecb6;
+  --color-townin-text: #92c9bb;
+
+  /* Animations */
+  --animate-slideIn: slideIn 0.3s ease-out;
+  --animate-fadeIn: fadeIn 0.2s ease-in;
+  --animate-scaleIn: scaleIn 0.2s ease-out;
+  --animate-glow: glow 2s ease-in-out infinite;
+  --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes glow {
+
+    0%,
+    100% {
+      box-shadow: 0 0 15px var(--color-accent-gold-glow);
+    }
+
+    50% {
+      box-shadow: 0 0 25px var(--color-accent-gold);
+    }
+  }
+
+  @keyframes ping {
+
+    75%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #1d3632;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #23483f;
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #13ecb6;
+  }
+
+  .bg-grainy {
+    background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+  }
+}
+
+/* Base Styles */
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 17, 34, 30;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: var(--font-display);
+}

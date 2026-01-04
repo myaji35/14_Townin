@@ -1,0 +1,301 @@
+{
+  "region": "의정부시 호원동",
+  "partners": [
+    {
+      "partnerId": "uij_partner_001",
+      "businessName": "회룡마트",
+      "category": "슈퍼마켓",
+      "owner": "김상호",
+      "registeredDate": "2025-01-15",
+      "location": {
+        "address": "경기도 의정부시 호국로 1250",
+        "lat": 37.7440,
+        "lon": 127.0485,
+        "nearbyApartments": [
+          {"name": "회룡 롯데캐슬", "distance": 200, "households": 1500},
+          {"name": "회룡 푸르지오", "distance": 350, "households": 800}
+        ]
+      },
+      "digitalSignboard": {
+        "installed": true,
+        "status": "OPEN",
+        "lastUpdated": "2024-12-21T09:30:00Z",
+        "openingHours": {
+          "weekday": "08:00-22:00",
+          "weekend": "09:00-21:00"
+        }
+      },
+      "flyers": [
+        {
+          "flyerId": "uij_flyer_001",
+          "title": "12월 연말 특가 행사",
+          "createdAt": "2024-12-18T10:00:00Z",
+          "validFrom": "2024-12-21",
+          "validUntil": "2024-12-25",
+          "views": 245,
+          "clicks": 12,
+          "conversions": 3,
+          "conversionRate": 0.012,
+          "products": [
+            {
+              "productId": "p001",
+              "name": "국내산 돼지고기 삼겹살",
+              "category": "정육",
+              "price": 9900,
+              "originalPrice": 13900,
+              "unit": "100g",
+              "promotion": "1+1",
+              "stock": 50,
+              "sold": 15,
+              "imageUrl": "/images/pork.jpg"
+            },
+            {
+              "productId": "p002",
+              "name": "제주 한라봉",
+              "category": "과일",
+              "price": 19900,
+              "originalPrice": 24900,
+              "unit": "3kg",
+              "promotion": "특가 20% 할인",
+              "stock": 30,
+              "sold": 8,
+              "imageUrl": "/images/hallabong.jpg"
+            },
+            {
+              "productId": "p003",
+              "name": "동원참치 (살코기)",
+              "category": "통조림",
+              "price": 8900,
+              "originalPrice": 10900,
+              "unit": "150g × 10캔",
+              "promotion": "묶음 특가",
+              "stock": 100,
+              "sold": 22,
+              "imageUrl": "/images/tuna.jpg"
+            }
+          ],
+          "targetAudience": {
+            "apartments": ["회룡 롯데캐슬", "회룡 푸르지오"],
+            "ageGroup": "30-50대 주부",
+            "radius": 500
+          }
+        }
+      ]
+    },
+    {
+      "partnerId": "uij_partner_002",
+      "businessName": "제일시장 김네 반찬가게",
+      "category": "반찬가게",
+      "owner": "김미영",
+      "registeredDate": "2025-01-20",
+      "location": {
+        "address": "경기도 의정부시 의정부동 123-45 (제일시장 내)",
+        "lat": 37.7380,
+        "lon": 127.0430,
+        "nearbyApartments": [
+          {"name": "의정부역 SK뷰", "distance": 400, "households": 600},
+          {"name": "의정부 센트럴 푸르지오", "distance": 550, "households": 900}
+        ]
+      },
+      "digitalSignboard": {
+        "installed": true,
+        "status": "OPEN",
+        "lastUpdated": "2024-12-21T08:00:00Z",
+        "openingHours": {
+          "weekday": "07:00-19:00",
+          "weekend": "07:00-18:00"
+        }
+      },
+      "flyers": [
+        {
+          "flyerId": "uij_flyer_002",
+          "title": "수제 반찬 주간 특가",
+          "createdAt": "2024-12-19T09:00:00Z",
+          "validFrom": "2024-12-21",
+          "validUntil": "2024-12-27",
+          "views": 189,
+          "clicks": 15,
+          "conversions": 5,
+          "conversionRate": 0.026,
+          "products": [
+            {
+              "productId": "p101",
+              "name": "김치 (포기김치)",
+              "category": "김치",
+              "price": 25000,
+              "originalPrice": 30000,
+              "unit": "3kg",
+              "promotion": "주간 특가",
+              "stock": 20,
+              "sold": 7,
+              "imageUrl": "/images/kimchi.jpg"
+            },
+            {
+              "productId": "p102",
+              "name": "멸치볶음",
+              "category": "반찬",
+              "price": 8000,
+              "originalPrice": 10000,
+              "unit": "500g",
+              "promotion": "20% 할인",
+              "stock": 30,
+              "sold": 12,
+              "imageUrl": "/images/anchovy.jpg"
+            },
+            {
+              "productId": "p103",
+              "name": "어묵볶음",
+              "category": "반찬",
+              "price": 7000,
+              "originalPrice": 9000,
+              "unit": "400g",
+              "promotion": "특가",
+              "stock": 25,
+              "sold": 9,
+              "imageUrl": "/images/fishcake.jpg"
+            }
+          ],
+          "targetAudience": {
+            "apartments": ["의정부역 SK뷰", "의정부 센트럴 푸르지오"],
+            "ageGroup": "40-60대",
+            "radius": 600
+          }
+        }
+      ]
+    },
+    {
+      "partnerId": "uij_partner_003",
+      "businessName": "회룡 고깃집 (한우명가)",
+      "category": "정육점",
+      "owner": "이정훈",
+      "registeredDate": "2025-01-18",
+      "location": {
+        "address": "경기도 의정부시 호국로 1230",
+        "lat": 37.7435,
+        "lon": 127.0478,
+        "nearbyApartments": [
+          {"name": "회룡 롯데캐슬", "distance": 150, "households": 1500}
+        ]
+      },
+      "digitalSignboard": {
+        "installed": true,
+        "status": "OPEN",
+        "lastUpdated": "2024-12-21T11:00:00Z",
+        "openingHours": {
+          "weekday": "09:00-21:00",
+          "weekend": "09:00-20:00"
+        }
+      },
+      "flyers": [
+        {
+          "flyerId": "uij_flyer_003",
+          "title": "크리스마스 한우 특판",
+          "createdAt": "2024-12-20T14:00:00Z",
+          "validFrom": "2024-12-21",
+          "validUntil": "2024-12-24",
+          "views": 312,
+          "clicks": 28,
+          "conversions": 7,
+          "conversionRate": 0.022,
+          "products": [
+            {
+              "productId": "p201",
+              "name": "한우 1++ 등심",
+              "category": "한우",
+              "price": 59900,
+              "originalPrice": 69900,
+              "unit": "600g",
+              "promotion": "크리스마스 특가",
+              "stock": 15,
+              "sold": 5,
+              "imageUrl": "/images/beef_sirloin.jpg"
+            },
+            {
+              "productId": "p202",
+              "name": "한우 1+ 안심",
+              "category": "한우",
+              "price": 54900,
+              "originalPrice": 64900,
+              "unit": "500g",
+              "promotion": "15% 할인",
+              "stock": 12,
+              "sold": 3,
+              "imageUrl": "/images/beef_tenderloin.jpg"
+            },
+            {
+              "productId": "p203",
+              "name": "한우 국거리 (양지)",
+              "category": "한우",
+              "price": 29900,
+              "originalPrice": 34900,
+              "unit": "1kg",
+              "promotion": "국거리 세트",
+              "stock": 20,
+              "sold": 8,
+              "imageUrl": "/images/beef_brisket.jpg"
+            }
+          ],
+          "targetAudience": {
+            "apartments": ["회룡 롯데캐슬"],
+            "ageGroup": "30-50대",
+            "radius": 300
+          }
+        }
+      ]
+    }
+  ],
+  "aggregateStats": {
+    "totalPartners": 3,
+    "totalFlyers": 3,
+    "totalProducts": 9,
+    "totalViews": 746,
+    "totalClicks": 55,
+    "totalConversions": 15,
+    "averageConversionRate": 0.020,
+    "targetConversionRate": 0.020,
+    "status": "목표 달성 (2% 전환율)"
+  },
+  "userJourneyAnalysis": {
+    "commonPaths": [
+      {
+        "path": "flyer_view → product_detail → location_check → pickup_reserve → payment",
+        "frequency": 8,
+        "conversionRate": 0.53,
+        "note": "성공 경로"
+      },
+      {
+        "path": "flyer_view → product_detail → location_check → exit",
+        "frequency": 12,
+        "conversionRate": 0,
+        "dropoffReason": "거리가 멀어서 (평균 800m 이상)",
+        "note": "거리 이탈"
+      },
+      {
+        "path": "flyer_view → product_detail → stock_check → exit",
+        "frequency": 18,
+        "conversionRate": 0,
+        "dropoffReason": "재고 부족",
+        "note": "재고 이탈 (개선 필요)"
+      },
+      {
+        "path": "flyer_view → exit",
+        "frequency": 35,
+        "conversionRate": 0,
+        "dropoffReason": "관심 없음",
+        "note": "즉시 이탈"
+      }
+    ],
+    "insights": [
+      {
+        "issue": "재고 확인 단계에서 18건 이탈 (24%)",
+        "recommendation": "파트너에게 실시간 재고 업데이트 유도",
+        "expectedImprovement": "전환율 2% → 2.6% (30% 증가)"
+      },
+      {
+        "issue": "위치 확인 후 거리로 인한 이탈 12건 (16%)",
+        "recommendation": "근처 다른 매장 추천 기능 추가",
+        "expectedImprovement": "이탈률 16% → 8%"
+      }
+    ]
+  }
+}

@@ -1,0 +1,166 @@
+.flyer-card-new {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.flyer-card-new:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent-primary);
+}
+
+/* Image Section */
+.flyer-card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--bg-tertiary);
+}
+
+.flyer-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.flyer-card-new:hover .flyer-card-image img {
+  transform: scale(1.05);
+}
+
+.flyer-card-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-tertiary);
+}
+
+/* Badges */
+.hot-deal-badge {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #FFA726 0%, #FF6F00 100%);
+  color: var(--bg-primary);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 8px rgba(255, 167, 38, 0.4);
+}
+
+.merchant-badge {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  padding: 6px 12px;
+  background: rgba(0, 217, 176, 0.95);
+  color: var(--bg-primary);
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 8px rgba(0, 217, 176, 0.3);
+}
+
+/* Content Section */
+.flyer-card-body {
+  padding: var(--space-5);
+}
+
+.flyer-merchant-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-2);
+}
+
+.flyer-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-3) 0;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.flyer-card-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-5) 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Earn Points Button */
+.earn-points-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 12px 20px;
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--bg-primary);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 12px rgba(0, 217, 176, 0.3);
+}
+
+.earn-points-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 217, 176, 0.4);
+}
+
+.earn-points-btn:active {
+  transform: translateY(0);
+}
+
+.btn-icon {
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flyer-card-body {
+    padding: var(--space-4);
+  }
+
+  .flyer-card-title {
+    font-size: 16px;
+  }
+
+  .flyer-card-description {
+    font-size: 13px;
+  }
+
+  .earn-points-btn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
