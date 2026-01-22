@@ -9,8 +9,8 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: 'Townin OS - Personalized Flyers',
-  description: 'Hyper-local Life Dashboard',
+  title: 'Townin OS - 맞춤형 전단지',
+  description: '동네 생활의 모든 것',
 }
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="ko" className="dark">
       <body className={`${manrope.variable} font-sans bg-[#11221e] text-white antialiased`}>{children}</body>
     </html>
   )

@@ -321,45 +321,43 @@ export default function NewFlyerPage() {
                         </div>
                     </div>
                 ) : (
-                    {/* Preview Mode */ }
-                    < div className="max-w-2xl mx-auto">
-                <Card className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 border-gray-700/50">
-                    <CardHeader>
-                        <div className="flex items-center justify-between mb-4">
-                            <span className="text-sm text-amber-400 font-semibold">AI 추천</span>
-                            {formData.discount && (
-                                <span className="px-3 py-1 bg-red-500 text-white text-sm font-bold rounded-full">
-                                    {formData.discount}
-                                </span>
-                            )}
-                        </div>
-                        {formData.imageUrl && (
-                            <div className="w-full h-48 bg-gray-700 rounded-lg mb-4 overflow-hidden">
-                                <img
-                                    src={formData.imageUrl}
-                                    alt={formData.title}
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                        )}
-                        <CardTitle className="text-white text-xl">{formData.title || '제목을 입력하세요'}</CardTitle>
-                        <CardDescription className="text-gray-300 mt-2">
-                            {formData.description || '설명을 입력하세요'}
-                        </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                        <div className="flex items-center justify-between text-sm">
-                            <span className="text-gray-400">{formData.location || '위치'}</span>
-                            <Button className="bg-amber-500 hover:bg-amber-600 text-white">
-                                {formData.points}P 받기
-                            </Button>
-                        </div>
-                    </CardContent>
-                </Card>
+                    <div className="max-w-2xl mx-auto">
+                        <Card className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 border-gray-700/50">
+                            <CardHeader>
+                                <div className="flex items-center justify-between mb-4">
+                                    <span className="text-sm text-amber-400 font-semibold">AI 추천</span>
+                                    {formData.discount && (
+                                        <span className="px-3 py-1 bg-red-500 text-white text-sm font-bold rounded-full">
+                                            {formData.discount}
+                                        </span>
+                                    )}
+                                </div>
+                                {formData.imageUrl && (
+                                    <div className="w-full h-48 bg-gray-700 rounded-lg mb-4 overflow-hidden">
+                                        <img
+                                            src={formData.imageUrl}
+                                            alt={formData.title}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                )}
+                                <CardTitle className="text-white text-xl">{formData.title || '제목을 입력하세요'}</CardTitle>
+                                <CardDescription className="text-gray-300 mt-2">
+                                    {formData.description || '설명을 입력하세요'}
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="flex items-center justify-between text-sm">
+                                    <span className="text-gray-400">{formData.location || '위치'}</span>
+                                    <Button className="bg-amber-500 hover:bg-amber-600 text-white">
+                                        {formData.points}P 받기
+                                    </Button>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
+                )}
+            </main>
         </div>
-    )
-}
-      </main >
-    </div >
-  );
+    );
 }

@@ -4,11 +4,12 @@ import { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Checkbox } from '@/components/ui/checkbox';
 import { M3Button, M3Card, AnimatedList } from '@/components/material-vivid';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function TowninDashboard() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedHub, setSelectedHub] = useState('Mapo-gu, Seoul');
+  const [isMapOpen, setIsMapOpen] = useState(true);
 
   const categories = [
     { id: 'all', label: 'All Categories' },
@@ -107,19 +108,19 @@ export default function TowninDashboard() {
           <nav className="flex flex-col gap-1 mb-8">
             <a className="flex items-center gap-3 px-4 py-3 rounded-xl text-[#A8C7BC] hover:bg-[#1A3530] transition-colors" href="#">
               <span className="text-lg">🏠</span>
-              <span className="text-sm font-medium">Home</span>
+              <span className="text-sm font-medium">홈</span>
             </a>
             <a className="flex items-center gap-3 px-4 py-3 rounded-xl bg-[#1A3530] text-white" href="#">
               <span className="text-lg">📰</span>
-              <span className="text-sm font-medium">Digital Flyers</span>
+              <span className="text-sm font-medium">디지털 전단지</span>
             </a>
-            <a className="flex items-center gap-3 px-4 py-3 rounded-xl text-[#A8C7BC] hover:bg-[#1A3530] transition-colors" href="#">
+            <a className="flex items-center gap-3 px-4 py-3 rounded-xl text-[#A8C7BC] hover:bg-[#1A3530] transition-colors" href="/wallet">
               <span className="text-lg">💰</span>
-              <span className="text-sm font-medium">My Wallet</span>
+              <span className="text-sm font-medium">내 지갑</span>
             </a>
-            <a className="flex items-center gap-3 px-4 py-3 rounded-xl text-[#A8C7BC] hover:bg-[#1A3530] transition-colors" href="#">
+            <a className="flex items-center gap-3 px-4 py-3 rounded-xl text-[#A8C7BC] hover:bg-[#1A3530] transition-colors" href="/community">
               <span className="text-lg">👥</span>
-              <span className="text-sm font-medium">Community</span>
+              <span className="text-sm font-medium">커뮤니티</span>
             </a>
           </nav>
         </div>
@@ -131,7 +132,7 @@ export default function TowninDashboard() {
               <span className="text-5xl">💰</span>
             </div>
             <div className="p-5 relative z-10">
-              <p className="text-[#A8C7BC] text-xs font-bold uppercase tracking-wider mb-2">MY POINTS STATUS</p>
+              <p className="text-[#A8C7BC] text-xs font-bold uppercase tracking-wider mb-2">나의 포인트 현황</p>
               <div className="flex items-baseline gap-1 mb-3">
                 <span className="text-3xl font-bold text-white">2,450</span>
                 <span className="text-sm text-[#13ecb6] font-bold">P</span>
@@ -146,14 +147,14 @@ export default function TowninDashboard() {
               </div>
               <p className="text-[10px] text-[#A8C7BC] flex items-center gap-1">
                 <span className="text-xs text-[#13ecb6]">↑</span>
-                350P earned this week
+                이번 주 350P 적립
               </p>
             </div>
           </M3Card>
 
           {/* Filter Categories */}
           <div>
-            <h4 className="text-white text-xs font-bold uppercase tracking-wider mb-4 opacity-70">FILTER CATEGORIES</h4>
+            <h4 className="text-white text-xs font-bold uppercase tracking-wider mb-4 opacity-70">카테고리 필터</h4>
             <div className="flex flex-col gap-1">
               {categories.map((cat) => (
                 <label key={cat.id} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#1A3530] cursor-pointer group transition-colors">
@@ -172,18 +173,18 @@ export default function TowninDashboard() {
 
         {/* User Profile */}
         <div className="p-4 border-t border-[#2A4C42]">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-[#13ecb6] flex items-center justify-center text-[#0A1612] font-bold text-sm">
+          <a href="/settings" className="flex items-center gap-3 group">
+            <div className="w-9 h-9 rounded-full bg-[#13ecb6] flex items-center justify-center text-[#0A1612] font-bold text-sm group-hover:ring-2 ring-[#13ecb6]/50 transition-all">
               AJ
             </div>
             <div className="flex-1">
-              <p className="text-white text-sm font-medium">Alex Johnson</p>
-              <p className="text-[#7A9B8F] text-xs">Premium Member</p>
+              <p className="text-white text-sm font-medium group-hover:text-[#13ecb6] transition-colors">Alex Johnson</p>
+              <p className="text-[#7A9B8F] text-xs">프리미엄 멤버</p>
             </div>
             <button className="text-[#A8C7BC] hover:text-white transition-colors">
-              <span className="text-lg">↗</span>
+              <span className="text-lg">⚙️</span>
             </button>
-          </div>
+          </a>
         </div>
       </aside>
 
@@ -205,7 +206,7 @@ export default function TowninDashboard() {
               <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#A8C7BC]">🔍</span>
               <input
                 className="w-full bg-[#1A3530] border-none rounded-lg py-2 pl-10 pr-4 text-sm text-white focus:ring-1 focus:ring-[#13ecb6] placeholder:text-[#5A7A72] outline-none"
-                placeholder="Search shops or items..."
+                placeholder="상점 또는 상품 검색..."
                 type="text"
               />
             </div>
@@ -217,7 +218,7 @@ export default function TowninDashboard() {
         </header>
 
         {/* Content Area with Map */}
-        <div className="flex-1 flex overflow-hidden">
+        <div className="flex-1 flex overflow-hidden relative">
           {/* Flyers Content */}
           <div className="flex-1 overflow-y-auto p-8">
             {/* AI GraphRAG Banner */}
@@ -232,13 +233,13 @@ export default function TowninDashboard() {
                 </motion.div>
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
-                    <h2 className="text-lg font-bold text-white">AI GraphRAG Analysis Complete</h2>
+                    <h2 className="text-lg font-bold text-white">AI GraphRAG 분석 완료</h2>
                     <Badge className="text-[10px] bg-[#13ecb6]/20 text-[#13ecb6] border-[#13ecb6]/40 px-2 py-0.5">
                       BETA
                     </Badge>
                   </div>
                   <p className="text-[#A8C7BC] text-sm">
-                    We've connected your lifestyle context with local services. Found 12 flyers matching your current health goals and shopping patterns.
+                    회원님의 라이프스타일 패턴과 지역 서비스를 연결했습니다. 현재 건강 목표와 소비 패턴에 맞는 전단지 12개를 찾았습니다.
                   </p>
                 </div>
               </div>
@@ -249,7 +250,7 @@ export default function TowninDashboard() {
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-xl font-bold text-white flex items-center gap-2">
                   <span className="text-[#13ecb6]">✨</span>
-                  This Week's Recommendations
+                  이번 주 추천 전단지
                 </h3>
                 <div className="flex gap-2">
                   <M3Button variant="tonal" className="w-9 h-9 rounded-full px-0 py-0">
@@ -288,7 +289,7 @@ export default function TowninDashboard() {
                       )}
                       {flyer.aiMatch && (
                         <div className="absolute bottom-3 right-3 bg-[#0A1612]/80 backdrop-blur-md text-white text-xs px-2.5 py-1.5 rounded-lg">
-                          <span className="font-semibold text-[#13ecb6]">Match:</span> {flyer.aiMatch}
+                          <span className="font-semibold text-[#13ecb6]">매칭:</span> {flyer.aiMatch}
                         </div>
                       )}
                     </div>
@@ -303,7 +304,7 @@ export default function TowninDashboard() {
                       <p className="text-[#A8C7BC] text-sm mb-5 line-clamp-2">{flyer.description}</p>
                       <M3Button variant="filled" className="mt-auto w-full gap-2">
                         <span>💰</span>
-                        Earn Points
+                        포인트 적립하기
                       </M3Button>
                     </div>
                   </M3Card>
@@ -313,7 +314,7 @@ export default function TowninDashboard() {
 
             {/* Explore Neighborhood */}
             <div>
-              <h3 className="text-xl font-bold text-white mb-5">Explore Neighborhood</h3>
+              <h3 className="text-xl font-bold text-white mb-5">우리 동네 둘러보기</h3>
               <AnimatedList className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5" staggerDelay={0.05}>
                 {filteredFlyers.filter(f => !f.featured).map((flyer) => (
                   <M3Card key={flyer.id} level={1} className="flex flex-col overflow-hidden">
@@ -323,11 +324,11 @@ export default function TowninDashboard() {
                     <div className="p-4 flex flex-col flex-1">
                       <div className="flex justify-between text-xs mb-2">
                         <span className="text-[#A8C7BC] uppercase font-semibold">{flyer.store}</span>
-                        <span className="text-[#13ecb6]">200m away</span>
+                        <span className="text-[#13ecb6]">200m 거리</span>
                       </div>
                       <h4 className="text-white font-bold text-base mb-4">{flyer.title}</h4>
                       <M3Button variant="outlined" className="mt-auto w-full">
-                        View Details
+                        상세 보기
                       </M3Button>
                     </div>
                   </M3Card>
@@ -337,7 +338,26 @@ export default function TowninDashboard() {
           </div>
 
           {/* Right Map Panel */}
-          <div className="w-[400px] h-full relative border-l border-[#2A4C42] hidden lg:block shrink-0">
+          <motion.div
+            initial={{ width: 400, opacity: 1 }}
+            animate={{
+              width: isMapOpen ? 400 : 0,
+              opacity: isMapOpen ? 1 : 0
+            }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            className="h-full relative border-l border-[#2A4C42] hidden lg:block shrink-0 overflow-hidden"
+          >
+            {/* Map Toggle Button (Collapse) */}
+            <div className="absolute top-4 left-4 z-50">
+              <M3Button
+                variant="tonal"
+                className="w-8 h-8 rounded-full px-0 py-0 shadow-lg bg-[#0A1612]/80 backdrop-blur-md hover:bg-[#13ecb6] hover:text-[#0A1612] transition-colors"
+                onClick={() => setIsMapOpen(false)}
+              >
+                <span className="text-lg">▶</span>
+              </M3Button>
+            </div>
+
             {/* Map Background */}
             <div className="absolute inset-0 bg-[#132822]">
               <div className="absolute inset-0 opacity-20" style={{
@@ -369,7 +389,7 @@ export default function TowninDashboard() {
               </motion.div>
               <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-[#0A1612] border border-[#13ecb6] rounded-lg px-3 py-2 shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
                 <p className="text-white text-xs font-bold">Fresh Greens Market</p>
-                <p className="text-[#13ecb6] text-[10px]">AI Recommended</p>
+                <p className="text-[#13ecb6] text-[10px]">AI 추천</p>
               </div>
             </div>
 
@@ -393,14 +413,35 @@ export default function TowninDashboard() {
               <div className="p-3 flex items-start gap-3">
                 <span className="text-[#13ecb6] text-lg mt-0.5">✨</span>
                 <div>
-                  <p className="text-white text-xs font-bold mb-1">Personalized Map</p>
+                  <p className="text-white text-xs font-bold mb-1">개인 맞춤형 지도</p>
                   <p className="text-[#A8C7BC] text-[10px] leading-relaxed">
-                    Glowing pins indicate shops matching your GraphRAG lifestyle profile.
+                    빛나는 핀은 회원님의 GraphRAG 라이프스타일 프로필과 일치하는 상점을 나타냅니다.
                   </p>
                 </div>
               </div>
             </M3Card>
-          </div>
+          </motion.div>
+
+          {/* Expand Button (Visible when closed) */}
+          <AnimatePresence>
+            {!isMapOpen && (
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                className="absolute top-4 right-4 z-50 hidden lg:block"
+              >
+                <M3Button
+                  variant="filled"
+                  className="rounded-full shadow-lg gap-2"
+                  onClick={() => setIsMapOpen(true)}
+                >
+                  <span className="text-lg">◀</span>
+                  <span className="text-sm">지도 열기</span>
+                </M3Button>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </main>
     </div>

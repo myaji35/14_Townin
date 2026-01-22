@@ -1,7 +1,7 @@
 Townin (타운인) 통합 제품 요구사항 정의서 (PRD)
 
-Version: 1.0
-Date: 2025-11-30
+Version: 1.1
+Date: 2026-01-04
 Project Type: Hyper-local Life OS & Insurance GraphRAG Platform
 Target Market: South Korea (Initial), Vietnam/Japan (Global Expansion)
 
@@ -61,7 +61,21 @@ N빵 공구 마켓: 대용량/할인 상품을 아파트 이웃과 나누는 '�
 
 이동 경로(직장→집) 데이터를 기반으로 최적의 상점 추천.
 
-2.4. 패밀리 케어 (IoT Integration)
+2.4. 패밀리 케어 (IoT Integration & Family Management)
+
+**2.4.1 가족 구성원 프로필 관리 (신설)**
+
+기능 정의: 사용자의 가족 구성원(자녀, 배우자, 부모님 등) 정보를 관리하는 기능.
+데이터 항목:
+- 관계 (Relationship): 배우자, 자녀, 부모, 형제/자매, 기타
+- 출생년도 (Birth Year): 연령대 기반 맞춤 추천용
+- 성별 (Gender): 성별 기반 맞춤 추천용
+- 별칭 (Nickname): 실명 대신 사용할 호칭 (Privacy-First 준수)
+- 거주 지역 (Location Hub): 부모님의 경우 별도 거주지 설정 가능 (안심 케어 연동)
+
+활용 목적:
+- 생애주기별 맞춤형 추천 (육아 용품, 키즈 카페, 실버 케어, 교육 정보)
+- 안심 케어 서비스 대상 지정
 
 효도 리포터 (AI):
 

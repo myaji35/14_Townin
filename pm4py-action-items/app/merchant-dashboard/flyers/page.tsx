@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Eye, Edit, Trash2, Copy, BarChart3, Plus Circle, Filter, Search } from 'lucide-react';
+import { Eye, Edit, Trash2, Copy, BarChart3, PlusCircle, Filter, Search } from 'lucide-react';
 import Link from 'next/link';
 
 interface Flyer {
@@ -130,8 +130,8 @@ export default function FlyersPage() {
                                         size="sm"
                                         onClick={() => setFilterStatus(status)}
                                         className={`${filterStatus === status
-                                                ? 'bg-amber-500/20 border-amber-500 text-amber-400'
-                                                : 'border-gray-600 text-gray-300'
+                                            ? 'bg-amber-500/20 border-amber-500 text-amber-400'
+                                            : 'border-gray-600 text-gray-300'
                                             }`}
                                     >
                                         {status === 'all' && '전체'}
