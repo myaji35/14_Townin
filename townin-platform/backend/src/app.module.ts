@@ -26,6 +26,8 @@ import { Neo4jModule } from './modules/neo4j/neo4j.module';
 import { InfluxDBModule } from './modules/influxdb/influxdb.module';
 import { GraphRAGModule } from './modules/graphrag/graphrag.module';
 import { IoTSensorsModule } from './modules/iot-sensors/iot-sensors.module';
+import { FlushModule } from './flush/flush.module';
+import { AvatarModule } from './avatar/avatar.module';
 
 @Module({
   imports: [
@@ -33,6 +35,7 @@ import { IoTSensorsModule } from './modules/iot-sensors/iot-sensors.module';
       isGlobal: true,
       envFilePath: '.env',
     }),
+    /*
     TypeOrmModule.forRootAsync({
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => {
@@ -44,8 +47,8 @@ import { IoTSensorsModule } from './modules/iot-sensors/iot-sensors.module';
           username: configService.get('DB_USERNAME', 'townin'),
           password: password && password.length > 0 ? password : undefined,
           database: configService.get('DB_DATABASE', 'townin-db'),
-          entities: [__dirname + '/**/*.entity{.ts,.js}'],
-          migrations: [__dirname + '/migrations/*{.ts,.js}'],
+          entities: [__dirname + '/!**!/!*.entity{.ts,.js}'],
+          migrations: [__dirname + '/migrations/!*{.ts,.js}'],
           synchronize: configService.get('NODE_ENV') === 'development',
           logging: configService.get('NODE_ENV') === 'development',
         };
@@ -61,6 +64,7 @@ import { IoTSensorsModule } from './modules/iot-sensors/iot-sensors.module';
         return config;
       },
     }),
+    */
     EventEmitterModule.forRoot(),
     // Temporarily disabled - requires Docker
     // RedisModule,
@@ -69,13 +73,13 @@ import { IoTSensorsModule } from './modules/iot-sensors/iot-sensors.module';
     // GraphRAGModule,
     // IoTSensorsModule,
     // AuthModule, // Requires RedisModule
-    UsersModule,
+    // UsersModule,
     // SecurityGuardsModule, // Temporarily disabled
-    MerchantsModule,
-    GridCellsModule,
-    FlyersModule,
+    // MerchantsModule,
+    // GridCellsModule,
+    // FlyersModule,
     // AdminModule, // Temporarily disabled
-    RegionsModule,
+    // RegionsModule,
     // GeocodingModule, // Temporarily disabled
     // UserLocationsModule, // Temporarily disabled
     // StatisticsModule, // Temporarily disabled
@@ -86,7 +90,9 @@ import { IoTSensorsModule } from './modules/iot-sensors/iot-sensors.module';
     // AnalyticsModule, // Temporarily disabled
     HealthModule,
     // FavoritesModule, // Temporarily disabled
-    SeedModule, // Seeding module for database initialization
+    // SeedModule, // Seeding module for database initialization
+    FlushModule,
+    AvatarModule,
   ],
 })
 export class AppModule { }

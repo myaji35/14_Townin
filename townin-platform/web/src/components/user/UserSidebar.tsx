@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useTheme } from '../../contexts/ThemeContext';
-import { Sun, Moon, Settings as SettingsIcon, LogOut, Users, MapPin } from 'lucide-react';
+import { Sun, Moon, Settings as SettingsIcon, LogOut, Users, MapPin, Shirt, ShieldCheck } from 'lucide-react';
 import './UserSidebar.css';
 
 interface UserSidebarProps {
@@ -192,6 +192,26 @@ export default function UserSidebar({
               >
                 <Users size={16} />
                 <span>가족 구성원 관리</span>
+              </button>
+              <button
+                className="settings-menu-item"
+                onClick={() => {
+                  window.location.href = '/user/avatar';
+                  setIsSettingsOpen(false);
+                }}
+              >
+                <Shirt size={16} />
+                <span>My Avatar (Townin Fit)</span>
+              </button>
+              <button
+                className="settings-menu-item"
+                onClick={() => {
+                  window.location.href = '/user/privacy';
+                  setIsSettingsOpen(false);
+                }}
+              >
+                <ShieldCheck size={16} />
+                <span>Privacy Center (Flush)</span>
               </button>
               <button className="settings-menu-item" onClick={handleThemeToggle}>
                 {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}

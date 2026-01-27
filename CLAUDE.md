@@ -143,3 +143,16 @@ Flyer click attribution: User gets 25 points, Guard gets 5 points, Platform gets
 - PRD and user-facing content: Korean
 - Code, comments, technical docs: English
 - Target market: South Korea (starting with 의정부시, Uijeongbu City)
+
+## ulw! Protocol (Ultra Light Weight Orchestration)
+
+We use the **ulw!** agentic workflow for efficient collaboration:
+1.  **Gemini (The Orchestrator)**: Defines "What" to build (Architecture, PRD).
+2.  **Open Code (The Builder)**: Implements "How" it works (Code, DB).
+3.  **Oh My Open Code (The Fixer)**: Verifies and fixes (QA, Refactoring).
+
+## Integrated Projects
+- **FLUSH**: Zero-Data Backend Infrastructure principles are integrated into the `FlushModule`.
+  - **Flush Address**: Temporary address tokenization
+  - **Flush Mail**: Relay email system with kill-switch
+
